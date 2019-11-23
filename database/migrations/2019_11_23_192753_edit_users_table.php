@@ -18,8 +18,6 @@ class EditUsersTable extends Migration
           $table->string('apellido');
           $table->string('usuario');
           $table->string('img_perfil');
-          $table->unsignedBigInteger('ciudad_id');
-          $table->foreign('ciudad_id')->references('id')->on('ciudades');
         });
     }
 
@@ -30,6 +28,8 @@ class EditUsersTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('users', function (Blueprint $table) {
+          $table->dropColumn(['apellido','usuario','img_perfil']);
+        });
     }
 }
