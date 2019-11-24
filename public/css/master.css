@@ -1,0 +1,337 @@
+
+
+
+
+/*login*/
+.bg-login {
+  background-image: url("../img/bg-login.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.bg-blue {
+  background: rgba(153, 204, 255, 0.7);
+}
+
+.box-shadow {
+  box-shadow: 1px 1px 3px 5px rgba(0,0,0,0.6);
+}
+
+.logo-user {
+  width: 25%;
+  border-radius: 50%;
+  position: absolute;
+  left: 37%;
+  top: -27%;
+  z-index: 1;
+}
+
+.margin-top {
+  margin-top: 120px;
+}
+
+.anchorPersonalizado:link, .anchorPersonalizado:visited {
+  color: tomato;
+}
+
+.anchorPersonalizado:hover, .anchorPersonalizado:active {
+  color: white;
+  background: tomato;
+  padding: 1px;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 5px 6px tomato;
+  border-radius: 1%;
+  margin-right: 5px;
+}
+
+.error {
+  background: #e31717;
+  color: white;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.ok {
+  background: #05ac05;
+  color: white;
+  border-radius: 5px;
+  padding: 8px;
+}
+/*fin login*/
+/*register*/
+.box-register{
+  border: solid 2px rgb(52, 152, 219);
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  background-color:  rgba(255, 255, 255, 0.5);
+}
+.body-register{
+  background-image: url("../img/bg-register.jpg");
+  background-size: contain;
+ }
+
+
+
+
+/* index */
+
+.ampliar{
+  height: 330px;
+}
+
+.ampliar:hover{
+  height: 350px;
+}
+
+.margen{
+  margin: 1px;
+  border: solid 2px;
+}
+.borde-blanco{
+  border-color: white;
+}
+
+.borde-negro{
+  border: 20px;
+  border-color: black;
+}
+
+.backg-header{
+  background-color: rgb(52, 152, 219);
+}
+.margen_1px{
+  margin: 1px;
+}
+
+.backg-grey{
+    background-color: rgb(224, 235, 235);
+}
+.color-lightBlue{
+  color: rgb(52, 152, 219);
+}
+#headline{
+  position: absolute;
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  font-size: 21px;
+  margin-left: 75px;
+  margin-top: 75px;
+}
+
+
+
+#index{
+  background-color: rgb(52, 152, 219);
+}
+
+.backg-footer{
+  background-color: rgb(27, 102, 152);
+  font-weight:300;
+  font-family:Kanit, sans-serif;
+}
+
+.backg-categorias{
+  background-color: white;
+}
+
+
+.backg-categorias:hover{
+  background-color: rgb(52, 152, 219);
+}
+
+
+.sizezing{
+  font-size: 150px;
+
+}
+
+
+
+
+
+.borde-blanco{
+  font-weight: bold;
+  height: 40px;
+  border: solid 1px;
+  border-color: white;
+}
+
+#caroussel1{
+  height: 300px;
+  background-image: url(../img/index/caroussel1.png);
+}
+#caroussel2{
+  height: 300px;
+  background-image: url(../img/index/caroussel2.png);
+}
+#caroussel3{
+  height: 300px;
+  background-image: url(../img/index/caroussel3.png);
+}
+#banner-productos{
+  background-image: url(../img/index/banner-prod.png);
+  height: 270px;
+  width: 1300px;
+}
+.boton-prod{
+  position: absolute;
+  left: 1000px;
+  bottom: 30px;
+}
+
+
+
+@media (max-width: 570px){
+  .boton-prod {
+    position: absolute;
+    width: 100px;
+    bottom: 30px;
+    left: 200px;
+}
+#caroussel1{
+  height: 300px;
+  background-image: url(../img/index/caroussel1-xs.png);
+}
+#caroussel2{
+  height: 300px;
+  background-image: url(../img/index/caroussel2-xs.png);
+}
+#caroussel3{
+  height: 300px;
+  background-image: url(../img/index/caroussel3-xs.png);
+}
+}
+@media (max-width: 767px) and (min-width: 576px) {
+
+  #caroussel1{
+    height: 300px;
+    background-image: url(../img/index/caroussel1-sm.png);
+  }
+  #caroussel2{
+    height: 300px;
+    background-image: url(../img/index/caroussel2-sm.png);
+  }
+  #caroussel3{
+    height: 300px;
+    background-image: url(../img/index/caroussel3-sm.png);
+  }
+  #banner-productos{
+    background-image: url(../img/index/banner-prod-sm.png);
+    height: 270px;
+    width: 480px;
+  }
+  .boton-prod {
+    position: absolute;
+    width: 100px;
+    left: 400px;
+    bottom: 30px;
+}
+
+
+
+}
+
+@media (max-width: 991px) and (min-width: 768px){
+
+  .dropdown-item{
+    font-weight:300;
+
+    font-family:Kanit, sans-serif;
+  }
+  #caroussel1{
+    height: 300px;
+    background-image: url(../img/index/caroussel1-md.png);
+  }
+  #caroussel2{
+    height: 300px;
+    background-image: url(../img/index/caroussel2-md.png);
+  }
+  #caroussel3{
+    height: 300px;
+    background-image: url(../img/index/caroussel3-md.png);
+  }
+  #banner-productos{
+    background-image: url(../img/index/banner-prod-md.png);
+    height: 270px;
+    width: 660px;
+  }
+  .boton-prod{
+    position: absolute;
+    left: 550px;
+    bottom: 30px;
+  }
+}
+
+
+/* Fin CSS Index */
+
+
+/*faqs*/
+.goBack {
+  background-image: url("../img/banner-faqs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.first-letter::first-letter {
+  color: dodgerblue;
+  text-shadow: 1px 1px black;
+}
+
+.list-none {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container div {
+  font-size: 34px;
+  line-height: 34px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/*oculto párrafos*/
+.hideAndSeek p {
+  display: none;
+}
+/*cambio las propiedades para visualizar los párrafos ocultos.*/
+.hideAndSeek p:target {
+  display: block;
+}
+
+.bg-white {
+  background: white;
+}
+/*fin faqs*/
+/*perfil*/
+.bg-perfil {
+    background-image: url("../img/bg-perfil.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.bg-celeste {
+  background: #e3f2fd;
+}
+
+.logo-perfil {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.icon-size i, .icon-size ion-icon {
+  font-size: 18px;
+  margin-right: 10px;
+}
+/*fin perfil*/

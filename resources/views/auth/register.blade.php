@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data" >
                         @csrf
 
                         <div class="form-group row">
@@ -23,6 +23,48 @@
                                     </span>
                                 @enderror
                             </div>
+                        </div>
+
+                        <div class="form-group row">
+                                <label for="surname" class="col-md-4 col-form-label text-md-right">{{ __('Surname') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="surname" type="text" class="form-control @error('surname') is-invalid @enderror" name="surname" value="{{ old('surname') }}" required autocomplete="surname" autofocus>
+
+                                    @error('surname')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                        </div>
+
+                        <div class="form-group row">
+                                <label for="user" class="col-md-4 col-form-label text-md-right">{{ __('User') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="user" type="text" class="form-control @error('user') is-invalid @enderror" name="user" value="{{ old('user') }}" required autocomplete="user" autofocus>
+
+                                    @error('user')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                        </div>
+
+                        <div class="form-group row">
+                                <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('City') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="city" type="number" class="form-control @error('city') is-invalid @enderror" name="city" value="{{ old('city') }}" required autocomplete="city" autofocus>
+
+                                    @error('city')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                         </div>
 
                         <div class="form-group row">
@@ -60,6 +102,20 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+
+                        <div class="form-group row">
+                                <label for="img_perfil" class="col-md-4 col-form-label text-md-right">{{ __('Img_perfil') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="img_perfil" type="file" class="form-control @error('img_perfil') is-invalid @enderror" name="img_perfil" required autocomplete="img_perfil" autofocus>
+
+                                    @error('img_perfil')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
