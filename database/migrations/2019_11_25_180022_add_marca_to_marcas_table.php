@@ -22,6 +22,14 @@ class AddMarcaToMarcasTable extends Migration
             ['nombre_marca' => 'Nokia'],
             ['nombre_marca' => 'Apple'],
             ['nombre_marca' => 'LG'],
+            ['nombre_marca' => 'HP'],
+            ['nombre_marca' => 'Asus'],
+            ['nombre_marca' => 'Acer'],
+            ['nombre_marca' => 'Otros'],
+            ['nombre_marca' => 'Sandisk'],
+            ['nombre_marca' => 'Wester Digital'],
+            ['nombre_marca' => 'Kingston'],
+            ['nombre_marca' => 'JBL'],
 
         ]);
     }
