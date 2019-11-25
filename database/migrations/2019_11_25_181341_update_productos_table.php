@@ -14,8 +14,6 @@ class UpdateProductosTable extends Migration
     public function up()
     {
         Schema::table('productos', function (Blueprint $table) {
-            $table->unsignedBigInteger('img_id')->nullable();
-            $table->foreign('img_id')->references('id')->on('imagenes');
 
             $table->unsignedBigInteger('marca_id')->nullable();
             $table->foreign('marca_id')->references('id')->on('marcas');
