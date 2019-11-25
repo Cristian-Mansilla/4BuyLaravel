@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
         <link href="https://fonts.googleapis.com/css?family=Kanit:300,400&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <link rel="stylesheet" href="{{ asset('css/navBar.css') }}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -51,9 +51,35 @@
                     </div>
 
                     <!-- Header 2  -->
+                    <div class="main ml-5">
+                        <ul class="mNav">
+                            <li class="hassubs"><a href="#">Categorias</a>
+                                <ul class="dDown" style="z-index:900;">
+
+                                    @foreach ($categorias as $categoria)
+                                        <li class='subs hassubs''><a href='/productos/{{$categoria->id}}'>{{$categoria->nombre_categoria}} </a>
+                                            <ul class='dDown'>";
+                                                @foreach ($categoria->subcategorias as $subcategoria)
+                                                    <li class='subs'><a href='/productos/{{$categoria->id}}'>{{$categoria->nombre_categoria}}</a></li>";
+                                                @endforeach
+                                            </ul>
+                                        </li>
+                                    @endforeach
+
+                                </ul>
+                            </li>
+                            <li><a href="">Canjear cupon</a></li>
+                            <li><a href="">Ofertas</a></li>
+                            <li><a href="">¿Quienes somos?</a></li>
+                            <li><a href="a">Ayuda</a></li>
+
+                            <li><a href=""><ion-icon name="notifications"></ion-icon></a></li>
+                            <li><a href=""><ion-icon name="cart"></ion-icon></a></li>
+                        </ul>
+                        <br style="clear: both;">
+                    </div>
 
                     {{-- require("barraNav.php"); --}}
-
 
 
                     </div>
@@ -81,15 +107,15 @@
                                 <button class='dropdown-item' type='butto'><a href='desloguear.php' class='text-center pt-2 col-12 rounded p-1 '>Desloguear</a></button>
 
                                 @else
-                                <button class='dropdown-item' type='butto'><a href='login.php' class='text-center pt-2 col-12 rounded p-1 '>Iniciar sesion</a></button>
-                                <button class='dropdown-item backg-header' type='button'><a href='registro.php' class='text-center pt-2 col-12 rounded text-white p-1'>Registro</a></button>
+                                <button class='dropdown-item' type='butto'><a href='{{ route('login') }}' class='text-center pt-2 col-12 rounded p-1 '>Iniciar sesion</a></button>
+                                <button class='dropdown-item backg-header' type='button'><a href='{{ route('register') }}' class='text-center pt-2 col-12 rounded text-white p-1'>Registro</a></button>
                                 @endif
 
-                            <button class="dropdown-item" type="button"><a href="canjearCupon.php" class="text-center pt-2 col-12 rounded p-1">Canjear cupon</a></button>
-                            <button class="dropdown-item" type="button"><a href="categorias.php?categoria=oferta" class="text-center pt-2 col-12 rounded p-1">Ofertas</a></button>
-                            <button class="dropdown-item" type="button"><a href="qSomos.php" class="text-center pt-2 col-12 rounded p-1">¿Quienes somos?</a></button>
-                            <button class="dropdown-item" type="button"><a href="ayuda.php" class="text-center pt-2 col-12 rounded p-1">Ayuda</a></button>
-                            <button class="dropdown-item" type="button"><a href="categorias.php?categoria=oferta" class="text-center pt-2 col-12 rounded p-1">Categorias</a></button>
+                            <button class="dropdown-item" type="button"><a href="" class="text-center pt-2 col-12 rounded p-1">Canjear cupon</a></button>
+                            <button class="dropdown-item" type="button"><a href="" class="text-center pt-2 col-12 rounded p-1">Ofertas</a></button>
+                            <button class="dropdown-item" type="button"><a href="" class="text-center pt-2 col-12 rounded p-1">¿Quienes somos?</a></button>
+                            <button class="dropdown-item" type="button"><a href="" class="text-center pt-2 col-12 rounded p-1">Ayuda</a></button>
+                            <button class="dropdown-item" type="button"><a href="" class="text-center pt-2 col-12 rounded p-1">Categorias</a></button>
 
                         </div>
 

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Categorias;
 class HomeController extends Controller
 {
     /**
@@ -19,6 +19,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $categorias = Categorias::whereNull('subcategoria_id')->get();
+        $vac = compact('categorias');
+        return view('home', $vac);
     }
 }
