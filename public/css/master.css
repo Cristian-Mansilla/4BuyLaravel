@@ -161,15 +161,15 @@
 
 #caroussel1{
   height: 300px;
-  background-image: url(/Carousel/caroussel1.png);
+  background-image: url(/Imagenes/Carousel/caroussel1.png);
 }
 #caroussel2{
   height: 300px;
-  background-image: url(/Carousel/caroussel2.png);
+  background-image: url(/Imagenes/Carousel/caroussel2.png);
 }
 #caroussel3{
   height: 300px;
-  background-image: url(/Carousel/caroussel3.png);
+  background-image: url(/Imagenes/Carousel/caroussel3.png);
 }
 #banner-productos{
   background-image: url(../img/index/banner-prod.png);
@@ -193,33 +193,33 @@
 }
 #caroussel1{
   height: 300px;
-  background-image: url(../img/index/caroussel1-xs.png);
+  background-image: url(/Imagenes/Carousel/caroussel1-xs.png);
 }
 #caroussel2{
   height: 300px;
-  background-image: url(../img/index/caroussel2-xs.png);
+  background-image: url(/Imagenes/Carousel/caroussel2-xs.png);
 }
 #caroussel3{
   height: 300px;
-  background-image: url(../img/index/caroussel3-xs.png);
+  background-image: url(/Imagenes/Carousel/caroussel3-xs.png);
 }
 }
 @media (max-width: 767px) and (min-width: 576px) {
 
   #caroussel1{
     height: 300px;
-    background-image: url(../img/index/caroussel1-sm.png);
+    background-image: url(/Imagenes/Carousel/caroussel3-sm.png);
   }
   #caroussel2{
     height: 300px;
-    background-image: url(../img/index/caroussel2-sm.png);
+    background-image: url(/Imagenes/Carousel/caroussel3-sm.png);
   }
   #caroussel3{
     height: 300px;
-    background-image: url(../img/index/caroussel3-sm.png);
+    background-image: url(/Imagenes/Carousel/caroussel3-sm.png);
   }
   #banner-productos{
-    background-image: url(../img/index/banner-prod-sm.png);
+    background-image: url();
     height: 270px;
     width: 480px;
   }
@@ -243,15 +243,15 @@
   }
   #caroussel1{
     height: 300px;
-    background-image: url(../img/index/caroussel1-md.png);
+    background-image: url(/Imagenes/Carousel/caroussel3-md.png);
   }
   #caroussel2{
     height: 300px;
-    background-image: url(../img/index/caroussel2-md.png);
+    background-image: url(/Imagenes/Carousel/caroussel3-md.png);
   }
   #caroussel3{
     height: 300px;
-    background-image: url(../img/index/caroussel3-md.png);
+    background-image: url(/Imagenes/Carousel/caroussel3-md.png);
   }
   #banner-productos{
     background-image: url(../img/index/banner-prod-md.png);

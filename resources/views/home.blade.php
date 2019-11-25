@@ -32,4 +32,25 @@
             </a>
         </div>
 
+        <div class="container-fluid">
+            <div class="container">
+                <!-- Bannerts Tarjetas -->
+                <div class="col-12 border-bottom justify-content-between d-flex my-2 ">
+                    <img src="{{asset('/Imagenes/Banners/banner_tarjeta1.png')}}" height="100" width="500" alt="Banert Tarjetas 1" class="col-lg-6 col-md-12">
+                    <img src="{{asset('/Imagenes/Banners/banner_tarjeta2.png')}}" height="100" width="500" alt="Baner Tarjetas 2" class="col-lg-6 d-lg-block d-sm-none d-md-none d-none ">
+                </div>
+                <br><br><br><br><br>
+                <!-- Mas Vendidos -->
+                <div class="justify-content-center">
+                        <h2 class="col-12 border-bottom border-secondary">Lo mas vendido</h2>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
 @stop
