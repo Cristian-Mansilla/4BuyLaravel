@@ -53,9 +53,9 @@
 
                                     @foreach ($categorias as $categoria)
                                         <li class='subs hassubs''><a href='/productos/{{$categoria->id}}'>{{$categoria->nombre_categoria}} </a>
-                                            <ul class='dDown'>";
+                                            <ul class='dDown'>
                                                 @foreach ($categoria->subcategorias as $subcategoria)
-                                                    <li class='subs'><a href='/productos/{{$categoria->id}}'>{{$categoria->nombre_categoria}}</a></li>";
+                                                    <li class='subs'><a href='/productos/{{$categoria->id}}'>{{$categoria->nombre_categoria}}</a></li>
                                                 @endforeach
                                             </ul>
                                         </li>
