@@ -1,5 +1,13 @@
 
-
+#logo{
+    font-size: 25px;
+}
+.height-250{
+    height: 250px;
+}
+.height-280{
+    height: 280px;
+}
 * {
     box-sizing: border-box;
   }

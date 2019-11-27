@@ -33,59 +33,82 @@
         </div>
 
         <div class="container-fluid backg-grey p-1">
-            <div class="container">
+            <main class="container">
                 <!-- Bannerts Tarjetas -->
                 <div class="col-12 justify-content-center d-flex mt-2 ">
-                    <img src="{{asset('/Imagenes/Banners/banner_tarjeta1.png')}}" height="100" width="500" alt="Banert Tarjetas 1" class="col-lg-6 col-md-12 sombra p-0 mr-4">
-                    <img src="{{asset('/Imagenes/Banners/banner_tarjeta2.png')}}" height="100" width="500" alt="Baner Tarjetas 2" class="col-lg-6 d-lg-block d-sm-none d-md-none d-none p-0 sombra">
+                    <img src="{{asset('/Imagenes/Index/Banners/banner_tarjeta1.png')}}" height="100" width="500" alt="Banert Tarjetas 1" class="col-lg-6 col-md-12 sombra p-0 mr-4">
+                    <img src="{{asset('/Imagenes/Index/Banners/banner_tarjeta2.png')}}" height="100" width="500" alt="Baner Tarjetas 2" class="col-lg-6 d-lg-block d-sm-none d-md-none d-none p-0 sombra">
                 </div>
                 <br><br><br>
                 <!-- Mas Vendidos -->
                 <div class="justify-content-center row">
-                        <div class="col-12 row">
-                                <h2 class="col-12 border-bottom border-secondary">Lo mas vendido</h2>
-
-                                @foreach($prodMasVendidos as $producto)
-                                    <div class='zoom col-lg-3 col-md-12 mt-2 mb-5 text-center' style='height:300px;'>
-                                        <a href='#top' class=' text-dark text-decoration-none'>
-                                            <div class='card sombra' style='height:300px;'>
-                                                <div class='card-img-top p-3'>
-                                                    <img src=' {{$producto->ruta_imagen}} ' height='150' alt='...'>
-                                                </div>
-                                                <div class='card-body border-top'>
-                                                    <h3 class='card-text green'>$ {{$producto->precio}}</h3>
-                                                    <h5 class='card-title color-grey'>{{$producto->titulo}}</h5>
-
-                                                </div>
-                                            </div>
-                                        </a>
+                    <div class="col-12 justify-content-between row">
+                        <h2 class="col-12">Lo mas vendido</h2>
+                        @foreach($prodMasVendidos as $producto)
+                            <div class='zoom col-2 p-2'>
+                                <a href='#top' class=' text-dark text-decoration-none'>
+                                    <div class='card sombra text-center'>
+                                        <div class='card-img-top p-3'>
+                                            <img src=' {{$producto->ruta_imagen}} ' height='120' alt='...'>
+                                        </div>
+                                        <div class='card-body border-top'>
+                                            <h3 class='card-text'>$ {{$producto->precio}}</h3>
+                                            <h5 class='card-title color-grey'>{{$producto->titulo}}</h5>
+                                        </div>
                                     </div>
-                                @endforeach
-                        </div>
-
-
-                        <div class="col-12 row">
-                                <h2 class="col-12 border-bottom border-secondary mt-4">Segun tu ultima visita</h2>
-
-                                @foreach($prodUltimaVisita as $producto)
-                                    <div class='zoom col-lg-3 col-md-12 mt-2 mb-5 p-3 text-center' style='height:300px;'>
-                                        <a href='#top' class=' text-dark text-decoration-none'>
-                                            <div class='card sombra' style='height:300px;'>
-                                                <div class='card-img-top p-3'>
-                                                    <img src=' {{$producto->ruta_imagen}} ' height='150' alt='...'>
-                                                </div>
-                                                <div class='card-body'>
-                                                    <h3 class='card-text green'>$ {{$producto->precio}}</h3>
-                                                    <h5 class='card-title color-grey'>{{$producto->titulo}}</h5>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                @endforeach
-                        </div>
-
-
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
+                <br><br><br>
+                <div class="col-12 bg-dark height-250 ">
+                        <h1 class="text-white text-center">Banner Publicidad</h1>
+                </div>
+                <br><br><br>
+                <div class="justify-content-center row">
+                    <div class="col-12 justify-content-between row">
+                        <h2 class="col-12">Segun tu ultima visita</h2>
+                        @foreach($prodUltimaVisita as $producto)
+                            <div class='zoom col-2 p-2'>
+                                <a href='#top' class=' text-dark text-decoration-none'>
+                                    <div class='card sombra text-center'>
+                                        <div class='card-img-top p-3'>
+                                            <img src=' {{$producto->ruta_imagen}} ' height='120' alt='...'>
+                                        </div>                                            <div class='card-body border-top'>
+                                            <h3 class='card-text'>$ {{$producto->precio}}</h3>
+                                            <h5 class='card-title color-grey'>{{$producto->titulo}}</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+                <br><br><br>
+                <h2 class="col-12">Descubrí</h2>
+                <br>
+                <div class="col-12 row height-280 d-flex justify-content-between">
+                    <div class="col-6 bg-dark rounded row sombra">
+                        <div class="col-6 text-center pt-5">
+                            <h2 class="col-12 mt-5 text-white">LO MEJOR EN INFORMATICA</h2>
+                            <button type="button" class="btn btn-primary btn-sm d-block col-12">Ver más</button>
+                        </div>
+                        <div class="col-6 pt-4 ">
+                            <img src="/Imagenes/Index/informatica.jpeg" class="rounded" height="230" width="200" alt="">
+                        </div>
+                    </div>
+                    <div class="col-6 bg-white rounded row sombra">
+                        <div class="col-6 text-center pt-5">
+                            <h2 class="col-12 mt-5 text-dark">OFERTAS ESCLUSIVAS</h2>
+                                <button type="button" class="btn btn-primary btn-sm d-block col-12">Ver más</button>
+                        </div>
+                        <div class="col-6 pt-4 ">
+                            <img src="/Imagenes/Index/ofertaEsclusiva.jpeg" class="rounded" height="230" width="200" alt="">
+                        </div>
+                    </div>
+                </div>
+
                 <br><br><br><br><br>
                 <!-- CATEGORIAS MAS BUSCADAS -->
                 <div class="row justify-content-center ">
@@ -143,11 +166,12 @@
                         </div>
 
                 </div>
-
+            </main>
 
                 {{-- Fin Container --}}
             </div>
-        </div>
+
+
 
 
 

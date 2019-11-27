@@ -15,13 +15,13 @@
                 <!--Header 1  -->
             <div class="container">
                 <div class="row d-flex justify-content-between p-2 col-md-12 col-lg-12">
-                    <a href="index.php" class="col-md-2 col-lg-2"><img src="" class="rounded-circle w-md-10 h-md-10 w-lg-25 h-lg-100" alt="LOGO"></a>
+                    <a href="index.php" class="col-md-2 col-lg-2 text-white text-decoration-none " id="logo">4Buy!</a>
                     <form class="form-inline row my-2 my-lg-0 col-md-6 col-lg-6" action ="categorias.php" method="get">
                     <input class="form-control mr-sm-2 col-md-8 col-lg-9" type="search" placeholder="Search" name="categoria" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0 col-md-3 col-lg-2 text-white text-decoration-none borde-blanco" type="submit" >Search</button>
                 </form>
 
-                    <div class="col-lg-3 row pt-lg-3 d-lg-block d-sm-none d-xs-none d-md-none">
+                    <div class="col-lg-3 row pt-lg-2 d-lg-block d-sm-none d-xs-none d-md-none">
 
 
 
@@ -34,7 +34,7 @@
                                         @csrf
                                     </form>
                             @else
-                                <a href='{{ route('login') }}' class=' borde-blanco pt-1   rounded col-7 m-1 p-2 text-center text-decoration-none text-white'>Iniciar sesion</a>
+                                <a href='{{ route('login') }}' class=' borde-blanco rounded col-7 m-1 p-2 text-center text-decoration-none text-white'>Iniciar sesion</a>
                                 <a href='{{ route('register') }}' class='borde-blanco border-none pt-1 p-2 bg-white rounded col-4 m-1 text-center text-decoration-none color-lightBlue'>Registro</a>
 
                                 @endif
