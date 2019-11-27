@@ -1,25 +1,27 @@
 @extends('layouts.app')
 
+@section('fondo')
+  bg-login
+@endsection
+
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-md-center margin-top">
         <div class="col-md-8">
-            <div class="card">
-              <div class="card-header">{{ __('Login') }}
+            <div class="card bg-blue box-shadow position-relative">
+              <div class="card-header titulo">{{ __('Iniciar sesión') }}
                 <img class="logo-user box-shadow" src="/Imagenes/Login/user.jpg" alt="">
               </div>
-              <div class="row justify-content-md-center margin-top">
-                <div class="col-12 col-md-8 col-lg-6 p-4 bg-blue box-shadow position-relative">
-                  <form method="POST" action="{{ route('login') }}">
-                      @csrf
-
+                <form method="POST" action="{{ route('login') }}">
+                    @csrf
+                    <div class="p-4">
                       <div class="form-group row">
-                          <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address </label>
+                          <label for="usuario" class="col-md-4 col-form-label text-md-right">Usuario: </label>
 
                           <div class="col-md-6">
-                              <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                              <input id="usuario" type="text" class="form-control @error('user') is-invalid @enderror" name="user" value="{{ old('user') }}" required autocomplete="user" autofocus>
 
-                              @error('email')
+                              @error('user')
                                   <span class="invalid-feedback" role="alert">
                                       <strong>{{ $message }}</strong>
                                   </span>
@@ -28,7 +30,7 @@
                       </div>
 
                       <div class="form-group row">
-                          <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                          <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña:') }}</label>
 
                           <div class="col-md-6">
                               <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
@@ -47,7 +49,7 @@
                                   <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                   <label class="form-check-label" for="remember">
-                                      {{ __('Remember Me') }}
+                                      {{ __('Recordarme') }}
                                   </label>
                               </div>
                           </div>
@@ -55,20 +57,19 @@
 
                       <div class="form-group row mb-0">
                           <div class="col-md-8 offset-md-4">
-                              <button type="submit" class="btn btn-primary">
-                                  {{ __('Login') }}
-                              </button>
+                            <button type="submit" class="btn btn-primary btn-lg">
+                              {{ __('Iniciar sesión') }}
+                            </button>
 
                               @if (Route::has('password.request'))
                                   <a class="btn btn-link" href="{{ route('password.request') }}">
-                                      {{ __('Forgot Your Password?') }}
+                                      {{ __('¿Olvidaste tu contraseña?') }}
                                   </a>
                               @endif
                           </div>
                       </div>
-                  </form>
-                </div>
-              </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

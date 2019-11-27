@@ -40,7 +40,7 @@
 
 /*login*/
 .bg-login {
-  background-image: url("../img/bg-login.jpg");
+  background-image: url("/Imagenes/Login/bg-login.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -56,12 +56,16 @@
 }
 
 .logo-user {
-  width: 25%;
+  width: 15%;
   border-radius: 50%;
   position: absolute;
-  left: 37%;
-  top: -27%;
+  left: 42.5%;
+  top: -19%;
   z-index: 1;
+}
+
+.titulo {
+  font-size: 30px;
 }
 
 .margin-top {
