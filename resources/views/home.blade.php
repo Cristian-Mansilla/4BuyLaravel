@@ -53,8 +53,9 @@
                                                     <img src=' {{$producto->ruta_imagen}} ' height='150' alt='...'>
                                                 </div>
                                                 <div class='card-body border-top'>
-                                                    <h5 class='card-title'>{{$producto->titulo}}</h5>
-                                                    <p class='card-text'>$ {{$producto->precio}}</p>
+                                                    <h3 class='card-text green'>$ {{$producto->precio}}</h3>
+                                                    <h5 class='card-title color-grey'>{{$producto->titulo}}</h5>
+
                                                 </div>
                                             </div>
                                         </a>
@@ -74,8 +75,8 @@
                                                     <img src=' {{$producto->ruta_imagen}} ' height='150' alt='...'>
                                                 </div>
                                                 <div class='card-body'>
-                                                    <h5 class='card-title'>{{$producto->titulo}}</h5>
-                                                    <p class='card-text'>$ {{$producto->precio}}</p>
+                                                    <h3 class='card-text green'>$ {{$producto->precio}}</h3>
+                                                    <h5 class='card-title color-grey'>{{$producto->titulo}}</h5>
                                                 </div>
                                             </div>
                                         </a>

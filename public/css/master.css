@@ -23,6 +23,12 @@
     transition: box-shadow .6s;
     box-shadow: 2px 2px 15px #666;
   }
+  .green{
+    color: rgb(94, 195, 108);
+  }
+  .color-grey{
+      color: rgb(130, 120, 120);
+  }
 
 /*login*/
 .bg-login {
