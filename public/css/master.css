@@ -1,6 +1,29 @@
+.sinDeco{
+    text-decoration: none;
+}
 
+* {
+    box-sizing: border-box;
+  }
 
+  .zoom {
 
+    transition: transform .4s;
+  }
+
+  .zoom:hover {
+    z-index: 999;
+    transform: scale(1.03);
+  }
+
+  .sombra{
+      box-shadow:  4px 4px 7px #666;
+  }
+
+  a .sombra:hover{
+    transition: box-shadow .6s;
+    box-shadow: 2px 2px 15px #666;
+  }
 
 /*login*/
 .bg-login {
@@ -106,7 +129,7 @@
 }
 
 .backg-grey{
-    background-color: rgb(224, 235, 235);
+    background-color: rgb(212, 202, 201);
 }
 .color-lightBlue{
   color: rgb(52, 152, 219);
@@ -139,7 +162,8 @@
 
 
 .backg-categorias:hover{
-  background-color: rgb(52, 152, 219);
+    transition: background-color .4s;
+    background-color: rgb(52, 152, 219);
 }
 
 
