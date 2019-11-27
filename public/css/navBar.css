@@ -10,6 +10,7 @@ li a{text-decoration: none;}
 .mNav li:hover{background: #fff;transition: ease-in .35s;-moz-transition: ease-in .35s;-webkit-transition: ease-in .35s;}
 .mNav li:hover a{color: rgb(52, 152, 219);transition: ease-in .35s;-moz-transition: ease-in .35s;-webkit-transition: ease-in .35s;}
 /*First Level*/
+ .hassubs li:hover{color:rgb(52, 152, 219)}
 .subs {left: -45px;position: relative;top: 0px;width: 175px;border-left: none !important; border-bottom: 1px dotted #fff !important;}
 .subs:last-child{border: none !important;}
 .hassubs:hover .dDown,.hassubs .hassubs:hover .dDown{opacity: 1;visibility: visible; transition: ease-in .35s;-moz-transition: ease-in .35s;-webkit-transition: ease-in .35s;}

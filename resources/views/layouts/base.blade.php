@@ -5,11 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
         <link href="https://fonts.googleapis.com/css?family=Kanit:300,400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Alatsi|Ubuntu:400,500,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/navBar.css') }}">
         <link rel="stylesheet" href="{{ asset('css/master.css') }}">
     <title>Document</title>
 </head>
-<body>
+<body class="backg-grey fuente">
         <header class="container-fluid h-200 backg-header d-lg-block d-md-none d-sm-none d-none" >
                 <!--Header 1  -->
             <div class="container">
@@ -48,14 +49,14 @@
                     <!-- Header 2  -->
                     <div class="main ml-5">
                         <ul class="mNav">
-                            <li class="hassubs"><a href="#">Categorias</a>
+                            <li class="hassubs text-white">Categorias
                                 <ul class="dDown" style="z-index:900;">
 
                                     @foreach ($categorias as $categoria)
-                                        <li class='subs hassubs''><a href='/productos/{{$categoria->id}}'>{{$categoria->nombre_categoria}} </a>
+                                        <li class='subs hassubs'>{{$categoria->nombre_categoria}}
                                             <ul class='dDown'>
                                                 @foreach ($categoria->subcategorias as $subcategoria)
-                                                    <li class='subs'><a href='/productos/{{$categoria->id}}'>{{$categoria->nombre_categoria}}</a></li>
+                                                    <li class='subs'><a href='/Productos/{{$subcategoria->id}}'>{{$subcategoria->nombre_categoria}}</a></li>
                                                 @endforeach
                                             </ul>
                                         </li>
@@ -88,7 +89,7 @@
             <header class="container-fluid backg-header d-lg-none" >
                 <div class="container d-flex justify-content-between pb-3">
                     <div class="dropdown col-3 pt-2">
-                        button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <ion-icon name="menu"></ion-icon>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -144,8 +145,8 @@
 
 
 
-
-            <footer class="container-fluid justify-content-between row backg-footer m-0">
+            {{-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> --}}
+            <footer class="container-fluid justify-content-between row backg-footer  m-0">
                     <div class="col-lg-3 col-md-5">
                         <h3 class="col-12 text-white">Comprar y vender</h3>
                         <ul class="list-unstyled">

@@ -1,6 +1,4 @@
-.sinDeco{
-    text-decoration: none;
-}
+
 
 * {
     box-sizing: border-box;
@@ -17,6 +15,7 @@
   }
 
   .sombra{
+
       box-shadow:  4px 4px 7px #666;
   }
 
@@ -99,6 +98,17 @@
 
 
 /* index */
+body{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: medium;
+
+}
+
+.fuente{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: medium;
+}
+
 
 .ampliar{
   height: 330px;
@@ -129,7 +139,7 @@
 }
 
 .backg-grey{
-    background-color: rgb(212, 202, 201);
+    background-color: rgb(235, 235, 235);
 }
 .color-lightBlue{
   color: rgb(52, 152, 219);

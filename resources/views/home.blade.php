@@ -32,7 +32,7 @@
             </a>
         </div>
 
-        <div class="container-fluid ">
+        <div class="container-fluid backg-grey p-1">
             <div class="container">
                 <!-- Bannerts Tarjetas -->
                 <div class="col-12 justify-content-center d-flex mt-2 ">
@@ -85,8 +85,9 @@
 
 
                 </div>
+                <br><br><br><br><br>
                 <!-- CATEGORIAS MAS BUSCADAS -->
-                <div class="row justify-content-center">
+                <div class="row justify-content-center ">
                         <h2 class="text-center col-12">CATEGORIAS MAS BUSCADAS</h2>
                         <br><br>
 
