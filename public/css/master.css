@@ -22,10 +22,7 @@
     transform: scale(1.03);
   }
 
-  .sombra{
 
-      box-shadow:  4px 4px 7px #666;
-  }
 
   a .sombra:hover{
     transition: box-shadow .6s;
@@ -120,6 +117,16 @@ body{
     font-family: 'Ubuntu', sans-serif;
     font-weight: medium;
 
+}
+
+.img-descubri{
+    height: 230px;
+    width: 200px;
+}
+.titulo-descubri{
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 18px;
 }
 
 .fuente{
@@ -231,8 +238,16 @@ body{
         left: 200px;
     }
     .imgCarousel{
-        height: 120px;
+        height: 110px;
         width: 100%;
+    }
+    .img-descubri{
+        height: 150px;
+        width: 120px;
+    }
+    .titulo-descubri{
+        font-size: 15px;
+        margin-top:5px;
     }
 }
 @media (max-width: 767px) and (min-width: 576px) {
@@ -276,6 +291,10 @@ body{
         position: absolute;
         left: 550px;
         bottom: 30px;
+    }
+    .img-descubri{
+        height: 200px;
+        width: 170px;
     }
 }
 

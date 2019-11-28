@@ -42,10 +42,10 @@
                 <br><br><br>
                 <!-- Mas Vendidos -->
                 <div class="justify-content-center row">
-                    <div class="col-12 justify-content-between row">
+                    <div class="col-12 justify-content-lg-between justify-content-center row">
                         <h2 class="col-12">Lo mas vendido</h2>
                         @foreach($prodMasVendidos as $producto)
-                            <div class='zoom col-lg-2 col-md-5 p-2'>
+                            <div class='zoom col-lg-2 col-md-5 col-sm-6 col-10 p-2'>
                                 <a href='#top' class=' text-dark text-decoration-none'>
                                     <div class='card sombra text-center'>
                                         <div class='card-img-top p-3'>
@@ -67,15 +67,16 @@
                 </div>
                 <br><br><br>
                 <div class="justify-content-center row">
-                    <div class="col-12 justify-content-between row">
+                    <div class="col-12 justify-content-lg-between justify-content-center row">
                         <h2 class="col-lg-12">Segun tu ultima visita</h2>
                         @foreach($prodUltimaVisita as $producto)
-                            <div class='zoom col-lg-2 col-md-5 p-2'>
+                            <div class='zoom col-lg-2 col-md-5 col-sm-6 col-10 p-2'>
                                 <a href='#top' class=' text-dark text-decoration-none'>
                                     <div class='card sombra text-center'>
                                         <div class='card-img-top p-3'>
                                             <img src=' {{$producto->ruta_imagen}} ' height='120' alt='...'>
-                                        </div>                                            <div class='card-body border-top'>
+                                        </div>
+                                        <div class='card-body border-top'>
                                             <h3 class='card-text'>$ {{$producto->precio}}</h3>
                                             <h5 class='card-title color-grey'>{{$producto->titulo}}</h5>
                                         </div>
@@ -91,20 +92,20 @@
                 <div class="col-12 row height-280 d-flex justify-content-lg-between justify-content-center">
                     <div class="col-lg-6 col-md-10 bg-dark rounded row sombra">
                         <div class="col-6 text-center pt-5">
-                            <h2 class="col-12 mt-5 text-white">LO MEJOR EN INFORMATICA</h2>
+                            <p class="col-12 text-white titulo-descubri">LO MEJOR EN INFORMATICA</p>
                             <button type="button" class="btn btn-primary btn-sm d-block col-12">Ver más</button>
                         </div>
-                        <div class="col-6 pt-4 ">
-                            <img src="/Imagenes/Index/informatica.jpeg" class="rounded" height="230" width="200" alt="">
+                        <div class="col-6 pt-4 mb-3 mb-lg-0">
+                            <img src="/Imagenes/Index/informatica.jpeg" class="rounded img-descubri" alt="">
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-10 bg-white rounded row sombra">
+                    <div class="col-lg-6 col-md-10 bg-white rounded row sombra mt-sm-2 mt-2 mt-lg-0">
                         <div class="col-6 text-center pt-5">
-                            <h2 class="col-12 mt-5 text-dark">OFERTAS ESCLUSIVAS</h2>
+                            <p class="col-12 titulo-descubri text-dark">OFERTAS ESCLUSIVAS</p>
                                 <button type="button" class="btn btn-primary btn-sm d-block col-12">Ver más</button>
                         </div>
                         <div class="col-6 pt-4 ">
-                            <img src="/Imagenes/Index/ofertaEsclusiva.jpeg" class="rounded" height="230" width="200" alt="">
+                            <img src="/Imagenes/Index/ofertaEsclusiva.jpeg" class="rounded img-descubri" alt="">
                         </div>
                     </div>
                 </div>
