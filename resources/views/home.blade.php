@@ -12,14 +12,14 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active" id="caroussel1">
-
+                <div class="carousel-item active">
+                    <img src="https://http2.mlstatic.com/optimize/o:f_webp/resources/exhibitors/MLA-vacaciones-a-un-click/55a742b0-0704-11ea-9e73-d195bc8dc8db-home-slider_desktop.jpg" alt="" class="imgCarousel">
                 </div>
-                <div class="carousel-item" id="caroussel2">
-
+                <div class="carousel-item">
+                    <img src="https://http2.mlstatic.com/optimize/o:f_webp/resources/deals/exhibitors_resources/mla-home-desktop-slider-picture-0dd8b481-6e18-4d0f-8207-61072a5379ca.jpg" alt="" class="imgCarousel">
                 </div>
-                <div class="carousel-item" id="caroussel3">
-
+                <div class="carousel-item">
+                    <img src="https://http2.mlstatic.com/optimize/o:f_webp/resources/deals/exhibitors_resources/mla-home-desktop-slider-picture-e82ae8e7-44ee-455a-93ef-93b98e6a1e0f.jpg" alt="" class="imgCarousel">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -36,7 +36,7 @@
             <main class="container">
                 <!-- Bannerts Tarjetas -->
                 <div class="col-12 justify-content-center d-flex mt-2 ">
-                    <img src="{{asset('/Imagenes/Index/Banners/banner_tarjeta1.png')}}" height="100" width="500" alt="Banert Tarjetas 1" class="col-lg-6 col-md-12 sombra p-0 mr-4">
+                    <img src="{{asset('/Imagenes/Index/Banners/banner_tarjeta1.png')}}" height="100" width="500" alt="Banert Tarjetas 1" class="col-lg-6 col-md-12 d-lg-block d-sm-none d-md-none d-none sombra p-0 mr-4">
                     <img src="{{asset('/Imagenes/Index/Banners/banner_tarjeta2.png')}}" height="100" width="500" alt="Baner Tarjetas 2" class="col-lg-6 d-lg-block d-sm-none d-md-none d-none p-0 sombra">
                 </div>
                 <br><br><br>
@@ -45,7 +45,7 @@
                     <div class="col-12 justify-content-between row">
                         <h2 class="col-12">Lo mas vendido</h2>
                         @foreach($prodMasVendidos as $producto)
-                            <div class='zoom col-2 p-2'>
+                            <div class='zoom col-lg-2 col-md-5 p-2'>
                                 <a href='#top' class=' text-dark text-decoration-none'>
                                     <div class='card sombra text-center'>
                                         <div class='card-img-top p-3'>
@@ -68,9 +68,9 @@
                 <br><br><br>
                 <div class="justify-content-center row">
                     <div class="col-12 justify-content-between row">
-                        <h2 class="col-12">Segun tu ultima visita</h2>
+                        <h2 class="col-lg-12">Segun tu ultima visita</h2>
                         @foreach($prodUltimaVisita as $producto)
-                            <div class='zoom col-2 p-2'>
+                            <div class='zoom col-lg-2 col-md-5 p-2'>
                                 <a href='#top' class=' text-dark text-decoration-none'>
                                     <div class='card sombra text-center'>
                                         <div class='card-img-top p-3'>
@@ -88,8 +88,8 @@
                 <br><br><br>
                 <h2 class="col-12">Descubrí</h2>
                 <br>
-                <div class="col-12 row height-280 d-flex justify-content-between">
-                    <div class="col-6 bg-dark rounded row sombra">
+                <div class="col-12 row height-280 d-flex justify-content-lg-between justify-content-center">
+                    <div class="col-lg-6 col-md-10 bg-dark rounded row sombra">
                         <div class="col-6 text-center pt-5">
                             <h2 class="col-12 mt-5 text-white">LO MEJOR EN INFORMATICA</h2>
                             <button type="button" class="btn btn-primary btn-sm d-block col-12">Ver más</button>
@@ -98,7 +98,7 @@
                             <img src="/Imagenes/Index/informatica.jpeg" class="rounded" height="230" width="200" alt="">
                         </div>
                     </div>
-                    <div class="col-6 bg-white rounded row sombra">
+                    <div class="col-lg-6 col-md-10 bg-white rounded row sombra">
                         <div class="col-6 text-center pt-5">
                             <h2 class="col-12 mt-5 text-dark">OFERTAS ESCLUSIVAS</h2>
                                 <button type="button" class="btn btn-primary btn-sm d-block col-12">Ver más</button>
@@ -111,7 +111,7 @@
 
                 <br><br><br><br><br>
                 <!-- CATEGORIAS MAS BUSCADAS -->
-                <div class="row justify-content-center ">
+                <div class="row justify-content-center d-lg-flex d-none">
                         <h2 class="text-center col-12">CATEGORIAS MAS BUSCADAS</h2>
                         <br><br>
 
@@ -165,6 +165,9 @@
                             </div></a>
                         </div>
 
+                </div>
+                <div>
+                    <br><br><br><br><br><br><br>
                 </div>
             </main>
 

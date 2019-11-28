@@ -211,110 +211,72 @@ body{
   border-color: white;
 }
 
-#caroussel1{
-  height: 300px;
-  background-image: url(/Imagenes/Carousel/caroussel1.png);
+.imgCarousel{
+    height: 300px;
+    width: 100%;
 }
-#caroussel2{
-  height: 300px;
-  background-image: url(/Imagenes/Carousel/caroussel2.png);
-}
-#caroussel3{
-  height: 300px;
-  background-image: url(/Imagenes/Carousel/caroussel3.png);
-}
-#banner-productos{
-  background-image: url(../img/index/banner-prod.png);
-  height: 270px;
-  width: 1300px;
-}
-.boton-prod{
-  position: absolute;
-  left: 1000px;
-  bottom: 30px;
+    .boton-prod{
+    position: absolute;
+    left: 1000px;
+    bottom: 30px;
 }
 
 
 
 @media (max-width: 570px){
-  .boton-prod {
-    position: absolute;
-    width: 100px;
-    bottom: 30px;
-    left: 200px;
-}
-#caroussel1{
-  height: 300px;
-  background-image: url(/Imagenes/Carousel/caroussel1-xs.png);
-}
-#caroussel2{
-  height: 300px;
-  background-image: url(/Imagenes/Carousel/caroussel2-xs.png);
-}
-#caroussel3{
-  height: 300px;
-  background-image: url(/Imagenes/Carousel/caroussel3-xs.png);
-}
+    .boton-prod {
+        position: absolute;
+        width: 120px;
+        bottom: 30px;
+        left: 200px;
+    }
+    .imgCarousel{
+        height: 120px;
+        width: 100%;
+    }
 }
 @media (max-width: 767px) and (min-width: 576px) {
 
-  #caroussel1{
-    height: 300px;
-    background-image: url(/Imagenes/Carousel/caroussel3-sm.png);
-  }
-  #caroussel2{
-    height: 300px;
-    background-image: url(/Imagenes/Carousel/caroussel3-sm.png);
-  }
-  #caroussel3{
-    height: 300px;
-    background-image: url(/Imagenes/Carousel/caroussel3-sm.png);
-  }
-  #banner-productos{
-    background-image: url();
-    height: 270px;
-    width: 480px;
-  }
-  .boton-prod {
-    position: absolute;
-    width: 100px;
-    left: 400px;
-    bottom: 30px;
-}
-
-
+    .imgCarousel{
+        height: 150px;
+        width: 100%;
+    }
+    #banner-productos{
+        background-image: url();
+        height: 200px;
+        width: 480px;
+    }
+    .boton-prod {
+        position: absolute;
+        width: 100px;
+        left: 400px;
+        bottom: 30px;
+    }
 
 }
 
 @media (max-width: 991px) and (min-width: 768px){
 
-  .dropdown-item{
-    font-weight:300;
+    .dropdown-item{
+        font-weight:300;
 
-    font-family:Kanit, sans-serif;
-  }
-  #caroussel1{
-    height: 300px;
-    background-image: url(/Imagenes/Carousel/caroussel3-md.png);
-  }
-  #caroussel2{
-    height: 300px;
-    background-image: url(/Imagenes/Carousel/caroussel3-md.png);
-  }
-  #caroussel3{
-    height: 300px;
-    background-image: url(/Imagenes/Carousel/caroussel3-md.png);
-  }
-  #banner-productos{
-    background-image: url(../img/index/banner-prod-md.png);
-    height: 270px;
-    width: 660px;
-  }
-  .boton-prod{
-    position: absolute;
-    left: 550px;
-    bottom: 30px;
-  }
+        font-family:Kanit, sans-serif;
+    }
+    .imgCarousel{
+        height: 200px;
+        width: 100%;
+    }
+
+    #banner-productos{
+        background-image: url(../img/index/banner-prod-md.png);
+        height: 270px;
+        width: 660px;
+    }
+    .boton-prod{
+        position: absolute;
+        left: 550px;
+        bottom: 30px;
+    }
 }
 
 
@@ -323,10 +285,10 @@ body{
 
 /*faqs*/
 .goBack {
-  background-image: url("../img/banner-faqs.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+    background-image: url("../img/banner-faqs.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .first-letter::first-letter {
