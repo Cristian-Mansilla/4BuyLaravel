@@ -3,17 +3,17 @@
 @section('content')
 <br><br>
 <main class="container justify-content-center">
-    <div class="col-12 row my-3 justify-content-center">
-        <div class="col-6 ">
-            <img src=" {{$producto[0]->ruta_imagen}}" class="sombraS" height="500" width="500" alt="Imagen Producto">
+    <div class="col-12 row my-3 justify-content-center justify-content-md-between">
+        <div class="col-lg-6 col-12 col-md-5 my-2">
+            <img src=" {{$producto[0]->ruta_imagen}}" class="sombraS imgProdDetalle" alt="Imagen Producto">
         </div>
-        <div class="col-5 text-left row bg-white p-4 sombraS">
+        <div class="col-lg-5 col-12 col-md-5 col-sm-12 ml-lg-0 ml-md-0 ml-sm-5 ml-3 text-left row bg-white p-4 sombraS">
             <div class="col-12 mt-2 ">
-                <h2> {{$producto[0]->titulo}}</h2>
-                <h1>$ {{$producto[0]->precio}} </h1>
-                <h4>Stock: {{$producto[0]->stock}} </h4>
+                <p class="tituloProdDetalle"> {{$producto[0]->titulo}}</p>
+                <p class="infoProdDetalle">$ {{$producto[0]->precio}} </p>
+                <p class="infoProdDetalle">Stock: {{$producto[0]->stock}} </p>
             </div>
-            <div class="col-12">
+            <div class="col-12 infoProdDetalle">
                 <p><img src="https://img.icons8.com/cute-clipart/32/000000/bank-card-back-side.png"> Paga en hasta 12 cuotas</p>
                 <img src="https://img.icons8.com/cute-clipart/32/000000/visa.png">
                 <img src="https://img.icons8.com/color/32/000000/mastercard-logo.png">
