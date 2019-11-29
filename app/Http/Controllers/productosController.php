@@ -15,10 +15,16 @@ class productosController extends Controller
         return view('testProductos', $vac);
     }
 
-    public function productosPorId($id){
-        $productos = Producto::where('categoria_id', 'LIKE', $id)->paginate(10);
+    public function productosPorCategoria($categoria){
+        $productos = Producto::where('categoria_id', 'LIKE', $categoria)->paginate(10);
         $categorias = Categorias::whereNull('subcategoria_id')->get();
         $vac = compact('productos', 'categorias');
         return view('Productos', $vac);
+    }
+    public function detalleProducto($id){
+        $producto = Producto::where('id', 'LIKE', $id)->get();
+        $categorias = Categorias::whereNull('subcategoria_id')->get();
+        $vac = compact('producto', 'categorias');
+        return view('detalleProducto', $vac);
     }
 }

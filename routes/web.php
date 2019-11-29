@@ -21,4 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/Productos', 'productosController@TodosLosProductos');
 
-Route::get('/Productos/Categoria/{id}', 'productosController@productosPorId');
+Route::get('/Productos/Categoria/{categoria}', 'productosController@productosPorCategoria');
+
+Route::get('/Productos/Detalle/{id}', 'productosController@detalleProducto');
