@@ -74,7 +74,7 @@
                                             <img src=' {{$producto->ruta_imagen}} ' height='120' alt='...'>
                                         </div>
                                         <div class='card-body border-top'>
-                                            <h3 class='card-text'>$ {{$producto->precio}}</h3>
+                                            <h3 class='card-text'><ion-icon name="logo-usd"></ion-icon> {{$producto->precio}}</h3>
                                             <h5 class='card-title color-grey'>{{$producto->titulo}}</h5>
                                         </div>
                                     </div>

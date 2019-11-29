@@ -8,11 +8,11 @@
 
                 @foreach ($categorias as $cate)
 
-                    <li>{{$cate->nombre_categoria}}
+                    <li class="text-dark">{{$cate->nombre_categoria}}
                         <ul class=''>
 
                     @foreach ($cate->subcategorias as $subcat)
-                        <li class=''><a class="text-dark text-decoration-none" href='/Productos/{{$subcat->id}}'> {{$subcat->nombre_categoria}} </a></li>
+                        <li class=''><a class="color-grey text-decoration-none" href='/Productos/Categoria/{{$subcat->id}}'> {{$subcat->nombre_categoria}} </a></li>
 
                     @endforeach
                     </ul>
@@ -25,18 +25,22 @@
             <div class='col-8 row border-bottom'>
                 @foreach ($productos as $producto)
 
-                    <div class='col-12 mb-2 bg-white sombra'>
-                        <a href='' class='col-12 row text-dark '>
+                    <div class='col-12 bg-white sombra mb-2' style="height:150px;">
+                        <div class="col-12 row">
+
+
                             <div class='col-4 p-4'>
-                                <img src='{{asset($producto->ruta_imagen)}}' height='160' width='160'>
+                                <img src='{{asset($producto->ruta_imagen)}}' height='100' width='100'>
                             </div>
-                            <div class='col-8 p-5 row'>
-                                <h4 class='col-12'>{{$producto->titulo}}</h4>
-                                <h2 class='col-5'>$ {{$producto->precio}}</h2>
-                                <h4 class='col-5'>En stock: {{$producto->stock}}</h4>
+                            <div class='col-8 text-center mt-5 p-1 row justify-content-center'>
+                                <a href="#" class='col-12 text-center text-dark'>{{$producto->titulo}}</a>
+
+                                <h6 class='col-5 color-grey'>$ {{$producto->precio}}</h6>
+                                <h6 class='col-5 color-grey'>En stock: {{$producto->stock}}</h6>
 
                             </div>
-                        </a>
+
+                      </div>
                     </div>
 
 

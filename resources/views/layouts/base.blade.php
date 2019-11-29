@@ -15,7 +15,7 @@
                 <!--Header 1  -->
             <div class="container">
                 <div class="row d-flex justify-content-between p-2 col-md-12 col-lg-12">
-                    <a href="index.php" class="col-md-2 col-lg-2 text-white text-decoration-none " id="logo">4Buy!</a>
+                    <a href="/" class="col-md-2 col-lg-2 text-white text-decoration-none " id="logo">4Buy!</a>
                     <form class="form-inline row my-2 my-lg-0 col-md-6 col-lg-6" action ="categorias.php" method="get">
                     <input class="form-control mr-sm-2 col-md-8 col-lg-9" type="search" placeholder="Search" name="categoria" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0 col-md-3 col-lg-2 text-white text-decoration-none borde-blanco" type="submit" >Search</button>
@@ -56,7 +56,7 @@
                                         <li class='subs hassubs'>{{$categoria->nombre_categoria}}
                                             <ul class='dDown'>
                                                 @foreach ($categoria->subcategorias as $subcategoria)
-                                                    <li class='subs'><a href='/Productos/{{$subcategoria->id}}'>{{$subcategoria->nombre_categoria}}</a></li>
+                                                    <li class='subs'><a href='/Productos/Categoria/{{$subcategoria->id}}'>{{$subcategoria->nombre_categoria}}</a></li>
                                                 @endforeach
                                             </ul>
                                         </li>

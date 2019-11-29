@@ -35,6 +35,17 @@
       color: rgb(130, 120, 120);
   }
 
+
+
+
+/* Producto */
+
+.titulo-prod{
+  font-size: 50px;
+}
+
+/* Fin producto */
+
 /*login*/
 .bg-login {
   background-image: url("/Imagenes/Login/bg-login.jpg");
