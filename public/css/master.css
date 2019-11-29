@@ -22,7 +22,10 @@
     transform: scale(1.03);
   }
 
+  .sombraS{
 
+    box-shadow: 2px 2px 8px;
+  }
 
   a .sombra:hover{
     transition: box-shadow .6s;

@@ -30,10 +30,10 @@
 
 
                             <div class='col-4 p-4'>
-                                <img src='{{asset($producto->ruta_imagen)}}' height='100' width='100'>
+                                <img src='{{$producto->ruta_imagen}}' height='100' width='100'>
                             </div>
                             <div class='col-8 text-center mt-5 p-1 row justify-content-center'>
-                                <a href="#" class='col-12 text-center text-dark'>{{$producto->titulo}}</a>
+                                <a href="/Productos/Detalle/{{$producto->id}} " class='col-12 text-center text-dark'>{{$producto->titulo}}</a>
 
                                 <h6 class='col-5 color-grey'>$ {{$producto->precio}}</h6>
                                 <h6 class='col-5 color-grey'>En stock: {{$producto->stock}}</h6>
