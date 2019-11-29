@@ -107,16 +107,26 @@
 .body-register{
   background-image: url("../img/bg-register.jpg");
   background-size: contain;
+
  }
 
 
 
 
 /* index */
+
+.text-dark{
+  font-weight: bold;
+}
+
 body{
     font-family: 'Ubuntu', sans-serif;
     font-weight: medium;
 
+}
+.height-publicidad{
+    height: 250px;
+    width: 100%;
 }
 
 .img-descubri{
@@ -231,6 +241,10 @@ body{
 
 
 @media (max-width: 570px){
+  .height-publicidad{
+      height: 110px;
+      width: 100%;
+  }
     .boton-prod {
         position: absolute;
         width: 120px;
@@ -252,6 +266,11 @@ body{
 }
 @media (max-width: 767px) and (min-width: 576px) {
 
+  .height-publicidad{
+      height: 150px;
+      width: 100%;
+  }
+
     .imgCarousel{
         height: 150px;
         width: 100%;
@@ -271,7 +290,10 @@ body{
 }
 
 @media (max-width: 991px) and (min-width: 768px){
-
+  .height-publicidad{
+      height: 190px;
+      width: 100%;
+  }
     .dropdown-item{
         font-weight:300;
 
