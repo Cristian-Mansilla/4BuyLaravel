@@ -2,6 +2,7 @@
 #logo{
     font-size: 25px;
 }
+
 .height-250{
     height: 250px;
 }
@@ -47,6 +48,10 @@
   font-size: 50px;
 }
 
+.imgAllProd{
+    height: 100px;
+    width: 100px;
+}
 /* Fin producto */
 
 /*login*/
@@ -276,6 +281,12 @@ body{
         font-size: 15px;
         margin-top:5px;
     }
+    .imgAllProd{
+        height: 60px;
+        width: 60px;
+    }
+    .infoAllProd{
+        font-size: 11px;
 }
 @media (max-width: 767px) and (min-width: 576px) {
 
@@ -283,6 +294,8 @@ body{
       height: 150px;
       width: 100%;
   }
+
+
 
     .imgCarousel{
         height: 150px;

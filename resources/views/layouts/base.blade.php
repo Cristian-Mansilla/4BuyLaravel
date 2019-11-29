@@ -89,7 +89,7 @@
             <header class="container-fluid backg-header d-lg-none" >
                 <div class="container d-flex justify-content-between pb-3">
                     <div class="dropdown col-3 pt-2">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <ion-icon name="menu"></ion-icon>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -116,12 +116,13 @@
                         </div>
 
                     </div>
-                        <div class="col-3 py-2 text-center">
-                        <a href="index.php" class=""><img src="" height="35" width="35" class="rounded-circle" alt="LOGO"></a>
-                    </div>
-                    <div class="row col-5 justify-content-between py-2 text-center">
-                        <a href="" class="col-4 bg-dark p-2  text-white rounded"><ion-icon name="notifications"></ion-icon></a>
-                        <a href="" class="col-4  bg-dark p-2 text-white rounded"><ion-icon name="cart"></ion-icon></a>
+                        <div class="col-4   py-2 text-center">
+                        <a href="index.php" class="text-white" id="logo">4Buy!</a>
+                        </div>
+
+                    <div class="row col-5 justify-content-between justify-content-md-around py-2 text-center">
+                        <a href="" class="col-5 col-md-3 col-sm-4 borde-blanco p-2  text-white rounded"><ion-icon name="notifications"></ion-icon></a>
+                        <a href="" class="col-5 col-md-3 col-sm-4 borde-blanco p-2 text-white rounded"><ion-icon name="cart"></ion-icon></a>
                     </div>
 
                 </div>
