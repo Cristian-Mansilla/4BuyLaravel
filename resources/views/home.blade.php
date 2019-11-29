@@ -43,7 +43,7 @@
                         <h2 class="col-12">Lo mas vendido</h2>
                         @foreach($prodMasVendidos as $producto)
                             <div class='zoom col-lg-2 col-md-5 col-sm-6 col-10 p-2'>
-                                <a href='#top' class=' text-dark text-decoration-none'>
+                                <a href='/Productos/Detalle/{{$producto->id}} ' class=' text-dark text-decoration-none'>
                                     <div class='card sombra text-center'>
                                         <div class='card-img-top p-3'>
                                             <img src=' {{$producto->ruta_imagen}} ' height='120' alt='...'>
@@ -68,10 +68,10 @@
                         <h2 class="col-lg-12">Segun tu ultima visita</h2>
                         @foreach($prodUltimaVisita as $producto)
                             <div class='zoom col-lg-2 col-md-5 col-sm-6 col-10 p-2'>
-                                <a href='#top' class=' text-dark text-decoration-none'>
+                                <a href='/Productos/Detalle/{{$producto->id}} ' class=' text-dark text-decoration-none'>
                                     <div class='card sombra text-center'>
                                         <div class='card-img-top p-3'>
-                                            <img src=' {{$producto->ruta_imagen}} ' height='120' alt='...'>
+                                            <img src='{{$producto->ruta_imagen}} ' height='120' alt='...'>
                                         </div>
                                         <div class='card-body border-top'>
                                             <h3 class='card-text'><ion-icon name="logo-usd"></ion-icon> {{$producto->precio}}</h3>

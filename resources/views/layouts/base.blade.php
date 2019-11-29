@@ -18,7 +18,7 @@
                     <a href="/" class="col-md-2 col-lg-2 text-white text-decoration-none " id="logo">4Buy!</a>
                     <form class="form-inline row my-2 my-lg-0 col-md-6 col-lg-6" action ="categorias.php" method="get">
                     <input class="form-control mr-sm-2 col-md-8 col-lg-9" type="search" placeholder="Search" name="categoria" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0 col-md-3 col-lg-2 text-white text-decoration-none borde-blanco" type="submit" >Search</button>
+                    <button class="btn  my-2 my-sm-0 col-md-3 col-lg-2 text-white text-decoration-none borde-blanco searchButton" type="submit" >Search</button>
                 </form>
 
                     <div class="col-lg-3 row pt-lg-2 d-lg-block d-sm-none d-xs-none d-md-none">
