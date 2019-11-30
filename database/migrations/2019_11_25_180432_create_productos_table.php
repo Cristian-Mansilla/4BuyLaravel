@@ -19,6 +19,7 @@ class CreateProductosTable extends Migration
             $table->integer('precio');
             $table->integer('stock');
             $table->string('ruta_imagen');
+            $table->boolean('oferta');
             $table->timestamps();
         });
     }

@@ -34,4 +34,10 @@ class productosController extends Controller
         $vac = compact('productos', 'categorias');
         return view('Productos', $vac);
     }
+    public function ofertas(){
+        $productos = Producto::where('oferta', 'like', '1')->paginate(10);
+        $categorias = Categorias::whereNull('subcategoria_id')->get();
+        $vac = compact('productos', 'categorias');
+        return view('Productos', $vac);
+    }
 }

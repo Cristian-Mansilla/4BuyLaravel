@@ -65,7 +65,7 @@
                                 </ul>
                             </li>
                             <li><a href="">Canjear cupon</a></li>
-                            <li><a href="">Ofertas</a></li>
+                            <li><a href="/Productos/Ofertas">Ofertas</a></li>
                             <li><a href="">¿Quienes somos?</a></li>
                             <li><a href="a">Ayuda</a></li>
 
@@ -108,7 +108,7 @@
                                 @endif
 
                             <button class="dropdown-item" type="button"><a href="" class="text-center pt-2 col-12 rounded p-1">Canjear cupon</a></button>
-                            <button class="dropdown-item" type="button"><a href="" class="text-center pt-2 col-12 rounded p-1">Ofertas</a></button>
+                            <button class="dropdown-item" type="button"><a href="/Productos/Ofertas" class="text-center pt-2 col-12 rounded p-1">Ofertas</a></button>
                             <button class="dropdown-item" type="button"><a href="" class="text-center pt-2 col-12 rounded p-1">¿Quienes somos?</a></button>
                             <button class="dropdown-item" type="button"><a href="" class="text-center pt-2 col-12 rounded p-1">Ayuda</a></button>
                             <button class="dropdown-item" type="button"><a href="" class="text-center pt-2 col-12 rounded p-1">Categorias</a></button>
