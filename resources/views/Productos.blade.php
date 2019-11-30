@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('content')
-<div class="container  justify-content-lg-between justify-content-center d-flex " >
+<main class="container  justify-content-lg-between justify-content-center " >
     <div class="col-12 justify-content-lg-between justify-content-center row pt-4">
         <div class="col-4 bg-white  sombra d-lg-block d-none">
             <ul class="text-left" >
@@ -47,12 +47,14 @@
 
 
                 @endforeach
+
             </div>
-            <div class="col-12 justify-content-center d-flex mt-3">{{ $productos->links() }}</div>
+
     </div>
 
+    <div class="col-12 justify-content-center d-flex">{{ $productos->appends($_GET)->links() }}</div>
 
 
-</div>
+</main>
 
 @stop

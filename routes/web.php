@@ -17,6 +17,7 @@ Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/', 'HomeController@index')->name('home');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/Productos', 'productosController@TodosLosProductos');
@@ -24,3 +25,5 @@ Route::get('/Productos', 'productosController@TodosLosProductos');
 Route::get('/Productos/Categoria/{categoria}', 'productosController@productosPorCategoria');
 
 Route::get('/Productos/Detalle/{id}', 'productosController@detalleProducto');
+
+Route::get('/Productos/Busqueda', 'productosController@busqueda');

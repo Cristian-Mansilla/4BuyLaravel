@@ -306,7 +306,7 @@ body{
     }
     .imgProdDetalle{
         height: 350px;
-        width: 352px;
+        width: 100%;
     }
     .tituloProdDetalle{
         font-size: 20px;

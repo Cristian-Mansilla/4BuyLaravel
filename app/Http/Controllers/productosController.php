@@ -27,4 +27,11 @@ class productosController extends Controller
         $vac = compact('producto', 'categorias');
         return view('detalleProducto', $vac);
     }
+
+    public function busqueda(Request $form){
+        $productos = Producto::where('titulo', 'Like', '%' . $form['categoria'] . '%')->paginate(10);
+        $categorias = Categorias::whereNull('subcategoria_id')->get();
+        $vac = compact('productos', 'categorias');
+        return view('Productos', $vac);
+    }
 }
