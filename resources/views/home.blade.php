@@ -114,50 +114,50 @@
                         <br><br>
 
                         <div class=" card p-4 col-2 backg-categorias">
-                            <a class="text-decoration-none text-dark" href="categorias.php?categoria=computadoras"><img  src=" {{ url('/Imagenes/Index/Categorias/Laptop.png') }} " class="card-img-top p-5" alt="...">
+                            <a class="text-decoration-none text-dark" href="/Productos/Categoria/15"><img  src=" {{ url('/Imagenes/Index/Categorias/Laptop.png') }} " class="card-img-top p-5" alt="...">
                             <div class="card-body">
                                 <p class="card-text text-center ">Notebooks</p>
                             </div></a>
                         </div>
                         <div class=" card p-4 col-2  backg-categorias" >
-                            <a class="text-decoration-none text-dark" href="categorias.php?categoria=celulares"><img  src="{{url('/Imagenes/Index/Categorias/Phone.png')}}" class="card-img-top p-5" alt="...">
+                            <a class="text-decoration-none text-dark" href="/Productos/Categoria/12"><img  src="{{url('/Imagenes/Index/Categorias/Phone.png')}}" class="card-img-top p-5" alt="...">
                             <div class="card-body">
                                 <p class="card-text text-center ">Celulares</p>
                             </div></a>
                         </div>
                             <div class=" card p-4 col-2  backg-categorias">
-                            <a class="text-decoration-none text-dark" href="categorias.php?categoria=videojuegos"><img  src="{{url('/Imagenes/Index/Categorias/Juegos.png')}}" class="card-img-top p-5" alt="...">
+                            <a class="text-decoration-none text-dark" href="/Productos/Categoria/22"><img  src="{{url('/Imagenes/Index/Categorias/Juegos.png')}}" class="card-img-top p-5" alt="...">
                             <div class="card-body">
                                 <p class="card-text text-center ">Videojuegos</p>
                             </div></a>
                         </div>
                         <div class=" card p-4 col-2 backg-categorias">
-                            <a class="text-decoration-none text-dark " href="categorias.php?categoria=herramientas"><img  src="{{url('/Imagenes/Index/Categorias/Tools.png')}}" class="card-img-top p-5" alt="...">
+                            <a class="text-decoration-none text-dark " href="/Productos/Categoria/30"><img  src="{{url('/Imagenes/Index/Categorias/Tools.png')}}" class="card-img-top p-5" alt="...">
                             <div class="card-body">
                                 <p class="card-text text-center ">Herramientas</p>
                             </div></a>
                         </div>
 
                         <div class=" card p-4 col-2  backg-categorias">
-                            <a class="text-decoration-none text-dark" href="categorias.php?categoria=hogar"><img  src="{{url('/Imagenes/Index/Categorias/House.png')}}" class="card-img-top p-5" alt="...">
+                            <a class="text-decoration-none text-dark" href="/Productos/Categoria/4"><img  src="{{url('/Imagenes/Index/Categorias/House.png')}}" class="card-img-top p-5" alt="...">
                             <div class="card-body">
                                 <p class="card-text text-center ">Hogar</p>
                             </div></a>
                         </div>
                         <div class=" card p-4 col-2  backg-categorias">
-                            <a class="text-decoration-none text-dark" href="categorias.php?categoria=autos"><img  src="{{url('/Imagenes/Index/Categorias/Car.png')}}" class="card-img-top p-5" alt="...">
+                            <a class="text-decoration-none text-dark" href="/Productos/Categoria/=autos"><img  src="{{url('/Imagenes/Index/Categorias/Car.png')}}" class="card-img-top p-5" alt="...">
                             <div class="card-body">
                                 <p class="card-text text-center ">Autos</p>
                             </div></a>
                         </div>
                         <div class=" card p-4 col-2  backg-categorias">
-                            <a class="text-decoration-none text-dark" href="categorias.php?categoria=colchonesSommiers"><img  src="{{ url('/Imagenes/Index/Categorias/Bed.png')}}" class="card-img-top p-5" alt="...">
+                            <a class="text-decoration-none text-dark" href="/Productos/Categoria/19"><img  src="{{ url('/Imagenes/Index/Categorias/Bed.png')}}" class="card-img-top p-5" alt="...">
                             <div class="card-body">
                                 <p class="card-text text-center ">Colchones y Sommiers</p>
                             </div></a>
                         </div>
                         <div class=" card p-4 col-2  backg-categorias">
-                            <a class="text-decoration-none text-dark" href="categorias.php?categoria=televisor"><img  src="{{url('/Imagenes/Index/Categorias/TV.png')}}" class="card-img-top p-5" alt="...">
+                            <a class="text-decoration-none text-dark" href="/Productos/Categoria/8"><img  src="{{url('/Imagenes/Index/Categorias/TV.png')}}" class="card-img-top p-5" alt="...">
                             <div class="card-body">
                                 <p class="card-text text-center ">Televisores</p>
                             </div></a>
