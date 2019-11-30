@@ -4,7 +4,7 @@
 <br><br>
 <main class="container justify-content-center">
     <div class="col-12 row my-3 justify-content-center justify-content-md-between">
-        <div class="col-lg-6 col-12 col-md-5 my-2">
+        <div class="col-lg-6 col-12 col-md-5 my-2 ">
             <img src=" {{$producto[0]->ruta_imagen}}" class="sombraS imgProdDetalle" alt="Imagen Producto">
         </div>
         <div class="col-lg-5 col-12 col-md-5 col-sm-12 ml-lg-0 ml-md-0 ml-sm-5 ml-3 text-left row bg-white p-4 sombraS">
