@@ -162,6 +162,31 @@
                                 <p class="card-text text-center ">Televisores</p>
                             </div></a>
                         </div>
+                        <div class=" card p-4 col-2  backg-categorias">
+                            <a class="text-decoration-none text-dark" href="/Productos/Categoria/9"><img  src="{{url('/Imagenes/Index/Categorias/Audio.png')}}" class="card-img-top p-5" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center ">Audio</p>
+                            </div></a>
+                        </div>
+                        <div class=" card p-4 col-2  backg-categorias">
+                            <a class="text-decoration-none text-dark" href="/Productos/Categoria/6"><img  src="{{url('/Imagenes/Index/Categorias/Deportes.png')}}" class="card-img-top p-5" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center ">Deportes</p>
+                            </div></a>
+                        </div>
+                        <div class=" card p-4 col-2  backg-categorias">
+                            <a class="text-decoration-none text-dark" href="/Productos/Categoria/18"><img  src="{{url('/Imagenes/Index/Categorias/Cocina.png')}}" class="card-img-top p-5" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center ">Cocina</p>
+                            </div></a>
+                        </div>
+                        <div class=" card p-4 col-2  backg-categorias">
+                            <a class="text-decoration-none text-dark" href="/Productos/Categoria/31"><img  src="{{url('/Imagenes/Index/Categorias/Pintureria.png')}}" class="card-img-top p-5" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center ">Pinturería</p>
+                            </div></a>
+                        </div>
+
 
                 </div>
                 <div>
