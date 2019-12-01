@@ -112,7 +112,7 @@
                             <button class="dropdown-item" type="button"><a href="/Productos/Ofertas" class="text-center pt-2 col-12 rounded p-1">Ofertas</a></button>
                             <button class="dropdown-item" type="button"><a href="" class="text-center pt-2 col-12 rounded p-1">¿Quienes somos?</a></button>
                             <button class="dropdown-item" type="button"><a href="" class="text-center pt-2 col-12 rounded p-1">Ayuda</a></button>
-                            <button class="dropdown-item" type="button"><a href="/Categorias" class="text-center pt-2 col-12 rounded p-1">Categorias</a></button>
+                            <button class="dropdown-item" type="button"><a href="/Categorias/Menu" class="text-center pt-2 col-12 rounded p-1">Categorias</a></button>
 
                         </div>
 
