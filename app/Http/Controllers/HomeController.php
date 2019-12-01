@@ -21,9 +21,9 @@ class HomeController extends Controller
     public function index()
     {
         $categorias = Categorias::whereNull('subcategoria_id')->get();
-
+        $cate = $_COOKIE['ultimaVisita'];
         $prodMasVendidos = Producto::where('categoria_id', 'LIKE', 12)->paginate(5);
-        $prodUltimaVisita = Producto::where('categoria_id', 'LIKE', 11)->paginate(5);
+        $prodUltimaVisita = Producto::where('categoria_id', 'LIKE', $cate)->paginate(5);
         $vac = compact('categorias', 'prodMasVendidos', 'prodUltimaVisita');
         return view('home', $vac);
     }

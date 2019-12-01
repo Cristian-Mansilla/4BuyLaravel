@@ -16,6 +16,7 @@ class productosController extends Controller
     }
 
     public function productosPorCategoria($categoria){
+        setcookie('ultimaVisita', $categoria, time() + (86400 * 30), "/");
         $productos = Producto::where('categoria_id', 'LIKE', $categoria)->paginate(10);
         $categorias = Categorias::whereNull('subcategoria_id')->get();
         $vac = compact('productos', 'categorias');

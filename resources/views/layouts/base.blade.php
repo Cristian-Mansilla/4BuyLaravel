@@ -11,6 +11,7 @@
     <title>Document</title>
 </head>
 <body class="backg-grey fuente">
+
         <header class="container-fluid h-200 backg-header d-lg-block d-md-none d-sm-none d-none" >
                 <!--Header 1  -->
             <div class="container">
@@ -128,7 +129,7 @@
                 </div>
                 <div class="container">
                     <form class="form-inline row my-2 col-12 ml-1" action="/Productos/Busqueda" method="get">
-                        <input class="form-control col-10 col-md-11" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control col-10 col-md-11" name="categoria" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success col-2 col-md-1 text-center text-white borde-blanco" type="submit"><ion-icon name="search"></ion-icon></button>
                     </form>
 
