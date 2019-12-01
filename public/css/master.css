@@ -58,8 +58,8 @@
 }
 
 .imgProdDetalle{
-    height: 500px;
-    width: 500px;
+    height: 100%;
+    width: 100%;
 }
 .tituloProdDetalle{
     font-size: 40px;
@@ -342,8 +342,8 @@ body{
         bottom: 30px;
     }
     .imgProdDetalle{
-        height: 500px;
-        width: 500px;
+        height: 100%;
+        width: 100%;
     }
     .tituloProdDetalle{
         font-size: 20px;
