@@ -17,7 +17,17 @@ class productosController extends Controller
 
     public function productosPorCategoria($categoria){
         setcookie('ultimaVisita', $categoria, time() + (86400 * 30), "/");
-        $productos = Producto::where('categoria_id', 'LIKE', $categoria)->paginate(10);
+        $cate = Categorias::find($categoria);
+        $prod = Producto::where('categoria_id', 'LIKE', $cate->id);
+
+        foreach ($cate->subcategorias as $key) {
+
+            // ->where('field_1', red_1); // Desired output
+            $prod->orWhere('categoria_id', 'LIKE', $key->id);
+
+        }
+        $productos = $prod->paginate(10);
+
         $categorias = Categorias::whereNull('subcategoria_id')->get();
         $vac = compact('productos', 'categorias');
         return view('Productos', $vac);

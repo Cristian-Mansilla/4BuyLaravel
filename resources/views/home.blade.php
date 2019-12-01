@@ -90,7 +90,7 @@
                     <div class="col-lg-6 col-md-10 bg-dark rounded row sombra">
                         <div class="col-6 text-center pt-5">
                             <p class="col-12 text-white titulo-descubri">LO MEJOR EN INFORMATICA</p>
-                            <button type="button" class="btn btn-primary btn-sm d-block col-12">Ver más</button>
+                            <a href="/Productos/Categoria/3" class="btn btn-primary btn-sm d-block col-12 text-white">Ver más</a>
                         </div>
                         <div class="col-6 pt-4 mb-3 mb-lg-0">
                             <img src="/Imagenes/Index/informatica.jpeg" class="rounded img-descubri" alt="">
@@ -99,7 +99,7 @@
                     <div class="col-lg-6 col-md-10 bg-white rounded row sombra mt-sm-2 mt-2 mt-lg-0">
                         <div class="col-6 text-center pt-5">
                             <p class="col-12 titulo-descubri text-dark">OFERTAS ESCLUSIVAS</p>
-                                <button type="button" class="btn btn-primary btn-sm d-block col-12">Ver más</button>
+                                <a href="/Productos/Ofertas" class="btn btn-primary btn-sm d-block col-12 text-white">Ver más</a>
                         </div>
                         <div class="col-6 pt-4 ">
                             <img src="/Imagenes/Index/ofertaEsclusiva.jpeg" class="rounded img-descubri" alt="">
