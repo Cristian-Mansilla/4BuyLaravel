@@ -147,8 +147,8 @@
 
 
             {{-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> --}}
-            <footer class="container-fluid justify-content-between row backg-footer  m-0">
-                    <div class="col-lg-3 col-md-5">
+            <footer class="container-fluid justify-content-lg-between justify-content-center row backg-footer  m-0">
+                    <div class="col-lg-3 col-md-5 col-10 text-center text-lg-left text-md-left">
                         <h3 class="col-12 text-white">Comprar y vender</h3>
                         <ul class="list-unstyled">
                             <li class="ml-3"><a class="text-white text-decoration-none" href="registro.php">Registro</a> </li>
@@ -157,7 +157,7 @@
                             <li class="ml-3"><a class="text-white text-decoration-none" href="#">Productos populares</a> </li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 col-md-5">
+                    <div class="col-lg-3 col-md-5 col-10 text-center text-lg-left text-md-left">
                         <h3 class="text-white col-12">Metodos de pago</h3>
                         <ul class="list-unstyled ">
                             <li class="ml-3"><a class="text-white text-decoration-none" href="#">Metodos de pago</a></li>
@@ -165,7 +165,7 @@
                             <li class="ml-3"><a class="text-white text-decoration-none" href="#">Promociones con tarjetas</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 col-md-5 backg-footer">
+                    <div class="col-lg-3 col-md-5 col-10 text-center text-lg-left text-md-left ">
                         <h3 class="text-white col-12">Mas sobre nosotros</h3>
                         <ul class="list-unstyled">
                             <li class="ml-3"><a class="text-white text-decoration-none" href="#">Acerca de nosotros</a></li>
@@ -174,7 +174,7 @@
 
                         </ul>
                     </div>
-                    <div class="col-lg-3 col-md-5 backg-footer">
+                    <div class="col-lg-3 col-md-5 col-10 text-center text-lg-left text-md-left">
                         <h3 class="text-white col-12">Ayuda</h3>
                         <ul class="list-unstyled">
                             <li class="ml-3"><a class="text-white text-decoration-none" href="#">Atencion al cliente</a></li>
