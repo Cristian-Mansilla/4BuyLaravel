@@ -29,3 +29,7 @@ Route::get('/Productos/Detalle/{id}', 'productosController@detalleProducto');
 Route::get('/Productos/Busqueda', 'productosController@busqueda');
 
 Route::get('/Productos/Ofertas', 'productosController@ofertas');
+
+Route::get('/Categorias/Menu', 'categoriasController@menuCategorias');
+
+Route::get('/Categorias/Menu/{id}', 'categoriasController@menuSubcategorias');

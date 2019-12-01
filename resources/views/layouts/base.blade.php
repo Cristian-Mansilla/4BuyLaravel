@@ -112,7 +112,7 @@
                             <button class="dropdown-item" type="button"><a href="/Productos/Ofertas" class="text-center pt-2 col-12 rounded p-1">Ofertas</a></button>
                             <button class="dropdown-item" type="button"><a href="" class="text-center pt-2 col-12 rounded p-1">¿Quienes somos?</a></button>
                             <button class="dropdown-item" type="button"><a href="" class="text-center pt-2 col-12 rounded p-1">Ayuda</a></button>
-                            <button class="dropdown-item" type="button"><a href="" class="text-center pt-2 col-12 rounded p-1">Categorias</a></button>
+                            <button class="dropdown-item" type="button"><a href="/Categorias" class="text-center pt-2 col-12 rounded p-1">Categorias</a></button>
 
                         </div>
 
@@ -152,7 +152,7 @@
                     <div class="col-lg-3 col-md-5 col-10 text-center text-lg-left text-md-left">
                         <h3 class="col-12 text-white">Comprar y vender</h3>
                         <ul class="list-unstyled">
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="registro.php">Registro</a> </li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="{{ route('register') }}">Registro</a> </li>
                             <li class="ml-3"><a class="text-white text-decoration-none" href="#">Marcas</a> </li>
                             <li class="ml-3"><a class="text-white text-decoration-none" href="#">Como comprar y vender</a> </li>
                             <li class="ml-3"><a class="text-white text-decoration-none" href="#">Productos populares</a> </li>
@@ -179,8 +179,8 @@
                         <h3 class="text-white col-12">Ayuda</h3>
                         <ul class="list-unstyled">
                             <li class="ml-3"><a class="text-white text-decoration-none" href="#">Atencion al cliente</a></li>
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="faqs.php">Preguntas frecuentes</a></li>
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="contacto.php">Contacto</a></li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="#">Preguntas frecuentes</a></li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="#">Contacto</a></li>
                             <li class="ml-3"><a class="text-white text-decoration-none" href="#">Reportar Problema</a></li>
                             <li class="ml-3"><a class="text-white text-decoration-none" href="#">Medios de pago</a></li>
                             <li class="ml-3"><a class="text-white text-decoration-none" href="#">Ayuda</a></li>

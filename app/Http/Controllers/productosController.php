@@ -32,6 +32,9 @@ class productosController extends Controller
         $vac = compact('productos', 'categorias');
         return view('Productos', $vac);
     }
+
+
+
     public function detalleProducto($id){
         $producto = Producto::where('id', 'LIKE', $id)->get();
         $categorias = Categorias::whereNull('subcategoria_id')->get();

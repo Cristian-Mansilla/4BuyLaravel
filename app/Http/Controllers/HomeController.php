@@ -27,4 +27,9 @@ class HomeController extends Controller
         $vac = compact('categorias', 'prodMasVendidos', 'prodUltimaVisita');
         return view('home', $vac);
     }
+
+
+
+
+
 }

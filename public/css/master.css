@@ -316,6 +316,11 @@ body{
     .infoProdDetalle{
         font-size: 5x;
     }
+    .heightMenuCate{
+        height: 50px;
+        border-bottom: 1px solid #ededed;
+
+    }
 }
 @media (max-width: 767px) and (min-width: 576px) {
 
