@@ -3,12 +3,12 @@
 @section('content')
 <br><br>
 <main class="container justify-content-center">
-    <div class="col-12 row my-3 justify-content-center justify-content-md-between">
-        <div class="col-lg-6 col-12 col-md-5">
+    <div class="col-12 row my-3 justify-content-center justify-content-md-between m-0">
+        <div class="col-lg-6 col-12 col-md-5 p-0">
             <img src=" {{$producto[0]->ruta_imagen}}" class="sombraS imgProdDetalle p-3 bg-white" alt="Imagen Producto">
         </div>
-        <div class="col-lg-5 col-11 col-md-5 col-sm-12 text-left row bg-white p-4 sombraS mt-sm-2 mt-2 mt-lg-0 mt-md-0">
-            <div class="col-12 mt-2 ">
+        <div class="col-lg-5 col-12 col-md-5 col-sm-12 text-left row bg-white p-4 sombraS mt-sm-2 mt-2 mt-lg-0 mt-md-0">
+            <div class="col-12 mt-2">
                 <p class="tituloProdDetalle"> {{$producto[0]->titulo}}</p>
                 <p class="infoProdDetalle">$ {{$producto[0]->precio}} </p>
                 <p class="infoProdDetalle">Stock: {{$producto[0]->stock}} </p>
