@@ -100,8 +100,8 @@
 
                                 @if (Auth::check())
 
-                                <button class='dropdown-item' type='butto'><a href='perfil.php' class='text-center pt-2 col-12 rounded p-1 '>Perfil</a></button>
-                                <button class='dropdown-item' type='butto'><a href='desloguear.php' class='text-center pt-2 col-12 rounded p-1 '>Desloguear</a></button>
+                                <button class='dropdown-item' type='butto'><a href='' class='text-center pt-2 col-12 rounded p-1 '>Perfil</a></button>
+                                <button class='dropdown-item' type='butto'><a href='{{route('logout')}} ' class='text-center pt-2 col-12 rounded p-1 '>Desloguear</a></button>
 
                                 @else
                                 <button class='dropdown-item' type='butto'><a href='{{ route('login') }}' class='text-center pt-2 col-12 rounded p-1 '>Iniciar sesion</a></button>
@@ -118,7 +118,7 @@
 
                     </div>
                         <div class="col-4   py-2 text-center">
-                        <a href="index.php" class="text-white" id="logo">4Buy!</a>
+                        <a href="/" class="text-white" id="logo">4Buy!</a>
                         </div>
 
                     <div class="row col-5 justify-content-between justify-content-md-around py-2 text-center">
