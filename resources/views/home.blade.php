@@ -42,26 +42,8 @@ Home
 
                 <br><br><br>
                 <!-- Mas Vendidos -->
-                <div class="justify-content-center row">
-                    <div class="col-12 justify-content-lg-between justify-content-center row">
-                        <h2 class="col-12">Lo mas vendido</h2>
-                        @foreach($prodMasVendidos as $producto)
-                            <div class='zoom col-lg-2 col-md-5 col-sm-6 col-10 p-2'>
-                                <a href='/Productos/Detalle/{{$producto->id}} ' class=' text-dark text-decoration-none'>
-                                    <div class='card sombra text-center'>
-                                        <div class='card-img-top p-3'>
-                                            <img src=' {{$producto->ruta_imagen}} ' height='120' alt='...'>
-                                        </div>
-                                        <div class='card-body border-top'>
-                                            <h3 class='card-text'>$ {{$producto->precio}}</h3>
-                                            <h5 class='card-title color-grey'>{{$producto->titulo}}</h5>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
+                @include('compartido.carousel')
+                {{-- fin mas vendidos --}}
                 <br><br><br>
                 <div class="col-12 height-publicidad">
                     <img src="https://http2.mlstatic.com/optimize/o:f_webp/resources/deals/exhibitors_resources/mla-home-desktop-slider-picture-fd696b80-3b30-44f1-a5b9-8dc7b7959bea.jpg" class="height-publicidad" alt="">

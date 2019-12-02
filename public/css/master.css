@@ -149,6 +149,13 @@
 
 
 /* index */
+.botonSlide{
+    height: 50px;
+    width: 50px;
+    margin-top: 635px;
+
+
+}
 
 .text-dark{
   font-weight: bold;
