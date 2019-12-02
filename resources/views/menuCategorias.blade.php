@@ -1,5 +1,8 @@
 @extends('layouts.base')
 
+@section('title')
+    Categorias
+    @stop
 
 @section('content')
     <main >

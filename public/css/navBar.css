@@ -4,7 +4,7 @@
 li{list-style: none;font-weight:bolder;}
 li a{text-decoration: none; font-weight:bolder ;}
 .dDown{position: absolute;; width: 150px;top: 41px; opacity: 0;visibility: hidden;transition: ease-out .35s;-moz-transition: ease-out .35s;-webkit-transition: ease-out .35s;}
-.mNav li{float: left;padding: 5px;background: rgb(0, 204, 204);border-left: 1px dotted #fff;}
+.mNav li{float: left;padding: 5px;background: rgb(0, 204, 204);border-left: 1px solid #fff;}
 .mNav li:first-child{border: none;}
 .mNav li a{ display: block;padding: 2px 20px;color: #fff;font-family: arial; text-decoration: none;}
 .mNav li:hover{background: #fff;transition: ease-in .35s;-moz-transition: ease-in .35s;-webkit-transition: ease-in .35s;}

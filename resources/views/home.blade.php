@@ -1,8 +1,12 @@
 @extends('layouts.base')
 
+@section('head')
 
+@stop
 
-
+@section('title')
+Home
+@stop
 @section('content')
         <!-- Carousel -->
         <div id="carouselExampleIndicators" class="carousel slide col-12 p-0" data-ride="carousel" data-delay="3">
@@ -74,7 +78,7 @@
                                             <img src='{{$producto->ruta_imagen}} ' height='120' alt='...'>
                                         </div>
                                         <div class='card-body border-top'>
-                                            <h3 class='card-text'><ion-icon name="logo-usd"></ion-icon> {{$producto->precio}}</h3>
+                                            <h3 class='card-text'>$ {{$producto->precio}}</h3>
                                             <h5 class='card-title color-grey'>{{$producto->titulo}}</h5>
                                         </div>
                                     </div>
@@ -202,5 +206,10 @@
 
 
 
+
+@stop
+
+
+@section('scripts')
 
 @stop

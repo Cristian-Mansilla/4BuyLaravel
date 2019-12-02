@@ -1,5 +1,10 @@
 @extends('layouts.base')
 
+@section('title')
+    Productos
+    @stop
+
+
 @section('content')
 <main class="container  justify-content-lg-between justify-content-center " >
     <div class="col-12 justify-content-lg-between justify-content-center row pt-4">
