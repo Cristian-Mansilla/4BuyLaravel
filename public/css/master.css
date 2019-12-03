@@ -152,9 +152,13 @@
 .botonSlide{
     height: 50px;
     width: 50px;
-    margin-top: 635px;
+    margin-top: 660px;
 
 
+}
+
+.itemCarousel{
+    height: 270px;
 }
 
 .text-dark{
@@ -304,13 +308,7 @@ body{
         font-size: 13px;
         margin-top:5px;
     }
-    .imgAllProd{
-        height: 60px;
-        width: 60px;
-    }
-    .infoAllProd{
-        font-size: 11px;
-    }
+    
     .imgProdDetalle{
         height: 350px;
         width: 100%;
@@ -328,24 +326,33 @@ body{
         border-bottom: 1px solid #ededed;
 
     }
+    .botonSlide{
+        margin-top: 545px;
+        height: 50px;
+        width: 50px;
+
+    }
+    .itemCarousel{
+        height: 270px;
+    }
 }
 @media (max-width: 767px) and (min-width: 576px) {
 
-  .height-publicidad{
-      height: 150px;
-      width: 100%;
-  }
+    .height-publicidad{
+        height: 150px;
+        width: 100%;
+    }
 
-
+    .itemCarousel{
+        height: 360px;
+    }
+    .botonSlide{
+        margin-top: 600px;
+    }
 
     .imgCarousel{
         height: 150px;
         width: 100%;
-    }
-    #banner-productos{
-        background-image: url();
-        height: 200px;
-        width: 480px;
     }
     .boton-prod {
         position: absolute;
@@ -366,6 +373,8 @@ body{
         font-size: 5x;
     }
 
+
+
 }
 
 @media (max-width: 991px) and (min-width: 768px){
@@ -378,16 +387,9 @@ body{
 
         font-family:Kanit, sans-serif;
     }
-    .imgCarousel{
-        height: 200px;
-        width: 100%;
-    }
 
-    #banner-productos{
-        background-image: url(../img/index/banner-prod-md.png);
-        height: 270px;
-        width: 660px;
-    }
+
+
     .boton-prod{
         position: absolute;
         left: 550px;
@@ -408,6 +410,12 @@ body{
 
     .infoProdDetalle{
         font-size: 5x;
+    }
+    .itemCarousel{
+        height: 400px;
+    }
+    .botonSlide{
+        margin-top: 800px;
     }
 }
 
