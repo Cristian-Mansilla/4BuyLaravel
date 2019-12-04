@@ -1,3 +1,5 @@
+
+
 @extends('layouts.base')
 
 @section('head')
@@ -42,7 +44,9 @@ Home
 
                 <br><br><br>
                 <!-- Mas Vendidos -->
-                @include('compartido.carousel')
+                {{-- @include('compartido.carousel') --}}
+                @carousel(['productos'=> $prodMasVendidos])
+                @endcarousel
                 {{-- fin mas vendidos --}}
                 <br><br><br>
                 <div class="col-12 height-publicidad">
