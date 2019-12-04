@@ -1,14 +1,13 @@
-
-
 @extends('layouts.base')
 
 @section('head')
-
 @stop
 
 @section('title')
 Home
 @stop
+
+
 @section('content')
         <!-- Carousel -->
         <div id="carouselExampleIndicators" class="carousel slide col-12 p-0" data-ride="carousel" data-delay="3">
@@ -47,7 +46,12 @@ Home
 
                 @component('layouts.components.carousel',[
                     'productos'=> $prodMasVendidos,
-                    'tituloCarousel' => 'Lo mas vendido'
+                    'tituloCarousel' => 'Lo mas vendido',
+                    'id' => '#multi-item-example',
+                    'id2' => '#multi-item-example-medium',
+                    'nombre' => 'multi-item-example',
+                    'nombre2' => 'multi-item-example-medium',
+                    'clase' => 'botonSlide',
                     ])
                 @endcomponent
                 {{-- fin mas vendidos --}}
@@ -60,6 +64,11 @@ Home
                 @component('layouts.components.carousel',[
                     'productos'=> $prodUltimaVisita,
                     'tituloCarousel' => 'Segun tu ultima visita',
+                    'id' => '#multi-item-example2',
+                    'id2' => '#multi-item-example-medium2',
+                    'nombre' => 'multi-item-example2',
+                    'nombre2' => 'multi-item-example-medium2',
+                    'clase' => 'botonSlide2',
                     ])
 
                 @endcomponent

@@ -6,15 +6,9 @@
     <hr class="my-4">
     <h2 class="col-lg-12">{{$tituloCarousel}}</h2>
     <!--Carousel Wrapper-->
-    <div id="multi-item-example" class="carousel slide carousel-multi-item " data-ride="carousel" data-interval="30000">
+    <div id="{{$nombre}}" class="carousel slide carousel-multi-item " data-ride="carousel" data-interval="30000">
 
-        <!--Indicators-->
-        <ol class="carousel-indicators">
-            <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-            <li data-target="#multi-item-example" data-slide-to="1"></li>
-            <li data-target="#multi-item-example" data-slide-to="2"></li>
-        </ol>
-        <!--/.Indicators-->
+
 
         <!--Slides-->
         <div class="carousel-inner " role="listbox">
@@ -81,11 +75,11 @@
     <!--/.Carousel Wrapper-->
 
         <!--Controls-->
-        <a class="carousel-control-prev col-1 bg-dark botonSlide rounded-circle ml-5" href="#multi-item-example" role="button" data-slide="prev">
+        <a class="carousel-control-prev col-1 bg-dark {{$clase}} rounded-circle ml-5" href="{{$id}}" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next col-1 bg-dark botonSlide rounded-circle mr-5" href="#multi-item-example" role="button" data-slide="next">
+        <a class="carousel-control-next col-1 bg-dark {{$clase}} rounded-circle mr-5" href="{{$id}}" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
         </a>
@@ -99,7 +93,7 @@
             <hr class="my-4">
             <h2 class="col-lg-12">lo mas vendido</h2>
             <!--Carousel Wrapper-->
-            <div id="multi-item-example-medium" class="carousel slide carousel-multi-item " data-ride="carousel" data-interval="3000">
+            <div id="{{$nombre2}}" class="carousel slide carousel-multi-item " data-ride="carousel" data-interval="300000">
 
                 <!--Slides-->
                 <div class="carousel-inner " role="listbox">
@@ -169,11 +163,11 @@
             <!--/.Carousel Wrapper-->
 
                 <!--Controls-->
-                <a class="carousel-control-prev col-1 bg-dark botonSlide rounded-circle ml-2 ml-sm-4" href="#multi-item-example-medium" role="button" data-slide="prev">
+                <a class="carousel-control-prev col-1 bg-dark {{$clase}} rounded-circle ml-2 ml-sm-4" href="{{$id2}}" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next col-1 bg-dark botonSlide rounded-circle mr-2 mr-sm-4" href="#multi-item-example-medium" role="button" data-slide="next">
+                <a class="carousel-control-next col-1 bg-dark {{$clase}} rounded-circle mr-2 mr-sm-4" href="{{$id2}}" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                 </a>
