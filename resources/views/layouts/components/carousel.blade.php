@@ -1,7 +1,10 @@
+
 <div class="container my-4 d-lg-block d-md-none d-sm-none d-none">
 
+
+
     <hr class="my-4">
-    <h2 class="col-lg-12">lo mas vendido</h2>
+    <h2 class="col-lg-12">{{$tituloCarousel}}</h2>
     <!--Carousel Wrapper-->
     <div id="multi-item-example" class="carousel slide carousel-multi-item " data-ride="carousel" data-interval="30000">
 
@@ -34,7 +37,8 @@
             </div>
 
             <!--Second slide-->
-            <div class="carousel-item ">
+            @if(count($productos) >= 11)
+                <div class="carousel-item ">
                     <div class="row">
                         @for($i = 6; $i < 12; $i++)
                             <div class="col-md-2 itemCarousel">
@@ -49,9 +53,12 @@
                         @endfor
                     </div>
                 </div>
+            @endif
+
 
             <!--Third slide-->
-            <div class="carousel-item ">
+            @if(count($productos) >= 18)
+                <div class="carousel-item ">
                     <div class="row" >
                         @for($i = 13; $i < 19; $i++)
                             <div class="col-md-2 itemCarousel" >
@@ -66,6 +73,7 @@
                         @endfor
                     </div>
                 </div>
+            @endif
         </div>
         <!--/.Slides-->
 
@@ -91,7 +99,7 @@
             <hr class="my-4">
             <h2 class="col-lg-12">lo mas vendido</h2>
             <!--Carousel Wrapper-->
-            <div id="multi-item-example-medium" class="carousel slide carousel-multi-item " data-ride="carousel" data-interval="30000">
+            <div id="multi-item-example-medium" class="carousel slide carousel-multi-item " data-ride="carousel" data-interval="3000">
 
                 <!--Slides-->
                 <div class="carousel-inner " role="listbox">
@@ -146,6 +154,9 @@
 
                                 </div>
                             </div>
+                        @if($i= count($productos))
+                            @break
+                        @endif
                     @endfor
 
 

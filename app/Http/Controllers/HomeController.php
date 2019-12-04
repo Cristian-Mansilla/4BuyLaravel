@@ -20,15 +20,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $categorias = Categorias::whereNull('subcategoria_id')->get();
+
         if(isset($_COOKIE['ultimaVisita'])){
-          $cate = $_COOKIE['ultimaVisita'];
+            $cate = $_COOKIE['ultimaVisita'];
         }else{
-          $cate = 11;
+            $cate = 11;
         }
         $prodMasVendidos = Producto::where('categoria_id', 'LIKE', 12)->orWhere('categoria_id', 'LIKE', 11)->orwhere('categoria_id', 'LIKE', 8)->get();
-        $prodUltimaVisita = Producto::where('categoria_id', 'LIKE', $cate)->paginate(5);
-        $vac = compact('categorias', 'prodMasVendidos', 'prodUltimaVisita');
+        $prodUltimaVisita = Producto::where('categoria_id', 'LIKE', $cate)->orWhere('categoria_id', 'LIKE', 11)->orWhere('categoria_id', 'LIKE', 12)->get();
+        $vac = compact('prodMasVendidos', 'prodUltimaVisita');
         return view('home', $vac);
     }
 

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Categorias;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
@@ -26,6 +27,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
-        Blade::component('layouts.components.carousel','carousel');
+        // Blade::component('layouts.components.carousel','carousel');
+        $categorias = Categorias::whereNull('subcategoria_id')->get();
+        view()->share('categorias', $categorias);
+
     }
 }

@@ -10,8 +10,7 @@ class productosController extends Controller
 {
     public function todosLosProductos(){
         $productos = Producto::All();
-        $categorias = Categorias::whereNull('subcategoria_id')->get();
-        $vac = compact('productos', 'categorias');
+        $vac = compact('productos');
         return view('testProductos', $vac);
     }
 
@@ -28,8 +27,7 @@ class productosController extends Controller
         }
         $productos = $prod->paginate(10);
 
-        $categorias = Categorias::whereNull('subcategoria_id')->get();
-        $vac = compact('productos', 'categorias');
+        $vac = compact('productos');
         return view('Productos', $vac);
     }
 
@@ -37,21 +35,18 @@ class productosController extends Controller
 
     public function detalleProducto($id){
         $producto = Producto::where('id', 'LIKE', $id)->get();
-        $categorias = Categorias::whereNull('subcategoria_id')->get();
-        $vac = compact('producto', 'categorias');
+        $vac = compact('producto');
         return view('detalleProducto', $vac);
     }
 
     public function busqueda(Request $form){
         $productos = Producto::where('titulo', 'Like', '%' . $form['categoria'] . '%')->paginate(10);
-        $categorias = Categorias::whereNull('subcategoria_id')->get();
-        $vac = compact('productos', 'categorias');
+        $vac = compact('productos');
         return view('Productos', $vac);
     }
     public function ofertas(){
         $productos = Producto::where('oferta', 'like', '1')->paginate(10);
-        $categorias = Categorias::whereNull('subcategoria_id')->get();
-        $vac = compact('productos', 'categorias');
+        $vac = compact('productos');
         return view('Productos', $vac);
     }
 }
