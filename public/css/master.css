@@ -349,7 +349,8 @@ body{
 
     }
     .itemCarousel{
-        height: 270px;
+        height: 280px;
+        box-sizing: border-box;
     }
 }
 @media (max-width: 767px) and (min-width: 576px) {
