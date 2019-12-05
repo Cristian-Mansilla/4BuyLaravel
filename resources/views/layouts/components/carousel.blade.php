@@ -108,7 +108,7 @@
                                         <a class="text-dark col-6 " href="/Productos/Detalle/{{$productos[0]->id}} ">
                                           <div class="itemCarousel p-0">
                                               <div class="card mb-2 zoom itemCarousel">
-                                                  <img class="card-img-top p-1  px-md-5 pt-md-5 " src="{{$productos[0]->ruta_imagen}}"alt="Card image cap">
+                                                  <img class="card-img-top p-1 imgCarouselProd" src="{{$productos[0]->ruta_imagen}}"alt="Card image cap">
                                                   <div class="card-body text-center p-2">
                                                       <p class="card-title infoProdDetalle">$ {{$productos[0]->precio}} </p>
                                                       <p class="card-text">{{$productos[0]->titulo}} {{count($productos)}} </p>
@@ -121,7 +121,7 @@
                                         <a class="text-dark col-6" href="/Productos/Detalle/{{$productos[1]->id}} ">
                                           <div class=" itemCarousel p-0">
                                               <div class="card mb-2 zoom itemCarousel">
-                                                  <img class="card-img-top p-1 px-md-5 pt-md-5" src="{{$productos[1]->ruta_imagen}}"alt="Card image cap">
+                                                  <img class="card-img-top p-1 imgCarouselProd" src="{{$productos[1]->ruta_imagen}}"alt="Card image cap">
                                                   <div class="card-body text-center p-2">
                                                       <p class="card-title infoProdDetalle">$ {{$productos[1]->precio}} </p>
                                                       <p class="card-text">{{$productos[1]->titulo}}</p>
@@ -132,14 +132,16 @@
                                 </div>
                             </div>
 
-                    @for($i = 2; $i < count($productos); $i = $i +2)
-
+                    @for($i = 2; $i < 19; $i = $i +2)
+                      @if ($i == count($productos) || $i+1 == count($productos))
+                        @break
+                      @endif
                         <div class="carousel-item ">
                             <div class="row m-0">
                                     <a class="text-dark col-6" href="/Productos/Detalle/{{$productos[$i]->id}} ">
                                       <div class=" itemCarousel p-0">
                                           <div class="card mb-2 zoom itemCarousel">
-                                              <img class="card-img-top p-1  px-md-5 pt-md-5 " src="{{$productos[$i]->ruta_imagen}}"alt="Card image cap">
+                                              <img class="card-img-top p-1 imgCarouselProd" src="{{$productos[$i]->ruta_imagen}}"alt="Card image cap">
                                               <div class="card-body text-center p-2">
                                                   <p class="card-title infoProdDetalle">$ {{$productos[$i]->precio}} </p>
                                                   <p class="card-text">{{$productos[$i]->titulo}}</p>
@@ -151,7 +153,7 @@
                                     <a class="text-dark col-6" href="/Productos/Detalle/{{$productos[$i+1]->id}} ">
                                       <div class=" itemCarousel p-0">
                                           <div class="card mb-2 zoom itemCarousel">
-                                              <img class="card-img-top p-1  px-md-5 pt-md-5  " src="{{$productos[$i+1]->ruta_imagen}}"alt="Card image cap">
+                                              <img class="card-img-top p-1 imgCarouselProd" src="{{$productos[$i+1]->ruta_imagen}}"alt="Card image cap">
                                               <div class="card-body text-center p-2">
                                                   <p class="card-title infoProdDetalle">$ {{$productos[$i+1]->precio}} </p>
                                                   <p class="card-text">{{$productos[$i+1]->titulo}}</p>

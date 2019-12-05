@@ -435,7 +435,12 @@ body{
         font-size: 5x;
     }
     .itemCarousel{
-        height: 400px;
+        height: 300px;
+    }
+    .imgCarouselProd{
+      height: 60%;
+      width: 60%;
+      margin-left: 60px;
     }
     .botonSlide{
         margin-top: 800px;
