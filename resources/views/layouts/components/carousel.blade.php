@@ -17,10 +17,10 @@
             <div class="carousel-item active ">
                 <div class="row">
                     @for($i = 0; $i < 6; $i++)
-                        <div class="col-md-2 itemCarousel">
+                        <div class="col-md-2 itemCarousel p-1">
                             <a class="text-dark" href="/Productos/Detalle/{{$productos[$i]->id}}">
                               <div class="card mb-2 zoom itemCarousel">
-                                  <img class="card-img-top p-1" src="{{$productos[$i]->ruta_imagen}}"alt="Card image cap">
+                                  <img class="card-img-top p-3" src="{{$productos[$i]->ruta_imagen}}"alt="Card image cap">
                                   <div class="card-body text-center p-2">
                                       <h4 class="card-title">$ {{$productos[$i]->precio}} </h4>
                                       <p class="card-text">{{$productos[$i]->titulo}}</p>
@@ -37,10 +37,10 @@
                 <div class="carousel-item ">
                     <div class="row">
                         @for($i = 6; $i < 12; $i++)
-                            <div class="col-md-2 itemCarousel">
+                            <div class="col-md-2 itemCarousel p-1">
                               <a class="text-dark" href="/Productos/Detalle/{{$productos[$i]->id}}">
                                 <div class="card mb-2 zoom itemCarousel">
-                                    <img class="card-img-top p-1" src="{{$productos[$i]->ruta_imagen}}"alt="Card image cap">
+                                    <img class="card-img-top p-3" src="{{$productos[$i]->ruta_imagen}}"alt="Card image cap">
                                     <div class="card-body text-center p-2">
                                         <h4 class="card-title">$ {{$productos[$i]->precio}} </h4>
                                         <p class="card-text">{{$productos[$i]->titulo}}</p>
@@ -59,10 +59,10 @@
                 <div class="carousel-item ">
                     <div class="row" >
                         @for($i = 13; $i < 19; $i++)
-                            <div class="col-md-2 itemCarousel" >
+                            <div class="col-md-2 itemCarousel p-1" >
                                 <a class="text-dark" href="/Productos/Detalle/{{$productos[$i]->id}}">
                                   <div class="card mb-2 zoom itemCarousel">
-                                      <img class="card-img-top p-1" src="{{$productos[$i]->ruta_imagen}}"alt="Card image cap">
+                                      <img class="card-img-top p-3" src="{{$productos[$i]->ruta_imagen}}"alt="Card image cap">
                                       <div class="card-body  text-center p-2">
                                           <h4 class="card-title">$ {{$productos[$i]->precio}} </h4>
                                           <p class="card-text">{{$productos[$i]->titulo}}</p>
@@ -105,7 +105,7 @@
                 <div class="carousel-inner " role="listbox">
                         <div class="carousel-item active ">
                                 <div class="row m-0">
-                                        <a class="text-dark col-6 " href="/Productos/Detalle/{{$productos[0]->id}} ">
+                                        <a class="text-dark col-6 p-1" href="/Productos/Detalle/{{$productos[0]->id}} ">
                                           <div class="itemCarousel p-0">
                                               <div class="card mb-2 zoom itemCarousel">
                                                   <img class="card-img-top p-1 imgCarouselProd" src="{{$productos[0]->ruta_imagen}}"alt="Card image cap">
@@ -118,7 +118,7 @@
                                         </a>
 
 
-                                        <a class="text-dark col-6" href="/Productos/Detalle/{{$productos[1]->id}} ">
+                                        <a class="text-dark col-6 p-1" href="/Productos/Detalle/{{$productos[1]->id}} ">
                                           <div class=" itemCarousel p-0">
                                               <div class="card mb-2 zoom itemCarousel">
                                                   <img class="card-img-top p-1 imgCarouselProd" src="{{$productos[1]->ruta_imagen}}"alt="Card image cap">
@@ -138,7 +138,7 @@
                       @endif
                         <div class="carousel-item ">
                             <div class="row m-0">
-                                    <a class="text-dark col-6" href="/Productos/Detalle/{{$productos[$i]->id}} ">
+                                    <a class="text-dark col-6 p-1" href="/Productos/Detalle/{{$productos[$i]->id}} ">
                                       <div class=" itemCarousel p-0">
                                           <div class="card mb-2 zoom itemCarousel">
                                               <img class="card-img-top p-1 imgCarouselProd" src="{{$productos[$i]->ruta_imagen}}"alt="Card image cap">
@@ -150,7 +150,7 @@
                                       </div>
                                     </a>
 
-                                    <a class="text-dark col-6" href="/Productos/Detalle/{{$productos[$i+1]->id}} ">
+                                    <a class="text-dark col-6 p-1" href="/Productos/Detalle/{{$productos[$i+1]->id}} ">
                                       <div class=" itemCarousel p-0">
                                           <div class="card mb-2 zoom itemCarousel">
                                               <img class="card-img-top p-1 imgCarouselProd" src="{{$productos[$i+1]->ruta_imagen}}"alt="Card image cap">
