@@ -30,7 +30,7 @@
 
                             @if (Auth::check())
 
-                                <a href='' class='rounded col-7 m-1 p-2 text-center text-white text-decoration-none'><img height="40" width="40" class="rounded-circle" src='/upload/{{ Auth::user()->img_perfil }}' alt='imgPerfil'></a>
+                                <a href='{{ route('miPerfil')}}' class='rounded col-7 m-1 p-2 text-center text-white text-decoration-none'><img height="40" width="40" class="rounded-circle" src='/upload/{{ Auth::user()->img_perfil }}' alt='imgPerfil'></a>
                                 <a href="/logout" class='borde-blanco border-none pt-1 p-2 bg-white rounded col-4 m-1 text-center text-decoration-none color-lightBlue'>Desloguear</a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
