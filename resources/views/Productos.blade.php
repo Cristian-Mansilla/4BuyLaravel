@@ -27,6 +27,9 @@
 
             </ul>
         </div>
+            @if(empty($productos))
+                <h1 class="col-lg-8 col-12 row border-bottom text-center">No se encontraron productos con esa categoria</h1>
+            @else
             <div class='col-lg-8 col-12 row border-bottom text-center'>
                 @foreach ($productos as $producto)
 
@@ -55,10 +58,11 @@
 
             </div>
 
+            @endif
     </div>
-
+    @if(!empty($productos))
     <div class="col-12 justify-content-center d-flex">{{ $productos->appends($_GET)->links() }}</div>
-
+    @endif
 
 </main>
 
