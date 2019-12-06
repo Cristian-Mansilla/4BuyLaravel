@@ -32,6 +32,10 @@ class HomeController extends Controller
         return view('home', $vac);
     }
 
+    public function construccion(){
+        return view('construccion');
+    }
+
 
 
 

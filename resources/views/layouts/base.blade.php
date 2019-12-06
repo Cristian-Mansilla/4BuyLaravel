@@ -66,13 +66,13 @@
 
                                 </ul>
                             </li>
-                            <li><a href="">Canjear cupon</a></li>
+                            <li><a href="/construccion">Canjear cupon</a></li>
                             <li><a href="/Productos/Ofertas">Ofertas</a></li>
-                            <li><a href="">¿Quienes somos?</a></li>
-                            <li><a href="a">Ayuda</a></li>
+                            <li><a href="/construccion">¿Quienes somos?</a></li>
+                            <li><a href="/construccion">Ayuda</a></li>
 
                             <li><a href=""><ion-icon name="notifications"></ion-icon></a></li>
-                            <li><a href=""><ion-icon name="cart"></ion-icon></a></li>
+                            <li><a href="/construccion"><ion-icon name="cart"></ion-icon></a></li>
                         </ul>
                         <br style="clear: both;">
                     </div>
@@ -109,10 +109,10 @@
                                 <button class='dropdown-item backg-header' type='button'><a href='{{ route('register') }}' class='text-center pt-2 col-12 rounded text-white p-1'>Registro</a></button>
                                 @endif
 
-                            <button class="dropdown-item" type="button"><a href="" class="text-center pt-2 col-12 rounded p-1">Canjear cupon</a></button>
+                            <button class="dropdown-item" type="button"><a href="/construccion" class="text-center pt-2 col-12 rounded p-1">Canjear cupon</a></button>
                             <button class="dropdown-item" type="button"><a href="/Productos/Ofertas" class="text-center pt-2 col-12 rounded p-1">Ofertas</a></button>
-                            <button class="dropdown-item" type="button"><a href="" class="text-center pt-2 col-12 rounded p-1">¿Quienes somos?</a></button>
-                            <button class="dropdown-item" type="button"><a href="" class="text-center pt-2 col-12 rounded p-1">Ayuda</a></button>
+                            <button class="dropdown-item" type="button"><a href="/construccion" class="text-center pt-2 col-12 rounded p-1">¿Quienes somos?</a></button>
+                            <button class="dropdown-item" type="button"><a href="/construccion" class="text-center pt-2 col-12 rounded p-1">Ayuda</a></button>
                             <button class="dropdown-item" type="button"><a href="/Categorias/Menu" class="text-center pt-2 col-12 rounded p-1">Categorias</a></button>
 
                         </div>
@@ -124,7 +124,7 @@
 
                     <div class="row col-5 justify-content-between justify-content-md-around py-2 text-center">
                         <a href="" class="col-5 col-md-3 col-sm-4 borde-blanco p-2  text-white rounded"><ion-icon name="notifications"></ion-icon></a>
-                        <a href="" class="col-5 col-md-3 col-sm-4 borde-blanco p-2 text-white rounded"><ion-icon name="cart"></ion-icon></a>
+                        <a href="/construccion" class="col-5 col-md-3 col-sm-4 borde-blanco p-2 text-white rounded"><ion-icon name="cart"></ion-icon></a>
                     </div>
 
                 </div>
@@ -154,37 +154,37 @@
                         <h3 class="col-12 text-white">Comprar y vender</h3>
                         <ul class="list-unstyled">
                             <li class="ml-3"><a class="text-white text-decoration-none" href="{{ route('register') }}">Registro</a> </li>
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="#">Marcas</a> </li>
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="#">Como comprar y vender</a> </li>
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="#">Productos populares</a> </li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Marcas</a> </li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Como comprar y vender</a> </li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="/Productos/Oferta">Productos populares</a> </li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-5 col-10 text-center text-lg-left text-md-left">
                         <h3 class="text-white col-12">Metodos de pago</h3>
                         <ul class="list-unstyled ">
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="#">Metodos de pago</a></li>
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="#">Cupones especiales</a></li>
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="#">Promociones con tarjetas</a></li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Metodos de pago</a></li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Cupones especiales</a></li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Promociones con tarjetas</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-5 col-10 text-center text-lg-left text-md-left ">
                         <h3 class="text-white col-12">Mas sobre nosotros</h3>
                         <ul class="list-unstyled">
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="#">Acerca de nosotros</a></li>
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="#">Desarrolladores</a></li>
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="#">Politicas y reglas</a></li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Acerca de nosotros</a></li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Desarrolladores</a></li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Politicas y reglas</a></li>
 
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-5 col-10 text-center text-lg-left text-md-left">
                         <h3 class="text-white col-12">Ayuda</h3>
                         <ul class="list-unstyled">
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="#">Atencion al cliente</a></li>
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="#">Preguntas frecuentes</a></li>
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="#">Contacto</a></li>
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="#">Reportar Problema</a></li>
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="#">Medios de pago</a></li>
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="#">Ayuda</a></li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Atencion al cliente</a></li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Preguntas frecuentes</a></li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Contacto</a></li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Reportar Problema</a></li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Medios de pago</a></li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Ayuda</a></li>
 
                         </ul>
                     </div>
