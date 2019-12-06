@@ -34,4 +34,4 @@ Route::get('/Categorias/Menu', 'categoriasController@menuCategorias');
 
 Route::get('/Categorias/Menu/{id}', 'categoriasController@menuSubcategorias');
 
-Route::get('/perfil', 'perfilController@');
+Route::get('/perfil', 'perfilController@miPerfil');
