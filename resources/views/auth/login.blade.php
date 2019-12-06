@@ -19,9 +19,9 @@
                           <label for="usuario" class="col-md-4 col-form-label text-md-right">Usuario: </label>
 
                           <div class="col-md-6">
-                              <input id="usuario" type="text" class="form-control @error('user') is-invalid @enderror" name="user" value="{{ old('user') }}" required autocomplete="user" autofocus>
+                              <input id="usuario" type="text" class="form-control @error('usuario') is-invalid @enderror" name="usuario" value="{{ old('usuario') }}" required autocomplete="usuario" autofocus>
 
-                              @error('user')
+                              @error('usuario')
                                   <span class="invalid-feedback" role="alert">
                                       <strong>{{ $message }}</strong>
                                   </span>
