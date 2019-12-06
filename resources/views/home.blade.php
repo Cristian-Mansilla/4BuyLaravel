@@ -56,7 +56,7 @@ Home
                 @endcomponent
                 {{-- fin mas vendidos --}}
                 <br><br><br>
-                <div class="col-12 height-publicidad">
+                <div class="col-12 height-publicidad p-0">
                     <img src="https://http2.mlstatic.com/optimize/o:f_webp/resources/deals/exhibitors_resources/mla-home-desktop-slider-picture-fd696b80-3b30-44f1-a5b9-8dc7b7959bea.jpg" class="height-publicidad" alt="">
                 </div>
                 <br><br><br>
