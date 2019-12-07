@@ -1,4 +1,16 @@
-
+.slick-next, .slick-prev {
+    background-color: grey !important;
+    height: 30px !important;
+    width: 30px !important;
+    border-radius: 50%;
+    z-index: 999;
+    }
+.slick-next{
+    right: -40px !important;
+}
+.slick-prev{
+    left: -40px !important;
+}
 .searchButton{
     background-color: rgb(0, 204, 204);
 }

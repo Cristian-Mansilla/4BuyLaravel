@@ -215,6 +215,7 @@ $('.carouselSlick').slick({
     speed: 300,
     slidesToShow: 6,
     slidesToScroll: 6,
+    arrows:true,
     responsive: [
     {
         breakpoint: 1024,
@@ -222,7 +223,7 @@ $('.carouselSlick').slick({
             slidesToShow: 3,
             slidesToScroll: 3,
             infinite: true,
-            dots: true
+            dots: false
         }
     },
     {
@@ -237,6 +238,7 @@ $('.carouselSlick').slick({
         settings: {
             slidesToShow: 1,
             slidesToScroll: 1
+
         }
     }
     // You can unslick at a given breakpoint now by adding:
@@ -244,5 +246,6 @@ $('.carouselSlick').slick({
     // instead of a settings object
     ]
 });
+
 </script>
 @stop

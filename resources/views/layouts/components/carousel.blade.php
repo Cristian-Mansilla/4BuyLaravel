@@ -9,7 +9,7 @@
 <div class="carouselSlick">
     @foreach ($productos as $item)
         <div class="card itemCarousel">
-            <a href="" class="text-center text-dark itemCarousel" style="height:270px">
+            <a href="/Productos/Detalle/{{$item->id}}" class="text-center text-dark itemCarousel" style="height:270px">
                 <img src="{{$item->ruta_imagen}} " class="card-img-top imgCarouselMult" alt="...">
                 <div class="card-body p-3">
                     <h5 class="card-title">$ {{$item->precio}} </h5>
@@ -18,4 +18,6 @@
             </a>
         </div>
     @endforeach
+
+
 </div>
