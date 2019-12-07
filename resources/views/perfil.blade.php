@@ -68,7 +68,7 @@
             </div>
           @else
             <div class="tab-pane fade show" id="{{$content["id"]}}" role="tabpanel" aria-labelledby="{{$content["aria-labelledby"]}}">
-              @component('layouts.components.misDatos')@endcomponent
+              @component($content["pagina"])@endcomponent
             </div>
           @endif
         @endforeach

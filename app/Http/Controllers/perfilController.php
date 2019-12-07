@@ -20,13 +20,13 @@ class perfilController extends Controller
   ];
    $tabContent = [
     ["id" => "resumen", "aria-labelledby" => "resumen-tab", "pagina" => "pagina externa?"],
-    ["id" => "facturacion", "aria-labelledby" => "facturacion-tab", "pagina" => "pagina externa?"],
-    ["id" => "favoritos", "aria-labelledby" => "favoritos-tab", "pagina" => "pagina externa?"],
-    ["id" => "compras", "aria-labelledby" => "compras-tab", "pagina" => "pagina externa?"],
-    ["id" => "preguntas", "aria-labelledby" => "preguntas-tab", "pagina" => "pagina externa?"],
-    ["id" => "misDatos", "aria-labelledby" => "misDatos-tab", "pagina" => "misDatos"],
-    ["id" => "seguridad", "aria-labelledby" => "favoritos-tab", "pagina" => "pagina externa?"],
-    ["id" => "eMails", "aria-labelledby" => "eMails-tab", "pagina" => "pagina externa?"],
+    //["id" => "facturacion", "aria-labelledby" => "facturacion-tab", "pagina" => "pagina externa?"],
+    //["id" => "favoritos", "aria-labelledby" => "favoritos-tab", "pagina" => "pagina externa?"],
+    //["id" => "compras", "aria-labelledby" => "compras-tab", "pagina" => "pagina externa?"],
+    //["id" => "preguntas", "aria-labelledby" => "preguntas-tab", "pagina" => "pagina externa?"],
+    ["id" => "misDatos", "aria-labelledby" => "misDatos-tab", "pagina" => "layouts.components.misDatos"],
+    //["id" => "seguridad", "aria-labelledby" => "favoritos-tab", "pagina" => "pagina externa?"],
+    //["id" => "eMails", "aria-labelledby" => "eMails-tab", "pagina" => "pagina externa?"],
   ];
     return view('perfil', compact('compras', 'config', 'tabContent'));
   }
