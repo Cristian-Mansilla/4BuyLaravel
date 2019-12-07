@@ -15,13 +15,7 @@
             <a class="navbar-brand" href="#"><i class="fa fa-bars"></i>Mi cuenta</a>
           </button>
           <span>
-            ¡Hola
-            @if (isset($username))
-              {{$username}}
-            @else
-              usuario
-            @endif
-            !
+            ¡Hola {{isset($username)?$username:'usuario'}} !
           </span>
           <div class="collapse show" id="navbarNavDropdown">
             <ul class="nav navbar-nav" role="tablist">
@@ -42,7 +36,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   @foreach ($compras as $item)
                     <a class="dropdown-item" id="{{$item["id"]}}" href="{{$item["href"]}}" data-toggle="tab" role="tab" aria-controls="{{$item["aria-control"]}}" aria-selected="false">
-                      <?=$item["name"]?>
+                      {{$item["name"]}}
                     </a>
                   @endforeach
                 </div>
