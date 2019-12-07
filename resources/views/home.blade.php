@@ -1,10 +1,16 @@
 @extends('layouts.base')
 
-@section('head')
-@stop
+
 
 @section('title')
 Home
+@stop
+@section('head')
+
+<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+// Add the new slick-theme.css if you want the default styling
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
 @stop
 
 
@@ -47,14 +53,11 @@ Home
                 @component('layouts.components.carousel',[
                     'productos'=> $prodMasVendidos,
                     'tituloCarousel' => 'Lo mas vendido',
-                    'id' => '#multi-item-example',
-                    'id2' => '#multi-item-example-medium',
-                    'nombre' => 'multi-item-example',
-                    'nombre2' => 'multi-item-example-medium',
-                    'clase' => 'botonSlide',
                     ])
                 @endcomponent
                 {{-- fin mas vendidos --}}
+                <br><br><br>
+
                 <br><br><br>
                 <div class="col-12 height-publicidad p-0">
                     <img src="https://http2.mlstatic.com/optimize/o:f_webp/resources/deals/exhibitors_resources/mla-home-desktop-slider-picture-fd696b80-3b30-44f1-a5b9-8dc7b7959bea.jpg" class="height-publicidad" alt="">
@@ -197,4 +200,49 @@ Home
 
 @section('scripts')
 
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript">
+
+
+
+$('.carouselSlick').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 6,
+    slidesToScroll: 6,
+    responsive: [
+    {
+        breakpoint: 1024,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+        }
+    },
+    {
+        breakpoint: 600,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+        }
+    },
+    {
+        breakpoint: 480,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+        }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+    ]
+});
+</script>
 @stop

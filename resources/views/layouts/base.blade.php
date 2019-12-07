@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/navBar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/master.css') }}">
     <title>@section('title') @show | 4Buy</title>
+    @section('head')@show
 
 </head>
 <body class="backg-grey fuente">
