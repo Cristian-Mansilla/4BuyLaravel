@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('fondo')
-
+@section('css')
+  <link rel="stylesheet" href="{{asset("css/perfil.css")}}">
 @endsection
 
 @section('content')
@@ -68,7 +68,7 @@
             </div>
           @else
             <div class="tab-pane fade show" id="{{$content["id"]}}" role="tabpanel" aria-labelledby="{{$content["aria-labelledby"]}}">
-              @yield('misDatos')
+              @component('layouts.components.misDatos')@endcomponent
             </div>
           @endif
         @endforeach

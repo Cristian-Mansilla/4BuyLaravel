@@ -1,6 +1,4 @@
-@extends('perfil')
 
-@section('misDatos')
   <div class="border-left mt-4 px-4">
     <form class="" action="" method="post">
       <div class="d-flex">
@@ -58,4 +56,3 @@
       <button class="pulsador color3" type="submit" name="guardar">Guardar</button>
     </form>
   </div>
-@endsection
