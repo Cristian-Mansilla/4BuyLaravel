@@ -8,24 +8,26 @@
 @section('content')
 <main class="container  justify-content-lg-between justify-content-center " >
     <div class="col-12 justify-content-lg-between justify-content-center row pt-4">
-        <div class="col-4 bg-white  sombra d-lg-block d-none">
-            <ul class="text-left" >
-
-                @foreach ($categorias as $cate)
-
-                    <li class="text-dark">{{$cate->nombre_categoria}}
-                        <ul class=''>
-
-                    @foreach ($cate->subcategorias as $subcat)
-                        <li class=''><a class="color-grey text-decoration-none" href='/Productos/Categoria/{{$subcat->id}}'> {{$subcat->nombre_categoria}} </a></li>
-
-                    @endforeach
-                    </ul>
-                </li>
-                <br>
+        <div class="col-4 bg-white  sombra d-lg-block d-none row">
+            <div class="list-group">
+                <h3>Precio</h3>
+                <input type="hidden" id="hidden_minimun_price" value="0">
+                <input type="hidden" id="hidden_minimun_price" value="65000">
+                <p id="price_show">1000 - 65000</p>
+                <div id="price_range"></div>
+            </div>
+            <div class="list-gorup">
+                <h3>Marca</h3>
+                @foreach ($marcas as $item)
+                    <div class="list-gorup-item checkbox">
+                        <label>
+                            <input type="checkbox" class="common_selector brand" value="{{$item->id}}">
+                            {{$item->nombre_marca}}
+                        </label>
+                    </div>
                 @endforeach
 
-            </ul>
+            </div>
         </div>
             @if(empty($productos))
                 <h1 class="col-lg-8 col-12 row border-bottom text-center">No se encontraron productos con esa categoria</h1>

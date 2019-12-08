@@ -30,8 +30,14 @@ class productosController extends Controller
         }else{
             $productos = [];
         }
-
-        $vac = compact('productos');
+        $marcas = [];
+        foreach($productos as $item){
+            if(!in_array($item->marca, $marcas)){
+                array_push($marcas, $item->marca);
+            }
+        }
+        $marcas = array_unique($marcas);
+        $vac = compact('productos', 'marcas');
         return view('Productos', $vac);
     }
 
