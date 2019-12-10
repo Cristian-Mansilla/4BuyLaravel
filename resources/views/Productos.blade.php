@@ -16,15 +16,13 @@
                 <p id="price_show">1000 - 65000</p>
                 <div id="price_range"></div>
             </div>
-            <div class="list-gorup">
+            <div id="brands-list">
                 <h3>Marca</h3>
                 @foreach ($marcas as $item)
-                    <div class="list-gorup-item checkbox">
-                        <label>
-                            <input type="checkbox" class="common_selector brand" value="{{$item->id}}">
-                            {{$item->nombre_marca}}
-                        </label>
-                    </div>
+                    <li class="brandLi">
+                        <input type="checkbox" class="brand" value="{{$item->id}}">
+                        {{$item->nombre_marca}}
+                    </li>
                 @endforeach
 
             </div>
@@ -69,3 +67,35 @@
 </main>
 
 @stop
+
+@section('scripts')
+    <script type="text/javascript">
+        $(function(){
+            $('.brandLi').click(function(){
+                var brands = [];
+                $('.brand').each(function(){
+                    if($(this).is(":checked")){
+                        brands.push($(this).val());
+                    }
+
+                });
+                console.log(brands);
+                var filtro = brands.toString();
+                console.log(filtro);
+
+                fetch('/Filtro/'+filtro)
+                    .then(function(response){
+                        return response.json();
+                    })
+                    .then(function(data){
+                        console.log(data);
+                    })
+                    .catch(function(error){
+                        console.log(error);
+                    })
+
+
+            });
+        });
+    </script>
+@endsection
