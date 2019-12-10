@@ -453,7 +453,7 @@ body{
 
 /*faqs*/
 .goBack {
-    background-image: url("../img/banner-faqs.jpg");
+    background-image: url("/imagenes/banner-faqs.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
