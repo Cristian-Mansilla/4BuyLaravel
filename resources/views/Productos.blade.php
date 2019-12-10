@@ -27,49 +27,24 @@
 
             </div>
         </div>
-            @if(empty($productos))
-                <h1 class="col-lg-8 col-12 row border-bottom text-center">No se encontraron productos con esa categoria</h1>
-            @else
-            <div class='col-lg-8 col-12 row border-bottom text-center'>
-                @foreach ($productos as $producto)
 
-                    <div class='col-12 bg-white sombra mb-2' style="height:150px;">
-                        <div class="col-12 row justify-content-between">
+            <div class='col-lg-8 col-12 row border-bottom text-center' id="x">
 
-
-                            <div class='col-4 mt-lg-0 mt-md-0 mt-sm-0 mt-4 p-4'>
-                                <img src='{{$producto->ruta_imagen}}' class="imgAllProd">
-                            </div>
-                            <div class='col-8 text-center mt-5 p-1 row justify-content-center'>
-                                <a href="/Productos/Detalle/{{$producto->id}} " class='col-12 text-center text-dark'>{{$producto->titulo}}</a>
-
-                                <p class='col-6 color-grey infoAllProd'>$ {{$producto->precio}}</p>
-                                <p class='col-6 color-grey infoAllProd'>Stock:{{$producto->stock}}</p>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
-                @endforeach
 
             </div>
 
-            @endif
+
     </div>
-    @if(!empty($productos))
-    <div class="col-12 justify-content-center d-flex">{{ $productos->appends($_GET)->links() }}</div>
-    @endif
+
 
 </main>
 
 @stop
 
 @section('scripts')
-    <script type="text/javascript">
+<script type="text/javascript">
+
+    const productos =[];
         $(function(){
             $('.brandLi').click(function(){
                 var brands = [];
@@ -88,7 +63,36 @@
                         return response.json();
                     })
                     .then(function(data){
+
+                        var div = document.getElementById('x');
                         console.log(data);
+                        div.innerHTML = '';
+
+                        data.map(function (prod) {
+                            const templateLiteral = `
+                    <div class='col-12 bg-white sombra mb-2' style="height:150px;">
+                        <div class="col-12 row justify-content-between">
+
+
+                            <div class='col-4 mt-lg-0 mt-md-0 mt-sm-0 mt-4 p-4'>
+                                <img src='${prod.ruta_imagen}' class="imgAllProd">
+                            </div>
+                            <div class='col-8 text-center mt-5 p-1 row justify-content-center'>
+                                <a href="/Productos/Detalle/${prod.id} " class='col-12 text-center text-dark'>${prod.titulo}</a>
+
+                                <p class='col-6 color-grey infoAllProd'>$ ${prod.precio}</p>
+                                <p class='col-6 color-grey infoAllProd'>Stock: ${prod.stock}</p>
+
+                            </div>
+
+                        </div>
+                    </div>`;
+
+
+                        div.innerHTML = div.innerHTML.concat(templateLiteral);
+                        });
+
+
                     })
                     .catch(function(error){
                         console.log(error);
