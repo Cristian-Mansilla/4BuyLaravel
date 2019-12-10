@@ -38,6 +38,8 @@ Route::get('/Categorias/Menu/{id}', 'categoriasController@menuSubcategorias');
 
 Route::get('/perfil', 'perfilController@miPerfil')->name('miPerfil');
 
+Route::view('/faqs', 'FAQs')->name('faqs');
+
 Route::get('/construccion', 'HomeController@construccion');
 
 Route::get('/Filtro/{id}', function($id){

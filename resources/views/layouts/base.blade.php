@@ -181,7 +181,7 @@
                         <h3 class="text-white col-12">Ayuda</h3>
                         <ul class="list-unstyled">
                             <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Atencion al cliente</a></li>
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Preguntas frecuentes</a></li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="{{route('faqs')}}">Preguntas frecuentes</a></li>
                             <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Contacto</a></li>
                             <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Reportar Problema</a></li>
                             <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Medios de pago</a></li>
