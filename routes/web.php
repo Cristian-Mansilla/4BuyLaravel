@@ -42,19 +42,4 @@ Route::view('/faqs', 'FAQs')->name('faqs');
 
 Route::get('/construccion', 'HomeController@construccion');
 
-Route::get('/Filtro/{id}', function($id){
-    $marcas = explode(',' , $id);
-    $prod = Producto::where(function ($query) use ($marcas) {
-        return $query->where('categoria_id', '=', 50)
-                ->where('marca_id', '=', '50');
-    });
-
-    foreach($marcas as $marca){
-        $prod->orWhere(function ($query) use ($marca) {
-            return $query->where('categoria_id', '=', '12')
-                    ->where('marca_id', '=', $marca);
-        });
-    }
-    $productos = $prod->get();
-    return $productos;
-});
+Route::get('/Filtro/{id}', 'productosController@fetchProd');

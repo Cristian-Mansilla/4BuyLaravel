@@ -59,4 +59,30 @@ class productosController extends Controller
         $vac = compact('productos');
         return view('Productos', $vac);
     }
+
+    public function fetchProd(Request $request,$id){
+        $categoria = $request->query('categoria');
+        $marcas = explode(',' , $id);
+        $cant = count($marcas);
+        if(isset($marcas) && !empty($marcas) && $cant > 0){
+            $prod = Producto::where(function ($query) use ($marcas, $categoria) {
+                return $query->where('categoria_id', '=', 50)
+                        ->where('marca_id', '=', '50');
+            });
+
+            foreach($marcas as $marca){
+                $prod->orWhere(function ($query) use ($marca, $categoria) {
+                    return $query->where('categoria_id', '=', $categoria)
+                            ->where('marca_id', '=', $marca);
+                });
+            }
+            $productos = $prod->get();
+        }else {
+            $productos = Producto::where('categoria_id', '=', $categoria)->get();
+
+        }
+
+
+        return $productos;
+    }
 }

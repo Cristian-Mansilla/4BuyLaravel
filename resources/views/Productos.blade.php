@@ -44,22 +44,30 @@
 @section('scripts')
 <script type="text/javascript">
 
-    const productos =[];
         $(function(){
             $('.brandLi').click(function(){
                 var brands = [];
+                var pasadoString = [];
                 $('.brand').each(function(){
                     if($(this).is(":checked")){
                         brands.push($(this).val());
                     }
 
                 });
+                var loc = location.pathname;
+                console.log(loc);
+                var locArray = loc.split('/');
+                console.log(locArray[3]);
                 console.log(brands);
-                var filtro = brands.toString();
-                console.log(filtro);
 
-                fetch('/Filtro/'+filtro)
+
+
+                var filtro = brands.toString();
+                console.log('filtro:'+filtro);
+
+                fetch('/Filtro/'+filtro+ "?categoria=" + locArray[3])
                     .then(function(response){
+                        console.log('Datos:'+response);
                         return response.json();
                     })
                     .then(function(data){
