@@ -71,7 +71,7 @@
         $(function(){
             fetchProds();
             $('.brandLi').click(function(){
-                // document.getElementById('loader').style.display = 'flex';
+                fetchProds();
 
             });
 
@@ -135,7 +135,7 @@
 
                         div.innerHTML = div.innerHTML.concat(templateLiteral);
                         });
-                        document.getElementById('loader').style.display = 'none';
+                        //document.getElementById('loader').style.display = 'none';
 
 
                     })
