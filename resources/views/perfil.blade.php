@@ -15,7 +15,7 @@
             <a class="navbar-brand" href="#"><i class="fa fa-bars"></i>Mi cuenta</a>
           </button>
           <span>
-            ¡Hola {{isset($username)?$username:'usuario'}} !
+            ¡Hola {{(auth()->user())?auth()->user()->usuario:'usuario'}} !
           </span>
           <div class="collapse show" id="navbarNavDropdown">
             <ul class="nav navbar-nav" role="tablist">
