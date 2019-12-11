@@ -64,7 +64,7 @@ class productosController extends Controller
         $categoria = $request->query('categoria');
         $marcas = explode(',' , $id);
         $cant = count($marcas);
-        if(isset($marcas) && !empty($marcas) && $cant > 0){
+        if($id!='none'){
             $prod = Producto::where(function ($query) use ($marcas, $categoria) {
                 return $query->where('categoria_id', '=', 50)
                         ->where('marca_id', '=', '50');

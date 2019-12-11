@@ -4,6 +4,31 @@
     Productos
     @stop
 
+@section('head')
+    <style>
+.loader {
+    display: none;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-bottom: 16px solid blue;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+    </style>
+@endsection
 
 @section('content')
 <main class="container  justify-content-lg-between justify-content-center " >
@@ -29,9 +54,8 @@
         </div>
 
             <div class='col-lg-8 col-12 row border-bottom text-center' id="x">
-
-
             </div>
+            <div id="loader" class="loader"></div>
 
 
     </div>
@@ -45,7 +69,14 @@
 <script type="text/javascript">
 
         $(function(){
+            fetchProds();
             $('.brandLi').click(function(){
+                // document.getElementById('loader').style.display = 'flex';
+
+            });
+
+            function fetchProds(){
+
                 var brands = [];
                 var pasadoString = [];
                 $('.brand').each(function(){
@@ -55,14 +86,19 @@
 
                 });
                 var loc = location.pathname;
-                console.log(loc);
+
                 var locArray = loc.split('/');
-                console.log(locArray[3]);
-                console.log(brands);
 
 
 
-                var filtro = brands.toString();
+
+                if(brands && brands.length){
+                    var filtro = brands.toString();
+                }else{
+                    var filtro = "none";
+                }
+
+
                 console.log('filtro:'+filtro);
 
                 fetch('/Filtro/'+filtro+ "?categoria=" + locArray[3])
@@ -99,15 +135,14 @@
 
                         div.innerHTML = div.innerHTML.concat(templateLiteral);
                         });
+                        document.getElementById('loader').style.display = 'none';
 
 
                     })
                     .catch(function(error){
                         console.log(error);
                     })
-
-
-            });
+            }
         });
     </script>
 @endsection
