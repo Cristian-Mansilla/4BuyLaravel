@@ -19,13 +19,8 @@
                           <label for="usuario" class="col-md-4 col-form-label text-md-right">Usuario: </label>
 
                           <div class="col-md-6">
-                              <input id="usuario" type="text" class="form-control @error('usuario') is-invalid @enderror" name="usuario" value="{{ old('usuario') }}" required autocomplete="usuario" autofocus>
-
-                              @error('usuario')
-                                  <span class="invalid-feedback" role="alert">
-                                      <strong>{{ $message }}</strong>
-                                  </span>
-                              @enderror
+                              <input id="usuario" type="text" class="form-control {{$errors->has('usuario') ? 'alert alert-danger' : ''}}" name="usuario" value="{{ old('usuario') }}" required autocomplete="usuario" autofocus>
+                              {!! $errors->first('usuario', '<span class="help-block text-danger">:message</span>')!!}
                           </div>
                       </div>
 
@@ -33,13 +28,8 @@
                           <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña:') }}</label>
 
                           <div class="col-md-6">
-                              <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                              @error('password')
-                                  <span class="invalid-feedback" role="alert">
-                                      <strong>{{ $message }}</strong>
-                                  </span>
-                              @enderror
+                              <input id="password" type="password" class="form-control {{$errors->has('password') ? 'alert alert-danger' : ''}}" name="password" required autocomplete="current-password">
+                              {!! $errors->first('password', '<span class="help-block text-danger">:message</span>')!!}
                           </div>
                       </div>
 
