@@ -33,16 +33,71 @@ class productosController extends Controller
         $marcas = [];
         $modelos = [];
         $rams = [];
+        $memoriaInternas = [];
+        $lineas = [];
+        $tamañoPantallas = [];
+        $resoluciones = [];
+        $capacidades = [];
+        $tipoDePantallas = [];
+        $tamaños = [];
         foreach($productos as $item){
             if(!in_array($item->marca, $marcas)){
                 array_push($marcas, $item->marca);
             }
             if(isset($item->info)){
-                if(!in_array($item->info->Modelo, $modelos)){
-                    array_push($modelos, $item->info->Modelo);
+
+                if(isset($item->info->Modelo)){
+                    if(!in_array($item->info->Modelo, $modelos)){
+                        array_push($modelos, $item->info->Modelo);
+                    }
                 }
-                if(!in_array($item->info->Ram, $rams)){
-                    array_push($rams, $item->info->Ram);
+
+                if(isset($item->info->Ram)){
+                    if(!in_array($item->info->Ram, $rams)){
+                        array_push($rams, $item->info->Ram);
+                    }
+                }
+
+                if(isset($item->info->Memoria_interna)){
+                    if(!in_array($item->info->Memoria_interna, $memoriaInternas)){
+                        array_push($memoriaInternas, $item->info->Memoria_interna);
+                    }
+                }
+
+                if(isset($item->info->Linea)){
+                    if(!in_array($item->info->Linea, $lineas)){
+                        array_push($lineas, $item->info->Linea);
+                    }
+                }
+
+                if(isset($item->info->Tamaño_de_pantalla)){
+                    if(!in_array($item->info->Tamaño_de_pantalla, $tamañoPantallas)){
+                        array_push($tamañoPantallas, $item->info->Tamaño_de_pantalla);
+                    }
+                }
+
+                if(isset($item->info->Resolucion)){
+                    if(!in_array($item->info->Resolucion, $resoluciones)){
+                        array_push($resoluciones, $item->info->Resolucion);
+                    }
+                }
+
+                if(isset($item->info->Capacidad)){
+                    if(!in_array($item->info->Capacidad, $capacidades)){
+                        array_push($capacidades, $item->info->Capacidad);
+                    }
+                }
+
+                if(isset($item->info->Tipo_de_pantalla)){
+                    if(!in_array($item->info->Tipo_de_pantalla, $modelos)){
+                        array_push($modelos, $item->info->Tipo_de_pantalla);
+                    }
+                }
+
+                if(isset($item->info->Tamaño)){
+                    if(!in_array($item->info->Tamaño, $tamaños)){
+                        array_push($tamaños, $item->info->Tamaño);
+                    }
                 }
             }
 
@@ -50,7 +105,15 @@ class productosController extends Controller
 
         $marcas = array_unique($marcas);
         $modelos = array_unique($modelos);
-        $vac = compact('productos', 'marcas', 'modelos', 'rams');
+        $rams = array_unique($rams);
+        $memoriaInternas = array_unique($memoriaInternas);
+        $lineas = array_unique($lineas);
+        $tamañoPantallas = array_unique($tamañoPantallas);
+        $resoluciones = array_unique($resoluciones);
+        $capacidades = array_unique($capacidades);
+        $tipoDePantallas = array_unique($tipoDePantallas);
+        $tamaños = array_unique($tamaños);
+        $vac = compact('productos', 'marcas', 'modelos', 'rams', 'memoriaInternas', 'lineas', 'tamañoPantallas', 'resoluciones', 'capacidades', 'tipoDePantallas', 'tamaños');
         return view('Productos', $vac);
     }
 
