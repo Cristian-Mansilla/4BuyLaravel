@@ -16,7 +16,7 @@ class EditUsersTable extends Migration
         Schema::table('users', function (Blueprint $table) {
           $table->renameColumn('name','nombre');
           $table->string('apellido');
-          $table->string('usuario');
+          $table->string('usuario')->unique();
           $table->string('img_perfil');
         });
     }

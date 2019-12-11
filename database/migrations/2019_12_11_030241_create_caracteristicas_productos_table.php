@@ -21,7 +21,7 @@ class CreateCaracteristicasProductosTable extends Migration
             $table->string('Linea')->nullable();
             $table->string('Ram')->nullable();
             $table->string('Tamaño de pantalla')->nullable();
-            $table->string('Resolucion'->nullable());
+            $table->string('Resolucion')->nullable();
             $table->string('Capacidad')->nullable();
             $table->string('Tipo de pantalla')->nullable();
             $table->string('Tamaño')->nullable();
