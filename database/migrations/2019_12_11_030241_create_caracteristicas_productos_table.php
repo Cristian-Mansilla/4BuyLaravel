@@ -13,7 +13,7 @@ class CreateCaracteristicasProductosTable extends Migration
      */
     public function up()
     {
-        Schema::create('caracteristicas_productos', function (Blueprint $table) {
+        Schema::create('car_productos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('producto_id');
             $table->string('Modelo')->nullable();

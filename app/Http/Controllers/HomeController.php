@@ -36,6 +36,13 @@ class HomeController extends Controller
         return view('construccion');
     }
 
+    public function test(){
+        $producto = Producto::find(1);
+
+        $vac = compact('producto');
+        return view('test', $vac);
+    }
+
 
 
 

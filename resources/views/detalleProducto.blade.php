@@ -28,15 +28,24 @@
     <br><br>
     <div class="col-12 text-center bg-white ">
         <h4>Descripción</h4>
-        <p class="text-left">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas ratione animi dolorum in voluptates fugit hic neque nam repellat! Dolore natus earum officia ipsam cum mollitia consequuntur nam quisquam doloremque.</p>
-        <p class="text-left">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas ratione animi dolorum in voluptates fugit hic neque nam repellat! Dolore natus earum officia ipsam cum mollitia consequuntur nam quisquam doloremque.</p>
-        <p class="text-left">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas ratione animi dolorum in voluptates fugit hic neque nam repellat! Dolore natus earum officia ipsam cum mollitia consequuntur nam quisquam doloremque.</p>
-        <p class="text-left">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas ratione animi dolorum in voluptates fugit hic neque nam repellat! Dolore natus earum officia ipsam cum mollitia consequuntur nam quisquam doloremque.</p>
-        <p class="text-left">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas ratione animi dolorum in voluptates fugit hic neque nam repellat! Dolore natus earum officia ipsam cum mollitia consequuntur nam quisquam doloremque.</p>
-        <p class="text-left">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas ratione animi dolorum in voluptates fugit hic neque nam repellat! Dolore natus earum officia ipsam cum mollitia consequuntur nam quisquam doloremque.</p>
 
+        {{-- {{$producto[0]->info}} --}}
 
-
+        @if($producto[0]->info->Modelo)
+        Modelo: {{$producto[0]->info->Modelo}}
+        @endif
+        <br>
+        @if($producto[0]->info->Ram)
+        Ram: {{$producto[0]->info->Ram}}
+        @endif
+        <br>
+        @if($producto[0]->info->Memoria_interna)
+        Memoria interna :{{$producto[0]->info->Memoria_interna}}
+        @endif
+        <br>
+        @if($producto[0]->info->Linea)
+        Linea: {{$producto[0]->info->Linea}}
+        @endif
 
     </div>
 

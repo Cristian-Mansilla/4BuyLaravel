@@ -21,6 +21,7 @@ class CreateProductosTable extends Migration
             $table->string('ruta_imagen');
             $table->timestamps();
             $table->boolean('oferta');
+
         });
     }
 

@@ -10,5 +10,5 @@ class CarProducto extends Model
         'user_id', 'Modelo', 'Memoria_interna', 'Linea', 'Ram', 'Tamaño_de_pantalla', 'Resolucion', 'Capcidad', 'Tipo_de_pantalla', 'Tamaño',
     ];
 
-    public $table = 'caracteristicas_productos';
+    public $table = 'car_productos';
 }

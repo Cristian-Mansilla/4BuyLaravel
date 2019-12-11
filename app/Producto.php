@@ -19,5 +19,8 @@ class Producto extends Model
     public function categoria(){
         return $this->belongsTo('App\Categorias', 'categoria_id');
     }
+    public function info(){
+        return $this->belongsTo('App\CarProducto', 'info_id');
+    }
 
 }
