@@ -31,22 +31,27 @@
 
         {{-- {{$producto[0]->info}} --}}
 
-        @if($producto[0]->info->Modelo)
-        Modelo: {{$producto[0]->info->Modelo}}
+        @if(isset($producto[0]->info))
+            @if($producto[0]->info->Modelo)
+            Modelo: {{$producto[0]->info->Modelo}}
+            @endif
+            <br>
+            @if($producto[0]->info->Ram)
+            Ram: {{$producto[0]->info->Ram}}
+            @endif
+            <br>
+            @if($producto[0]->info->Memoria_interna)
+            Memoria interna :{{$producto[0]->info->Memoria_interna}}
+            @endif
+            <br>
+            @if($producto[0]->info->Linea)
+            Linea: {{$producto[0]->info->Linea}}
+            @endif
+            <br>
+            @if($producto[0]->info->Resolucion)
+            Resolucion: {{$producto[0]->info->Resolucion}}
+            @endif
         @endif
-        <br>
-        @if($producto[0]->info->Ram)
-        Ram: {{$producto[0]->info->Ram}}
-        @endif
-        <br>
-        @if($producto[0]->info->Memoria_interna)
-        Memoria interna :{{$producto[0]->info->Memoria_interna}}
-        @endif
-        <br>
-        @if($producto[0]->info->Linea)
-        Linea: {{$producto[0]->info->Linea}}
-        @endif
-
     </div>
 
 </main>

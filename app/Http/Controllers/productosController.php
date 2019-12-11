@@ -31,13 +31,26 @@ class productosController extends Controller
             $productos = [];
         }
         $marcas = [];
+        $modelos = [];
+        $rams = [];
         foreach($productos as $item){
             if(!in_array($item->marca, $marcas)){
                 array_push($marcas, $item->marca);
             }
+            if(isset($item->info)){
+                if(!in_array($item->info->Modelo, $modelos)){
+                    array_push($modelos, $item->info->Modelo);
+                }
+                if(!in_array($item->info->Ram, $rams)){
+                    array_push($rams, $item->info->Ram);
+                }
+            }
+
         }
+
         $marcas = array_unique($marcas);
-        $vac = compact('productos', 'marcas');
+        $modelos = array_unique($modelos);
+        $vac = compact('productos', 'marcas', 'modelos', 'rams');
         return view('Productos', $vac);
     }
 

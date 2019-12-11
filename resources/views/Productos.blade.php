@@ -43,12 +43,32 @@
             </div>
             <div id="brands-list">
                 <h3>Marca</h3>
-                @foreach ($marcas as $item)
-                    <li class="brandLi">
-                        <input type="checkbox" class="brand" value="{{$item->id}}">
-                        {{$item->nombre_marca}}
-                    </li>
-                @endforeach
+                <ul>
+                    @foreach ($marcas as $item)
+                        <li class="brandLi">
+                            <input type="checkbox" class="brand" value="{{$item->id}}">
+                            {{$item->nombre_marca}}
+                        </li>
+                    @endforeach
+                </ul>
+                <h3>Modelos</h3>
+                <ul>
+                    @foreach ($modelos as $modelo)
+                        <li class="brandLi">
+                            <input type="checkbox" class="" value="{{$modelo}}">
+                            {{$modelo}}
+                        </li>
+                    @endforeach
+                </ul>
+                <h3>Ram</h3>
+                <ul>
+                    @foreach ($rams as $ram)
+                        <li class="brandLi">
+                            <input type="checkbox" class="" value="{{$ram}}">
+                            {{$ram}}
+                        </li>
+                    @endforeach
+                </ul>
 
             </div>
         </div>
