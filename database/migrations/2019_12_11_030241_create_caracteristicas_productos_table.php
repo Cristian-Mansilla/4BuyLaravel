@@ -17,13 +17,13 @@ class CreateCaracteristicasProductosTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->string('Modelo')->nullable();
-            $table->string('Memoria interna')->nullable();
+            $table->string('Memoria_interna')->nullable();
             $table->string('Linea')->nullable();
             $table->string('Ram')->nullable();
-            $table->string('Tamaño de pantalla')->nullable();
+            $table->string('Tamaño_de_pantalla')->nullable();
             $table->string('Resolucion')->nullable();
             $table->string('Capacidad')->nullable();
-            $table->string('Tipo de pantalla')->nullable();
+            $table->string('Tipo_de_pantalla')->nullable();
             $table->string('Tamaño')->nullable();
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');

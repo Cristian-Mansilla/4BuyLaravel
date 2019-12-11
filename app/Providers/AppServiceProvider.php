@@ -28,8 +28,8 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
         // Blade::component('layouts.components.carousel','carousel');
-        // $categorias = Categorias::whereNull('subcategoria_id')->get();
-        // view()->share('categorias', $categorias);
+        $categorias = Categorias::whereNull('subcategoria_id')->get();
+        view()->share('categorias', $categorias);
 
     }
 }
