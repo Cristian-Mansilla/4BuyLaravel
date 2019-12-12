@@ -40,6 +40,8 @@ Route::view('/faqs', 'FAQs')->name('faqs');
 
 Route::get('/construccion', 'HomeController@construccion');
 
-Route::get('/Filtro/{id}', 'productosController@fetchProd');
+
+
+Route::get('/Filtro/{marca}', 'productosController@fetchProd');
 
 Route::get('/test', 'HomeController@test');

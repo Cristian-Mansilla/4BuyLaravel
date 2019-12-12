@@ -136,11 +136,23 @@ class productosController extends Controller
         return view('Productos', $vac);
     }
 
-    public function fetchProd(Request $request,$id){
-        $categoria = $request->query('categoria');
-        $marcas = explode(',' , $id);
+    public function fetchProd(Request $request,$marca){
+        $categoria = explode(',' ,$request->query('categoria'));
+        $modelos = explode(',' ,$request->query('modelo'));
+        $rams = explode(',' ,$request->query('ram'));
+        $memoriasInternas = explode(',' ,$request->query('memoriaInterna'));
+        $lineas = explode(',' ,$request->query('linea'));
+        $tamañosPantallas = explode(',' ,$request->query('tamañoPantalla'));
+        $resoluciones = explode(',' ,$request->query('resolucion'));
+        $capacidades = explode(',' ,$request->query('capacidad'));
+        $tipoPantallas = explode(',' ,$request->query('tipoPantalla'));
+        $tamaños = explode(',' ,$request->query('tamaño'));
+        $marcas = explode(',' , $marca);
+
+        $caracts = [$categoria, $modelos, $rams, $memoriasInternas, $lineas, $tamañosPantallas, $resoluciones, $capacidades, $tipoPantallas, $tamaños];
+
         $cant = count($marcas);
-        if($id!='none'){
+        if($marca!='none'){
             $prod = Producto::where(function ($query) use ($marcas, $categoria) {
                 return $query->where('categoria_id', '=', 50)
                         ->where('marca_id', '=', '50');
@@ -157,8 +169,32 @@ class productosController extends Controller
             $productos = Producto::where('categoria_id', '=', $categoria)->get();
 
         }
+        $flag=false;
+        $prodFinales = [];
+        foreach($productos as $producto){
+            if(isset($modelos) && !empty($modelos)){
+                foreach($modelos as $modelo){
+                    if($producto->info->Modelo == $modelo){
+                        array_push($prodFinales,$producto);
+                        $flag = true;
+                    }
+                }
+            }
+        }
+        $evaluar = [];
+        foreach($caracts as $car){
+            if(isset($car) && !empty($car) && $car != 300){
+                array_push($evaluar, $car);
+            }
+        }
 
 
-        return $productos;
+
+        if(!$flag){
+            $prodFinales = $productos;
+        }
+
+
+        return $evaluar;
     }
 }

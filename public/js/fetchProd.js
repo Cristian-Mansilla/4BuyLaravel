@@ -174,8 +174,9 @@ $(function(){
         console.log('Tamaño: '+tamaño);
 
         console.log('Marca:'+filtro);
-
-        fetch('/Filtro/'+filtro+ "?categoria=" + locArray[3])
+        var ruta = '/Filtro/'+filtro+'/'+modelo+'/'+ram+'/'+memoriaInterna+'/'+linea+'/'+tamañoPantalla+'/'+resolucion+'/'+capacidad+'/'+tipoPantalla+'/'+tamaño+'?categoria='+locArray[3];
+        console.log(ruta);
+        fetch(ruta)
             .then(function(response){
                 console.log('Datos:'+response);
                 return response.json();
