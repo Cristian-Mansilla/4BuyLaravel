@@ -37,7 +37,8 @@
         <h4 class="col-12 text-center my-5">Características principales</h4>
 
 
-        @if(isset($producto[0]->info->Modelo)&& !empty($producto[0]->info->Modelo))
+        <div class="col-12 row justify-content-between">
+            @if(isset($producto[0]->info->Modelo)&& !empty($producto[0]->info->Modelo))
             <div class="col-lg-2 text-center col-6">
                 <h5>Modelo</h5>
                 <p>{{$producto[0]->info->Modelo}}</p>
@@ -100,6 +101,7 @@
             </div>
         @endif
 
+        </div>
 
     </div>
 
