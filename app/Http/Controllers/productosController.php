@@ -171,22 +171,19 @@ class productosController extends Controller
         }
         $flag=false;
         $prodFinales = [];
-        foreach($productos as $producto){
-            if(isset($modelos) && !empty($modelos)){
-                foreach($modelos as $modelo){
-                    if($producto->info->Modelo == $modelo){
-                        array_push($prodFinales,$producto);
-                        $flag = true;
-                    }
-                }
-            }
-        }
+
         $evaluar = [];
-        foreach($caracts as $car){
-            if(isset($car) && !empty($car) && $car != 300){
-                array_push($evaluar, $car);
+        foreach($caracts as $carac){
+            if($carac[0] != 'none'){
+                array_push($evaluar, $carac);
             }
         }
+
+        $cant = count($evaluar);
+        for($i = 0;$i<$cant;$i++){
+            
+        }
+
 
 
 
