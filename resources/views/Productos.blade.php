@@ -5,29 +5,12 @@
     @stop
 
 @section('head')
-    <style>
-.loader {
-    display: none;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid blue;
-  border-bottom: 16px solid blue;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-    </style>
+<style>
+    .loader{
+        height: 200px;
+        width: 200px;
+    }
+</style>
 @endsection
 
 @section('content')
@@ -165,8 +148,9 @@
         </div>
 
             <div class='col-lg-8 col-12 row border-bottom text-center' id="x">
+
             </div>
-            <div id="loader" class="loader"></div>
+
 
 
     </div>
@@ -182,7 +166,12 @@
         $(function(){
             fetchProds();
             $('.brandLi').click(function(){
-                fetchProds();
+                var div = document.getElementById('x');
+
+                div.innerHTML = '';
+                div.innerHTML = '<div id="loader" class="loader col-12 justify-content-center"><img src="/Imagenes/loader.gif" alt=""></div>';
+                document.getElementById('loader').style.display = 'flex';
+                setTimeout(fetchProds, 1500);
 
             });
 
@@ -246,7 +235,7 @@
 
                         div.innerHTML = div.innerHTML.concat(templateLiteral);
                         });
-                        //document.getElementById('loader').style.display = 'none';
+                        document.getElementById('loader').style.display = 'none';
 
 
                     })
