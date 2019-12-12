@@ -41,7 +41,7 @@
                     <ul>
                         @foreach ($modelos as $modelo)
                             <li class="brandLi">
-                                <input type="checkbox" class="" value="{{$modelo}}">
+                                <input type="checkbox" class="modelo" value="{{$modelo}}">
                                 {{$modelo}}
                             </li>
                         @endforeach
@@ -52,7 +52,7 @@
                     <ul>
                         @foreach ($rams as $ram)
                             <li class="brandLi">
-                                <input type="checkbox" class="" value="{{$ram}}">
+                                <input type="checkbox" class="ram" value="{{$ram}}">
                                 {{$ram}}
                             </li>
                         @endforeach
@@ -64,7 +64,7 @@
                     <ul>
                         @foreach ($memoriaInternas as $memoriaInterna)
                             <li class="brandLi">
-                                <input type="checkbox" class="" value="{{$memoriaInterna}}">
+                                <input type="checkbox" class="memoriaInterna" value="{{$memoriaInterna}}">
                                 {{$memoriaInterna}}
                             </li>
                         @endforeach
@@ -76,7 +76,7 @@
                     <ul>
                         @foreach ($lineas as $linea)
                             <li class="brandLi">
-                                <input type="checkbox" class="" value="{{$linea}}">
+                                <input type="checkbox" class="linea" value="{{$linea}}">
                                 {{$linea}}
                             </li>
                         @endforeach
@@ -88,7 +88,7 @@
                     <ul>
                         @foreach ($tamañoPantallas as $tamañoPantalla)
                             <li class="brandLi">
-                                <input type="checkbox" class="" value="{{$tamañoPantalla}}">
+                                <input type="checkbox" class="tamañoPantalla" value="{{$tamañoPantalla}}">
                                 {{$tamañoPantalla}}
                             </li>
                         @endforeach
@@ -100,7 +100,7 @@
                     <ul>
                         @foreach ($resoluciones as $resolucion)
                             <li class="brandLi">
-                                <input type="checkbox" class="" value="{{$resolucion}}">
+                                <input type="checkbox" class="resolucion" value="{{$resolucion}}">
                                 {{$resolucion}}
                             </li>
                         @endforeach
@@ -112,7 +112,7 @@
                     <ul>
                         @foreach ($capacidades as $capacidad)
                             <li class="brandLi">
-                                <input type="checkbox" class="" value="{{$capacidad}}">
+                                <input type="checkbox" class="capacidad" value="{{$capacidad}}">
                                 {{$capacidad}}
                             </li>
                         @endforeach
@@ -124,7 +124,7 @@
                     <ul>
                         @foreach ($tipoDePantallas as $tipoDePantalla)
                             <li class="brandLi">
-                                <input type="checkbox" class="" value="{{$tipoDePantalla}}">
+                                <input type="checkbox" class="tipoPantalla" value="{{$tipoDePantalla}}">
                                 {{$tipoDePantalla}}
                             </li>
                         @endforeach
@@ -136,7 +136,7 @@
                     <ul>
                         @foreach ($tamaños as $tamaño)
                             <li class="brandLi">
-                                <input type="checkbox" class="" value="{{$tamaño}}">
+                                <input type="checkbox" class="tamaño" value="{{$tamaño}}">
                                 {{$tamaño}}
                             </li>
                         @endforeach
@@ -161,88 +161,5 @@
 @stop
 
 @section('scripts')
-<script type="text/javascript">
-
-        $(function(){
-            fetchProds();
-            $('.brandLi').click(function(){
-                var div = document.getElementById('x');
-
-                div.innerHTML = '';
-                div.innerHTML = '<div id="loader" class="loader col-12 justify-content-center"><img src="/Imagenes/loader.gif" alt=""></div>';
-                document.getElementById('loader').style.display = 'flex';
-                setTimeout(fetchProds, 1500);
-
-            });
-
-            function fetchProds(){
-
-                var brands = [];
-                var pasadoString = [];
-                $('.brand').each(function(){
-                    if($(this).is(":checked")){
-                        brands.push($(this).val());
-                    }
-
-                });
-                var loc = location.pathname;
-
-                var locArray = loc.split('/');
-
-
-
-
-                if(brands && brands.length){
-                    var filtro = brands.toString();
-                }else{
-                    var filtro = "none";
-                }
-
-
-                console.log('filtro:'+filtro);
-
-                fetch('/Filtro/'+filtro+ "?categoria=" + locArray[3])
-                    .then(function(response){
-                        console.log('Datos:'+response);
-                        return response.json();
-                    })
-                    .then(function(data){
-
-                        var div = document.getElementById('x');
-                        console.log(data);
-                        div.innerHTML = '';
-
-                        data.map(function (prod) {
-                            const templateLiteral = `
-                    <div class='col-12 bg-white sombra mb-2' style="height:150px;">
-                        <div class="col-12 row justify-content-between">
-
-
-                            <div class='col-4 mt-lg-0 mt-md-0 mt-sm-0 mt-4 p-4'>
-                                <img src='${prod.ruta_imagen}' class="imgAllProd">
-                            </div>
-                            <div class='col-8 text-center mt-5 p-1 row justify-content-center'>
-                                <a href="/Productos/Detalle/${prod.id} " class='col-12 text-center text-dark'>${prod.titulo}</a>
-
-                                <p class='col-6 color-grey infoAllProd'>$ ${prod.precio}</p>
-                                <p class='col-6 color-grey infoAllProd'>Stock: ${prod.stock}</p>
-
-                            </div>
-
-                        </div>
-                    </div>`;
-
-
-                        div.innerHTML = div.innerHTML.concat(templateLiteral);
-                        });
-                        document.getElementById('loader').style.display = 'none';
-
-
-                    })
-                    .catch(function(error){
-                        console.log(error);
-                    })
-            }
-        });
-    </script>
+<script src="{{asset('/js/fetchProd.js')}} "></script>
 @endsection
