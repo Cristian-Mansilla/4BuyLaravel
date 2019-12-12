@@ -1,5 +1,15 @@
 @extends('layouts.app')
 
+
+@section('css')
+<style>
+    body{
+        background-color: rgb(0, 204, 204);
+    }
+</style>
+
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
