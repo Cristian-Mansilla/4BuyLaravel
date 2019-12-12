@@ -26,7 +26,7 @@ class productosController extends Controller
             $prod->orWhere('categoria_id', 'LIKE', $key->id);
 
         }
-        $productos = $prod->paginate(10);
+        $productos = $prod->get();
         }else{
             $productos = [];
         }
@@ -41,9 +41,9 @@ class productosController extends Controller
         $tipoDePantallas = [];
         $tamaños = [];
         foreach($productos as $item){
-            if(!in_array($item->marca, $marcas)){
-                array_push($marcas, $item->marca);
-            }
+
+            array_push($marcas, $item->marca);
+
             if(isset($item->info)){
 
                 if(isset($item->info->Modelo)){

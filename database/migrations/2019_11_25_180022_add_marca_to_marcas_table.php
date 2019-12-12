@@ -30,6 +30,8 @@ class AddMarcaToMarcasTable extends Migration
             ['nombre_marca' => 'Wester Digital'],
             ['nombre_marca' => 'Kingston'],
             ['nombre_marca' => 'JBL'],
+            ['nombre_marca' => 'BLU'],
+            ['nombre_marca' => 'Huawei'],
 
         ]);
     }

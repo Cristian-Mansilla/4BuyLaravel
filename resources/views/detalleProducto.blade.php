@@ -26,32 +26,81 @@
         </div>
     </div>
     <br><br>
-    <div class="col-12 text-center bg-white ">
-        <h4>Descripción</h4>
+    <div class="col-12 bg-white row">
 
-        {{-- {{$producto[0]->info}} --}}
+        <div class="col-12 border-bottom p-3">
+            <h4 class="text-center">Descripción</h4><br><br>
+            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum architecto deleniti expedita distinctio saepe vitae possimus placeat maiores? Sapiente veniam sit sed reprehenderit tempore at officia id veritatis nobis natus?</p>
 
-        @if(isset($producto[0]->info))
-            @if($producto[0]->info->Modelo)
-            Modelo: {{$producto[0]->info->Modelo}}
-            @endif
-            <br>
-            @if($producto[0]->info->Ram)
-            Ram: {{$producto[0]->info->Ram}}
-            @endif
-            <br>
-            @if($producto[0]->info->Memoria_interna)
-            Memoria interna :{{$producto[0]->info->Memoria_interna}}
-            @endif
-            <br>
-            @if($producto[0]->info->Linea)
-            Linea: {{$producto[0]->info->Linea}}
-            @endif
-            <br>
-            @if($producto[0]->info->Resolucion)
-            Resolucion: {{$producto[0]->info->Resolucion}}
-            @endif
+        </div>
+
+        <h4 class="col-12 text-center my-5">Características principales</h4>
+
+
+        @if(isset($producto[0]->info->Modelo)&& !empty($producto[0]->info->Modelo))
+            <div class="col-lg-2 text-center col-6">
+                <h5>Modelo</h5>
+                <p>{{$producto[0]->info->Modelo}}</p>
+            </div>
         @endif
+
+        @if(isset($producto[0]->info->Memoria_interna)&& !empty($producto[0]->info->Memoria_interna))
+            <div class="col-lg-2 text-center col-6">
+                <h5>Memoria interna</h5>
+                <p>{{$producto[0]->info->Memoria_interna}}</p>
+            </div>
+        @endif
+
+        @if(isset($producto[0]->info->Linea)&& !empty($producto[0]->info->Linea))
+            <div class="col-lg-2 text-center col-6">
+                <h5>Linea</h5>
+                <p>{{$producto[0]->info->Linea}}</p>
+            </div>
+        @endif
+
+        @if(isset($producto[0]->info->Ram)&& !empty($producto[0]->info->Ram))
+            <div class="col-lg-2 text-center col-6">
+                <h5>Ram</h5>
+                <p>{{$producto[0]->info->Ram}}</p>
+            </div>
+        @endif
+
+        @if(isset($producto[0]->info->Tamaño_de_pantalla)&& !empty($producto[0]->info->Tamaño_de_pantalla))
+            <div class="col-lg-2 text-center col-6">
+                <h5>Tamaño de la pantalla</h5>
+                <p>{{$producto[0]->info->Tamaño_de_pantalla}}</p>
+            </div>
+        @endif
+
+        @if(isset($producto[0]->info->Resolucion)&& !empty($producto[0]->info->Resolucion))
+            <div class="col-lg-2 text-center col-6">
+                <h5>Resolucion</h5>
+                <p>{{$producto[0]->info->Resolucion}}</p>
+            </div>
+        @endif
+
+        @if(isset($producto[0]->info->Capacidad)&& !empty($producto[0]->info->Capacidad))
+            <div class="col-lg-2 text-center col-6">
+                <h5>Capacidad</h5>
+                <p>{{$producto[0]->info->Capacidad}}</p>
+            </div>
+        @endif
+
+        @if(isset($producto[0]->info->Tipo_de_pantalla)&& !empty($producto[0]->info->Tipo_de_pantalla))
+            <div class="col-lg-2 text-center col-6">
+                <h5>Tipo de pantalla</h5>
+                <p>{{$producto[0]->info->Tipo_de_pantalla}}</p>
+            </div>
+        @endif
+
+        @if(isset($producto[0]->info->Tamaño)&& !empty($producto[0]->info->Tamaño))
+            <div class="col-lg-2 text-center col-6">
+                <h5>Tamaño</h5>
+                <p>{{$producto[0]->info->Tamaño}}</p>
+            </div>
+        @endif
+
+
     </div>
 
 </main>

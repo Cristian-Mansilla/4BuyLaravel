@@ -15,7 +15,6 @@ class CreateCaracteristicasProductosTable extends Migration
     {
         Schema::create('car_productos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('producto_id');
             $table->string('Modelo')->nullable();
             $table->string('Memoria_interna')->nullable();
             $table->string('Linea')->nullable();
@@ -26,7 +25,7 @@ class CreateCaracteristicasProductosTable extends Migration
             $table->string('Tipo_de_pantalla')->nullable();
             $table->string('Tamaño')->nullable();
             $table->timestamps();
-            $table->foreign('producto_id')->references('id')->on('productos');
+
         });
     }
 
