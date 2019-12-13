@@ -22,7 +22,7 @@
 
                 <p><img src="https://img.icons8.com/nolan/32/000000/delivery.png"> Envio gratis</p>
             </div>
-            <button class="btn searchButton text-white col-12 text-center">Añadir al carrito</button>
+            <a href="/Carrito/add/{{$producto[0]->id}}" class="col-12"><button class="btn searchButton text-white col-12 text-center">Añadir al carrito</button></a>
         </div>
     </div>
     <br><br>

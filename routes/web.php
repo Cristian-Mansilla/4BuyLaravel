@@ -40,7 +40,11 @@ Route::view('/faqs', 'FAQs')->name('faqs');
 
 Route::get('/construccion', 'HomeController@construccion');
 
+Route::get('/Carrito', 'HomeController@carrito');
 
+Route::get('/Carrito/add/{id}', 'HomeController@addCarrito');
+
+Route::get('/Carrito/delete/{id}', 'HomeController@eliminarProdCarrito');
 
 Route::get('/Filtro/{marca}', 'productosController@fetchProd');
 

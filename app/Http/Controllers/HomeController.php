@@ -43,6 +43,47 @@ class HomeController extends Controller
         return view('test', $vac);
     }
 
+    public function addCarrito(Request $request, $id){
+        if ($request->session()->has('carrito')) {
+            $producto = Producto::find($id);
+            $request->session()->push('carrito', $producto);
+        }else{
+            session(['carrito' => []]);
+            $producto = Producto::find($id);
+            $request->session()->push('carrito', $producto);;
+
+        }
+        $data = $request->session()->all();
+        $vac = compact('data', 'producto');
+        return redirect('/Carrito');
+
+    }
+
+    public function eliminarProdCarrito($id){
+        $data = session('carrito');
+        $cant = count($data);
+        $data = array_values($data);
+        for($i = 0; $i < $cant; $i++){
+            if($data[$i]->id == $id){
+                unset($data[$i]);
+                $data = array_values($data);
+                session(['carrito' => $data]);
+                return redirect('Carrito');
+            }
+        }
+
+
+        return redirect('Carrito');
+    }
+
+    public function carrito(Request $request){
+
+        $data = session('carrito');
+        $data = array_values($data);
+        $vac = compact('data');
+        return view('carrito',$vac);
+    }
+
 
 
 
