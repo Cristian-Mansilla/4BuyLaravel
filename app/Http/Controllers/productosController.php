@@ -172,15 +172,28 @@ class productosController extends Controller
 
 
 
-        for($i = 0; $i <= count($productos); $i++){
-            if($productos[$i]->info->Memoria_interna !== "16 G"){
-                unset($productos[$i]);
-            }
-        }
+        $i = 0;
         $prodFinales = [];
+
         foreach($productos as $prod){
             array_push($prodFinales, $prod);
         }
+
+        // while($i < count($prodFinales)){
+        //     if($prodFinales[$i]->info->Linea !== 'Redmi'){
+        //         unset($prodFinales[$i]);
+        //     }
+        //      if($productos[$i]->info->Memoria_interna !== '32 GB'){
+        //           unset($productos[$i]);
+        //       }
+
+        //     $i++;
+
+        // }
+
+
+
+
 
 
         return $prodFinales;
