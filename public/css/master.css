@@ -1,4 +1,13 @@
 
+
+.infoMercado{
+
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+}
+
+
 .searchButton{
     background-color: rgb(0, 204, 204);
 }

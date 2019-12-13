@@ -10,7 +10,7 @@
             <img src='{{$prod->ruta_imagen}}' alt='Imagen Producto' height='100'>
           </div>
           <div class='col-10 row justify-content-between'>
-            <div class='col-7 mt-4 px-0'>
+            <div class='col-7 mt-4 px-0 infoMercado'>
               <h5>Celular motorola moto g4 32 Gb + 3GB Ram{{$prod->titulo}}</h5>
               <p>Modelo: {{$prod->info->Modelo}} </p>
             </div>
