@@ -149,9 +149,9 @@ class productosController extends Controller
         $tamaños = explode(',' ,$request->query('tamaño'));
         $marcas = explode(',' , $marca);
 
-        $caracts = [$categoria, $modelos, $rams, $memoriasInternas, $lineas, $tamañosPantallas, $resoluciones, $capacidades, $tipoPantallas, $tamaños];
 
-        $cant = count($marcas);
+
+
         if($marca!='none'){
             $prod = Producto::where(function ($query) use ($marcas, $categoria) {
                 return $query->where('categoria_id', '=', 50)
@@ -169,29 +169,20 @@ class productosController extends Controller
             $productos = Producto::where('categoria_id', '=', $categoria)->get();
 
         }
-        $flag=false;
-        $prodFinales = [];
 
-        $evaluar = [];
-        foreach($caracts as $carac){
-            if($carac[0] != 'none'){
-                array_push($evaluar, $carac);
+
+
+        for($i = 0; $i <= count($productos); $i++){
+            if($productos[$i]->info->Memoria_interna !== "16 G"){
+                unset($productos[$i]);
             }
         }
-
-        $cant = count($evaluar);
-        for($i = 0;$i<$cant;$i++){
-            
+        $prodFinales = [];
+        foreach($productos as $prod){
+            array_push($prodFinales, $prod);
         }
 
 
-
-
-        if(!$flag){
-            $prodFinales = $productos;
-        }
-
-
-        return $evaluar;
+        return $prodFinales;
     }
 }
