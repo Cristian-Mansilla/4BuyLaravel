@@ -10,6 +10,7 @@
 
 .menuCarrito{
     height: 200px;
+    display: block;
 }
 
 .prodCarrito{

@@ -20,7 +20,7 @@ class CreateProductosTable extends Migration
             $table->integer('stock');
             $table->string('ruta_imagen');
             $table->timestamps();
-            $table->boolean('oferta');
+            $table->integer('oferta');
 
         });
     }

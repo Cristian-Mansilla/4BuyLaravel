@@ -14,9 +14,13 @@
                 var div = document.getElementById('carrito');
                 div.innerHTML = '';
                 let precioTotal = 0;
+                let descuento = 0;
                 if(data && data.length){
                     data.map(function (prod) {
                         precioTotal = precioTotal + prod.precio;
+                        if(prod.oferta != 0){
+                            descuento = descuento + prod.oferta;
+                        }
                         const templateLiteral = `
                         <div class=' row justify-content-around bg-white p-2 mt-1 prodCarrito'>
                         <div class='col-2 pt-2'>
@@ -43,11 +47,15 @@
 
                     div.innerHTML = div.innerHTML.concat(templateLiteral);
                     var menu = document.getElementById('menu');
-                    const templateLiteral2 = `<h2 class="text-center">Menu</h2> <br>
-                    <div class="row justify-content-around p-2 menuCarrito">
-                    <div class="col-12">
-                        <h4>Precio total = ${precioTotal}</h4>
+                    const templateLiteral2 = `
+                    <div class="row justify-content-around p-2 bg-white menuCarrito pt-4">
+
+                    <div class="col-12 border-bottom mb-1">
+                        <h5>Precio = $ ${precioTotal}</h5>
+                        <h5>Descuento = $ ${descuento}</h5>
+
                     </div>
+                    <h4 class='pl-1'>Total a pagar = $ ${precioTotal-descuento}</h4>
                     <div class='col-12 row justify-content-between mt-4'>
                         <button class='bg-primary text-white rounded p-2 noBorder col-5 botonCarrito' onclick='comprar()'>Comprar</button>
                         <button class='bg-primary text-white rounded p-2 noBorder col-5 botonCarrito' onclick='deleteCar()'>Vaciar Carrito</button>

@@ -5,7 +5,7 @@
     <div class='row my-5 d-flex justify-content-between mx-3'>
         <div class="col-8" id="carrito">
         </div>
-        <div class="col-3 bg-white" id="menu">
+        <div class="col-3" id="menu">
 
         </div>
     </div>

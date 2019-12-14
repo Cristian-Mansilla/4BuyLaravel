@@ -73,7 +73,7 @@
                             <li><a href="/construccion">Ayuda</a></li>
 
                             <li><a href=""><ion-icon name="notifications"></ion-icon></a></li>
-                            <li><a href="/construccion"><ion-icon name="cart"></ion-icon></a></li>
+                            <li><a href="/Carrito"><ion-icon name="cart"></ion-icon></a></li>
                         </ul>
                         <br style="clear: both;">
                     </div>
@@ -125,7 +125,7 @@
 
                     <div class="row col-5 justify-content-between justify-content-md-around py-2 text-center">
                         <a href="" class="col-5 col-md-3 col-sm-4 borde-blanco p-2  text-white rounded"><ion-icon name="notifications"></ion-icon></a>
-                        <a href="/construccion" class="col-5 col-md-3 col-sm-4 borde-blanco p-2 text-white rounded"><ion-icon name="cart"></ion-icon></a>
+                        <a href="/Carrito" class="col-5 col-md-3 col-sm-4 borde-blanco p-2 text-white rounded"><ion-icon name="cart"></ion-icon></a>
                     </div>
 
                 </div>
