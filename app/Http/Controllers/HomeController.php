@@ -74,6 +74,11 @@ class HomeController extends Controller
         return redirect('Carrito');
     }
 
+    public function vaciarCarrito(){
+        session(['carrito' => []]);
+        return ['status' => 'ok'];
+    }
+
     public function carrito(){
         return view('carrito');
     }
