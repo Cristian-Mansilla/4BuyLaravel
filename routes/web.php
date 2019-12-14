@@ -42,6 +42,8 @@ Route::get('/construccion', 'HomeController@construccion');
 
 Route::get('/Carrito', 'HomeController@carrito');
 
+Route::get('/Carrito/get', 'HomeController@getCarrito');
+
 Route::get('/Carrito/add/{id}', 'HomeController@addCarrito');
 
 Route::get('/Carrito/delete/{id}', 'HomeController@eliminarProdCarrito');

@@ -6,6 +6,9 @@
       text-overflow: ellipsis;
       overflow: hidden;
 }
+.noBorder{
+    border: none;
+}
 
 
 .searchButton{

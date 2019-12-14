@@ -53,8 +53,6 @@ class HomeController extends Controller
             $request->session()->push('carrito', $producto);;
 
         }
-        $data = $request->session()->all();
-        $vac = compact('data', 'producto');
         return redirect('/Carrito');
 
     }
@@ -68,7 +66,7 @@ class HomeController extends Controller
                 unset($data[$i]);
                 $data = array_values($data);
                 session(['carrito' => $data]);
-                return redirect('Carrito');
+                return ['status' => 'ok'];
             }
         }
 
@@ -76,15 +74,16 @@ class HomeController extends Controller
         return redirect('Carrito');
     }
 
-    public function carrito(Request $request){
-
-        $data = session('carrito');
-        $data = array_values($data);
-        $vac = compact('data');
-        return view('carrito',$vac);
+    public function carrito(){
+        return view('carrito');
     }
 
 
+    public function getCarrito(){
+        $data = session('carrito');
+        $data = array_values($data);
+        return $data;
+    }
 
 
 
