@@ -75,8 +75,9 @@
                     </div>
                     <h4 class='pl-1'>Total a pagar = $ ${precioTotal-descuento}</h4>
                     <div class='col-12 row justify-content-between mt-4'>
-                        <button class='bg-primary text-white rounded p-2 noBorder col-5 botonCarrito' onclick='comprar()'>Comprar</button>
+                        <button class='bg-primary text-white rounded p-2 noBorder col-5 botonCarrito'onclick='compra()' >Comprar</button>
                         <button class='bg-primary text-white rounded p-2 noBorder col-5 botonCarrito' onclick='deleteCar()'>Vaciar Carrito</button>
+                        <input type='hidden' data-value='${precioTotal-descuento}' id='precioTotal'>
                     </div>
                 </div>`;
                     menu.innerHTML = templateLiteral2;
@@ -128,6 +129,7 @@ function deleteCar(){
     }
 }
 
-function comprar(){
-    console.log('comprar');
+function compra(){
+    var precio = $("#precioTotal").data('value');
+    location.replace("/Pago");
 }

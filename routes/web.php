@@ -55,3 +55,5 @@ Route::get('/Filtro/{marca}', 'productosController@fetchProd');
 Route::get('/test', 'HomeController@test');
 
 Route::get('/Carrito/cant', 'carritoController@cantCarrito');
+
+Route::get('/Pago', 'HomeController@pago');
