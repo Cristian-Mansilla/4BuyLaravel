@@ -9,7 +9,11 @@
 
         </div>
     </div>
+
+
 @endsection
+
+<input type="hidden" id="cantCarrito" data-value="{{json_encode($cantCarrito)}}">
 
 @section('scripts')
     <script src="js/fetchCarrito.js" ></script>

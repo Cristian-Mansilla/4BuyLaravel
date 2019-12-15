@@ -40,16 +40,18 @@ Route::view('/faqs', 'FAQs')->name('faqs');
 
 Route::get('/construccion', 'HomeController@construccion');
 
-Route::get('/Carrito', 'HomeController@carrito')->middleware('auth');
+Route::get('/Carrito', 'carritoController@carrito')->middleware('auth');
 
-Route::get('/Carrito/get', 'HomeController@getCarrito');
+Route::get('/Carrito/get', 'carritoController@getCarrito');
 
-Route::get('/Carrito/add/{id}', 'HomeController@addCarrito');
+Route::get('/Carrito/add/{id}', 'carritoController@addCarrito');
 
-Route::get('/Carrito/delete/{id}', 'HomeController@eliminarProdCarrito');
+Route::get('/Carrito/delete/{id}', 'carritoController@eliminarProdCarrito');
 
-Route::get('/Carrito/deleteAll', 'HomeController@vaciarCarrito');
+Route::get('/Carrito/deleteAll', 'carritoController@vaciarCarrito');
 
 Route::get('/Filtro/{marca}', 'productosController@fetchProd');
 
 Route::get('/test', 'HomeController@test');
+
+Route::get('/Carrito/cant', 'carritoController@cantCarrito');
