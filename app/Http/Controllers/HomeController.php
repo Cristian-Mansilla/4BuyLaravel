@@ -43,14 +43,14 @@ class HomeController extends Controller
         return view('test', $vac);
     }
 
-    public function pago(){
+    public function pago($precio){
         $carrito = session('carrito');
         $prods = [];
         foreach($carrito as $prod){
             array_push($prods, $prod->id);
         }
         $prods = implode(',', $prods);
-        $vac = compact('prods');
+        $vac = compact('prods', 'precio');
 
         return view('pago', $vac);
     }

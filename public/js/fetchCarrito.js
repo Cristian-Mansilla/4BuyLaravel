@@ -131,5 +131,5 @@ function deleteCar(){
 
 function compra(){
     var precio = $("#precioTotal").data('value');
-    location.replace("/Pago");
+    location.replace("/Pago/"+precio);
 }

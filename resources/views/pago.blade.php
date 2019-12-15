@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,10 +30,15 @@
       <input type="text" class="checkout-input checkout-cvc" placeholder="CVC">
     </p>
     <p>
-      <input type="submit" value="Purchase" class="checkout-btn">
+      <input type="submit" value="Purchase" id='enviar' class="checkout-btn">
     </p>
   </form>
+    <input type="hidden" value='{{$precio}}' id="monto">
 
-  {{dd($prods)}}
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src=" {{asset('js/pago.js')}} "></script>
+
+  {{-- {{dd($prods)}} --}}
+
 </body>
 </html>

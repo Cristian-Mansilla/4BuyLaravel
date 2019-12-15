@@ -56,4 +56,4 @@ Route::get('/test', 'HomeController@test');
 
 Route::get('/Carrito/cant', 'carritoController@cantCarrito');
 
-Route::get('/Pago', 'HomeController@pago');
+Route::get('/Pago/{precio}', 'HomeController@pago');
