@@ -13,7 +13,9 @@ class AddTarjetas extends Migration
      */
     public function up()
     {
-        //
+        DB::table('tarjetas')->insert([
+            ['numero_tarjeta' => '4111111111111111', 'propietario' => 'NICOLAS MORERO', 'mes_ven' => 11, 'año_ven' => 23, 'cvc' => 223],
+        ]);
     }
 
     /**
@@ -23,8 +25,6 @@ class AddTarjetas extends Migration
      */
     public function down()
     {
-        DB::table('tarjetas')->insert([
-                ['numero_tarjeta' => '4111111111111111', 'propietario' => 'NICOLAS MORERO', 'mes_ven' => 11, 'año_ven' => 23],
-            ]);
+
     }
 }

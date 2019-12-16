@@ -50,10 +50,12 @@ Route::get('/Carrito/delete/{id}', 'carritoController@eliminarProdCarrito');
 
 Route::get('/Carrito/deleteAll', 'carritoController@vaciarCarrito');
 
+Route::get('/Carrito/cant', 'carritoController@cantCarrito');
+
 Route::get('/Filtro/{marca}', 'productosController@fetchProd');
 
 Route::get('/test', 'HomeController@test');
 
-Route::get('/Carrito/cant', 'carritoController@cantCarrito');
-
 Route::get('/Pago/{precio}', 'HomeController@pago');
+
+Route::get('/Pago/procesar/{datos}', 'HomeController@procesar');

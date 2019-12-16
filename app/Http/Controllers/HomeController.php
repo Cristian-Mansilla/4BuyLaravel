@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Categorias;
+use App\compra;
 use App\Producto;
+use App\tarjeta;
+use Illuminate\Support\Facades\Auth;
+
 class HomeController extends Controller
 {
     /**
@@ -53,6 +57,37 @@ class HomeController extends Controller
         $vac = compact('prods', 'precio');
 
         return view('pago', $vac);
+    }
+
+    public function procesar(Request $request, $datos){
+
+        $datos = explode(',', $datos);
+        $numeroTarjeta = $datos[0];
+        $propietario = $datos[1];
+        $cvc = $datos[2];
+        $mesVen = $datos[3];
+        $añoVen = $datos[4];
+
+
+
+
+        $tarjetas = tarjeta::All();
+
+        foreach($tarjetas as $tarjeta){
+            if($tarjeta->numero_tarjeta == $numeroTarjeta && $tarjeta->propietario == $propietario && $tarjeta->cvc == $cvc && $tarjeta->mes_ven == $mesVen && $tarjeta->año_ven == $añoVen){
+                session(['carrito' => []]);
+                session(['cantCarrito' => []]);
+
+                $compra = new compra;
+                $compra->user_id = Auth::id();
+                $compra->productos = $request->query('productos');
+                $compra->save();
+
+                return ['status' => 'ok'];
+            }
+        }
+
+        return ['status' => 'no'];
     }
 
 
