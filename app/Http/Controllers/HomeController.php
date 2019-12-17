@@ -71,6 +71,7 @@ class HomeController extends Controller
 
 
 
+
         $tarjetas = tarjeta::All();
 
         foreach($tarjetas as $tarjeta){

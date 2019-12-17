@@ -1,16 +1,50 @@
-$(function(){
-    fetchProds();
+
+
+$( "#slider-range" ).slider({
+    range: true,
+    min: 0,
+    max: 500,
+    values: [ 0, 500 ],
+    slide: function( event, ui ) {
+      $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      var div = document.getElementById('x');
+
+        div.innerHTML = '';
+        div.innerHTML = '<div id="loader" class="loader col-12 justify-content-center"><img src="/Imagenes/loader.gif" alt=""></div>';
+
+        document.getElementById('loader').style.display = 'flex';
+        setTimeout(fetchProds($( "#slider-range" ).slider( "values", 0 ), $( "#slider-range" ).slider( "values", 1 )), 1500);
+    }
+
+  });
+  $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+    " - $" + $( "#slider-range" ).slider( "values", 1 )
+
+    );
+
+
+
+
+
+    fetchProds(1,2);
+
+
     $('.brandLi').click(function(){
+
         var div = document.getElementById('x');
 
         div.innerHTML = '';
         div.innerHTML = '<div id="loader" class="loader col-12 justify-content-center"><img src="/Imagenes/loader.gif" alt=""></div>';
+
         document.getElementById('loader').style.display = 'flex';
         setTimeout(fetchProds, 1500);
 
     });
 
-    function fetchProds(){
+    function fetchProds(rango1, rango2){
+
+        console.log(rango1);
+        console.log(rango2);
 
         var brands = [];
         var modelo = [];
@@ -218,4 +252,6 @@ $(function(){
                 console.log(error);
             })
     }
-});
+
+
+

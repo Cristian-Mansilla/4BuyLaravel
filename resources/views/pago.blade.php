@@ -34,6 +34,7 @@
     </p>
   </form>
     <input type="hidden" value='{{$precio}}' id="monto">
+    <input type="hidden" value='{{$prods}}' id='productos'>
 
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src=" {{asset('js/pago.js')}} "></script>

@@ -11,6 +11,7 @@ document.getElementById("enviar").addEventListener("click", function(event){
     })
         .then((pagar) => {
             if (pagar) {
+
                     var numeroTarjeta = document.getElementById("numero_tarjeta").value;
                     var propietario = document.getElementById("propietario").value;
                     var cvc = document.getElementById("cvc").value;
@@ -21,7 +22,8 @@ document.getElementById("enviar").addEventListener("click", function(event){
                     datosTarjeta.push(numeroTarjeta,propietario,cvc,mesVen,añoVen);
 
                     datosTarjeta = datosTarjeta.toString();
-                fetch('/Pago/procesar/'+datosTarjeta)
+                    var productos = document.getElementById('productos').value;
+                fetch('/Pago/procesar/'+datosTarjeta+'?productos='+productos)
                     .then(function(response){
                         return response.json();
                     })
