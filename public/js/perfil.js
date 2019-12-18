@@ -48,7 +48,7 @@ window.onload = function ()
     fetch('/perfil/actualizar')
       .then(function(response)
       {
-        return response.json()
+        return response.json();
       })
       .then(function(data)
       {
