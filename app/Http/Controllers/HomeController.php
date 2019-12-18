@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Categorias;
 use App\compra;
+use App\Cupon;
 use App\Producto;
 use App\tarjeta;
 use Illuminate\Support\Facades\Auth;
@@ -91,6 +92,25 @@ class HomeController extends Controller
         return ['status' => 'no'];
     }
 
+    public function cupon(){
+        return view('canjearCupon');
+    }
 
+    public function canjearCupon($cupon){
+        $cupones = Cupon::all();
+        foreach($cupones as $cup){
+            if($cup->cupon == $cupon){
+                if($cup->status == false){
+                    $cup->status = true;
+                    $cup->user_id = Auth::id();
+                    $cup->save();
+                    return ['status' => 'ok'];
+                }else{
+                    return['status' => 'no'];
+                }
+            }
+        }
+        return ['status' => 'no existe'];
+    }
 
 }

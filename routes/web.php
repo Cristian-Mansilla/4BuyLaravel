@@ -30,6 +30,8 @@ Route::get('/Productos/Busqueda', 'productosController@busqueda');
 
 Route::get('/Productos/Ofertas', 'productosController@ofertas');
 
+Route::get('/Filtro/Ofertas/GetProds', 'productosController@getOfertasProd');
+
 Route::get('/Categorias/Menu', 'categoriasController@menuCategorias');
 
 Route::get('/Categorias/Menu/{id}', 'categoriasController@menuSubcategorias');
@@ -59,3 +61,7 @@ Route::get('/test', 'HomeController@test');
 Route::get('/Pago/{precio}', 'HomeController@pago');
 
 Route::get('/Pago/procesar/{datos}', 'HomeController@procesar');
+
+Route::get('/Cupon', 'HomeController@cupon');
+
+Route::get('/Cupon/canjear/{cupon}', 'HomeController@canjearCupon');

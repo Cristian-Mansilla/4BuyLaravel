@@ -17,4 +17,5 @@
 
 @section('scripts')
     <script src="js/fetchCarrito.js" ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @endsection

@@ -113,20 +113,30 @@ function deleteProdCar(id){
 
 function deleteCar(){
     console.log('delete');
-    var preg = prompt('Estas seguro de que quieres vaciar el carrito?');
-    if(preg){
-        fetch('/Carrito/deleteAll')
-        .then(function(response){
-            return response.json;
-        })
-        .then(function(data){
-            console.log(data);
-            fetchCarrito();
-        })
-        .catch(function(error){
-            console.log(error);
-        })
-    }
+    swal({
+        text: "Quiere vaciar su carrito de compras?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    })
+        .then((preg) => {
+            if (preg) {
+                fetch('/Carrito/deleteAll')
+                    .then(function(response){
+                        return response.json;
+                    })
+                    .then(function(data){
+                        console.log(data);
+                        fetchCarrito();
+                    })
+                    .catch(function(error){
+                        console.log(error);
+                    })
+            }
+            });
+
+
+
 }
 
 function compra(){
