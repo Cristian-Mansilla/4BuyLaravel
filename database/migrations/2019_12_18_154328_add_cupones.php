@@ -15,7 +15,7 @@ class AddCupones extends Migration
     {
         DB::table('cupones')->insert([
             ['cupon' => '123456789', 'user_id' => null, 'status' => false],
-            ['cupon' => '987654321', 'user_id' => 1, 'status' => true],
+            ['cupon' => '987654321', 'user_id' => null, 'status' => true],
         ]);
     }
 

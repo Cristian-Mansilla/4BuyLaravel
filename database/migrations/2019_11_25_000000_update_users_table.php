@@ -14,8 +14,10 @@ class UpdateUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-          $table->unsignedBigInteger('ciudad_id');
-          $table->foreign('ciudad_id')->references('id')->on('ciudades');
+          $table->unsignedBigInteger('pais_id');
+          $table->foreign('pais_id')->references('id')->on('paises');
+          $table->unsignedBigInteger('provincia_id');
+          $table->foreign('provincia_id')->references('id')->on('provincias');
         });
     }
 
