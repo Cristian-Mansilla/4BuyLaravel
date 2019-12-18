@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Categorias;
+use App\Pais;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
@@ -30,6 +31,8 @@ class AppServiceProvider extends ServiceProvider
         // Blade::component('layouts.components.carousel','carousel');
         $categorias = Categorias::whereNull('subcategoria_id')->get();
         view()->share('categorias', $categorias);
+        $paises = Pais::all();
+        view()->share('paises', $paises);
 
     }
 }

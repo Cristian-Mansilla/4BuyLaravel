@@ -7,6 +7,7 @@ use App\Categorias;
 use App\compra;
 use App\Cupon;
 use App\Producto;
+use App\Provincia;
 use App\tarjeta;
 use Illuminate\Support\Facades\Auth;
 
@@ -115,6 +116,11 @@ class HomeController extends Controller
 
     public function ayuda(){
         return view('Ayuda');
+    }
+
+    public function getProvincias($pais){
+        $provincias = Provincia::where('pais_id', '=', $pais)->get();
+        return $provincias;
     }
 
 }

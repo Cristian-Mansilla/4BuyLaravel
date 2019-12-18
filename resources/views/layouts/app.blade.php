@@ -41,5 +41,10 @@
             @yield('content')
         </main>
     </div>
+
+
+    @section('scripts')
+
+    @show
 </body>
 </html>

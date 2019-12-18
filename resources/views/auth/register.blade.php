@@ -62,14 +62,31 @@
                                     @enderror
                                 </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="pais" class="col-md-4 col-form-label text-md-right">{{ __('Pais') }}</label>
+
+                            <div class="col-md-6">
+                                <select name="pais" id="pais" class="form-control @error('pais') is-invalid @enderror">
+                                    @foreach ($paises as $pais)
+                                        <option value="{{$pais->id}}" onclick="getProv({{$pais->id}})">{{$pais->nombre_pais}}</option>
+                                    @endforeach
+                                </select>
+                                @error('pais')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                    </div>
 
                         <div class="form-group row">
-                                <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('City') }}</label>
+                                <label for="provincia" class="col-md-4 col-form-label text-md-right">{{ __('Provincia') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="city" type="number" class="form-control @error('city') is-invalid @enderror" name="city" value="{{ old('city') }}" required autocomplete="city" autofocus>
+                                    <select name="provincia" id="provincia" class="form-control @error('provincia') is-invalid @enderror">
 
-                                    @error('city')
+                                    </select>
+                                    @error('provincia')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -140,4 +157,8 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+    <script src="{{asset('js/fetchRegister.js')}} "></script>
 @endsection
