@@ -11,6 +11,7 @@
         width: 200px;
     }
 </style>
+
 @endsection
 
 @section('content')

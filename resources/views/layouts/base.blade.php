@@ -11,6 +11,35 @@
     <link rel="stylesheet" href="{{ asset('css/navBar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/master.css') }}">
     <title>@section('title') @show | 4Buy</title>
+    <style>
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        .dropdown:hover .iconoNot{
+            color: black;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          padding: 12px 16px;
+          z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        .iconoNot{
+            color: white;
+        }
+        .iconoNot:hover{
+            color: black;
+        }
+        </style>
     @section('head')@show
 
 </head>
@@ -74,7 +103,19 @@
                             <li><a href="/construccion">Contacto</a></li>
                             <li><a href="/Ayuda">Ayuda</a></li>
 
-                            <li><a href=""><ion-icon name="notifications"></ion-icon></a></li>
+                            <li >
+                                <div class="dropdown px-2">
+                                    <span class="iconoNot"><ion-icon name="notifications"></ion-icon></span>
+                                    <div class="dropdown-content">
+                                    @if (Auth::check())
+                                        <p>Notificaciones</p>
+                                    @else
+                                        <a href="{{ route('login') }}">Loguearse</a>
+                                    @endif
+                                    </div>
+                                  </div>
+                            </li>
+
                             <li><a href="/Carrito"><ion-icon name="cart"></ion-icon></a></li>
                         </ul>
                         <br style="clear: both;">
