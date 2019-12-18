@@ -1,6 +1,4 @@
-
-
-    fetchProds();
+fetchOfertas();
 
 
     $('.brandLi').click(function(){
@@ -11,44 +9,15 @@
         div.innerHTML = '<div id="loader" class="loader col-12 justify-content-center"><img src="/Imagenes/loader.gif" alt=""></div>';
 
         document.getElementById('loader').style.display = 'flex';
-        setTimeout(fetchProds, 1500);
+        setTimeout(fetchOfertas, 1500);
 
     });
 
-    function fetchProds(){
-
-
-        var brands = [];
-
-
-        $('.brand').each(function(){
-            if($(this).is(":checked")){
-                brands.push($(this).val());
-            }
-
-        });
-
-
-        var loc = location.pathname;
-
-        var locArray = loc.split('/');
-
+    function fetchOfertas(){
 
         var precio = document.getElementById('precio').value;
 
-
-        if(brands && brands.length){
-            var filtro = brands.toString();
-        }else{
-            var filtro = "none";
-        }
-
-
-
-        console.log('Ordenar por: ' + precio);
-        console.log('Marca:'+filtro);
-
-        var ruta = '/Filtro/'+filtro+'?categoria='+locArray[3]+'&precio='+precio;
+        var ruta = '/Filtro/Ofertas/GetProds?precio='+precio;
         console.log(ruta);
         fetch(ruta)
             .then(function(response){

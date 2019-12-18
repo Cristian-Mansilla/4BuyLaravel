@@ -69,7 +69,7 @@
 
                                 </ul>
                             </li>
-                            <li><a href="/construccion">Canjear cupon</a></li>
+                            <li><a href="/Cupon">Canjear cupon</a></li>
                             <li><a href="/Productos/Ofertas">Ofertas</a></li>
                             <li><a href="/construccion">Contacto</a></li>
                             <li><a href="/construccion">Ayuda</a></li>
@@ -112,7 +112,7 @@
                                 <button class='dropdown-item backg-header' type='button'><a href='{{ route('register') }}' class='text-center pt-2 col-12 rounded text-white p-1'>Registro</a></button>
                                 @endif
 
-                            <button class="dropdown-item" type="button"><a href="/construccion" class="text-center pt-2 col-12 rounded p-1">Canjear cupon</a></button>
+                            <button class="dropdown-item" type="button"><a href="/Cupon" class="text-center pt-2 col-12 rounded p-1">Canjear cupon</a></button>
                             <button class="dropdown-item" type="button"><a href="/Productos/Ofertas" class="text-center pt-2 col-12 rounded p-1">Ofertas</a></button>
                             <button class="dropdown-item" type="button"><a href="/construccion" class="text-center pt-2 col-12 rounded p-1">Contacto</a></button>
                             <button class="dropdown-item" type="button"><a href="/construccion" class="text-center pt-2 col-12 rounded p-1">Ayuda</a></button>
