@@ -13,7 +13,7 @@
                 <img src="{{$item->ruta_imagen}} " class="card-img-top imgCarouselMult p-3" alt="...">
                 <div class="card-body p-3">
                     <h5 class="card-title">$ {{$item->precio}} </h5>
-                    <p class="card-text ">{{$item->titulo}} </p>
+                    <p class="card-text tituloCarouselPrd mb-2">{{$item->titulo}}</p>
                 </div>
             </a>
         </div>

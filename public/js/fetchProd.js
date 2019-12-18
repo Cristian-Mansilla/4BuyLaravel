@@ -86,7 +86,7 @@
                         <img src='${prod.ruta_imagen}' class="imgAllProd">
                     </div>
                     <div class='col-8 text-center mt-5 p-1 row justify-content-center'>
-                        <a href="/Productos/Detalle/${prod.id} " class='col-12 text-center text-dark tituloProdsAll'>Celular motorola moto g4 32 Gb + 3GB Ram${prod.titulo}</a>
+                        <a href="/Productos/Detalle/${prod.id} " class='col-12 text-center text-dark tituloProdsAll'>${prod.titulo}</a>
 
                         <p class='col-md-6 col-6 color-grey infoAllProd'>$ ${prod.precio}</p>
                         <p class='col-md-6 col-6 color-grey infoAllProd'>Stock: ${prod.stock}</p>

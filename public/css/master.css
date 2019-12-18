@@ -1,5 +1,12 @@
 
 
+.tituloCarouselPrd {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 .infoMercado{
 
     overflow-wrap: break-word;
