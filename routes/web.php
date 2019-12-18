@@ -73,3 +73,7 @@ Route::get('/Cupon/canjear/{cupon}', 'HomeController@canjearCupon');
 Route::get('/Ayuda', 'HomeController@ayuda');
 
 Route::get('/Provincias/get/{pais}', 'HomeController@getProvincias');
+
+Route::get('/Contacto', 'HomeController@contacto');
+
+Route::post('/Contacto/send', 'HomeController@contactoSend');

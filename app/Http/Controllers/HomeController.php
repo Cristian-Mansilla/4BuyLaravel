@@ -10,6 +10,7 @@ use App\Producto;
 use App\Provincia;
 use App\tarjeta;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
 
 class HomeController extends Controller
 {
@@ -123,4 +124,27 @@ class HomeController extends Controller
         return $provincias;
     }
 
+
+    public function contacto(){
+        return view('Contacto');
+    }
+    public function contactoSend(){
+        $nombre = Input::get('nombre');
+        $email = Input::get('email');
+        $mensaje = Input::get('mensaje');
+
+        $contacto = [
+            'nombre' => $nombre,
+            'email' => $email,
+            'mensaje' => $mensaje,
+        ];
+        $file = "json/contacto.json";
+        $json_data = file_get_contents($file);
+        $data = json_decode($json_data, true);
+        array_push($data, $contacto);
+
+        $json_string = json_encode($data);
+        file_put_contents($file, $json_string);
+        return redirect('/');
+    }
 }

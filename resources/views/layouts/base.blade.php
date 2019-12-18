@@ -100,7 +100,7 @@
                             </li>
                             <li><a href="/Cupon">Canjear cupon</a></li>
                             <li><a href="/Productos/Ofertas">Ofertas</a></li>
-                            <li><a href="/construccion">Contacto</a></li>
+                            <li><a href="/Contacto">Contacto</a></li>
                             <li><a href="/Ayuda">Ayuda</a></li>
 
                             <li >
@@ -114,7 +114,7 @@
                                         <a href="{{ route('login') }}">Loguearse</a>
                                     @endif
                                     </div>
-                                  </div>
+                                </div>
                             </li>
 
                             <li><a href="/Carrito"><ion-icon name="cart"></ion-icon></a></li>
@@ -156,7 +156,7 @@
 
                             <button class="dropdown-item" type="button"><a href="/Cupon" class="text-center pt-2 col-12 rounded p-1">Canjear cupon</a></button>
                             <button class="dropdown-item" type="button"><a href="/Productos/Ofertas" class="text-center pt-2 col-12 rounded p-1">Ofertas</a></button>
-                            <button class="dropdown-item" type="button"><a href="/construccion" class="text-center pt-2 col-12 rounded p-1">Contacto</a></button>
+                            <button class="dropdown-item" type="button"><a href="/Contacto" class="text-center pt-2 col-12 rounded p-1">Contacto</a></button>
                             <button class="dropdown-item" type="button"><a href="/Ayuda" class="text-center pt-2 col-12 rounded p-1">Ayuda</a></button>
                             <button class="dropdown-item" type="button"><a href="/Categorias/Menu" class="text-center pt-2 col-12 rounded p-1">Categorias</a></button>
 
