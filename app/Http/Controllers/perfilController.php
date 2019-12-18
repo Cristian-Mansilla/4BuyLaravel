@@ -41,7 +41,14 @@ class perfilController extends Controller
     return $usuario;
   }
 
-  public function actualizar(Request $request)
+  public function actualizar()
   {
+    $updateUsuario = [
+      'usuario' => request('usuario'),
+      'nombre' => request('nombre'),
+      'apellido' => request('apellido'),
+      'email' => request('email')
+    ];
+    return $updateUsuario;
   }
 }
