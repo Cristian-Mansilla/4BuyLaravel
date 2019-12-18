@@ -8,7 +8,7 @@ window.onload = function ()
 
   getInfo();
 
-  function getInfo ()
+  function getInfo()
   {
     fetch('/perfil/get')
       .then(function(response)
@@ -29,5 +29,14 @@ window.onload = function ()
       })
   }
 
-
+  document.querySelector('guardar').addEventListener('click', function (event)
+  {
+    event.preventDefault()
+    .then(function()
+    {
+     request()->validate([
+       'nombre' => 'required'
+     ]);
+    })
+  })
 }
