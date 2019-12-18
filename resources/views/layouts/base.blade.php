@@ -24,7 +24,7 @@
           display: none;
           position: absolute;
           background-color: #f9f9f9;
-          min-width: 160px;
+          min-width: 200px;
           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
           padding: 12px 16px;
           z-index: 1;
@@ -109,6 +109,7 @@
                                     <div class="dropdown-content">
                                     @if (Auth::check())
                                         <p>Notificaciones</p>
+                                        <p class="pl-1">No tiene notificaciones</p>
                                     @else
                                         <a href="{{ route('login') }}">Loguearse</a>
                                     @endif
@@ -167,7 +168,18 @@
                         </div>
 
                     <div class="row col-5 justify-content-between justify-content-md-around py-2 text-center">
-                        <a href="" class="col-5 col-md-3 col-sm-4 borde-blanco p-2  text-white rounded"><ion-icon name="notifications"></ion-icon></a>
+                        <div class="dropdown col-5 col-md-3 col-sm-4 borde-blanco p-2 rounded">
+                            <span class="iconoNot"><ion-icon name="notifications"></ion-icon></span>
+                            <div class="dropdown-content">
+                            @if (Auth::check())
+                                <p>Notificaciones</p>
+                                <p class="pl-1">No tiene notificaciones</p>
+                            @else
+                                <a href="{{ route('login') }}">Loguearse</a>
+                            @endif
+                            </div>
+                          </div>
+                        {{-- <a href="" class="col-5 col-md-3 col-sm-4 borde-blanco p-2  text-white rounded"><ion-icon name="notifications"></ion-icon></a> --}}
                         <a href="/Carrito" class="col-5 col-md-3 col-sm-4 borde-blanco p-2 text-white rounded"><ion-icon name="cart"></ion-icon></a>
                     </div>
 
