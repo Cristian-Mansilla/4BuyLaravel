@@ -50,6 +50,7 @@ class perfilController extends Controller
       'apellido' => request('apellido'),
       'email' => request('email')
     ]);
-    return redirect()->route('miPerfil');
+    return ['status' => 'ok']; 
+    //return redirect()->route('miPerfil');
   }
 }

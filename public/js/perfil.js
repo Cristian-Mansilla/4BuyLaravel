@@ -45,14 +45,19 @@ window.onload = function ()
     }
 
     //actualizando data usuario a tabla User
-    fetch('perfil/actualizar')
+    fetch('/perfil/actualizar')
       .then(function(response)
       {
         return response.json()
       })
       .then(function(data)
       {
-          console.log(data);
+          //console.log(data);
+          if (data.status == 'ok') {
+            alert('Los cambios se realizaron exitosamente');
+
+            return redirect().route('miPerfil');
+          }
       })
       .catch(function(error)
       {
