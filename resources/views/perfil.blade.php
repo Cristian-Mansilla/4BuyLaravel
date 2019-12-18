@@ -4,6 +4,10 @@
   <link rel="stylesheet" href="{{asset("css/perfil.css")}}">
 @endsection
 
+@section('script')
+  <script src="{{asset("js/perfil.js")}}"></script>
+@endsection
+
 @section('content')
   <!--inicia seccion perfil-->
   <div class="row">

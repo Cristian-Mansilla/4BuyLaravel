@@ -1,6 +1,7 @@
 
   <div class="border-left mt-4 px-4">
-    <form class="" action="" method="post">
+    <form class="" action="{{route('miPerfil')}}" method="get">
+      @csrf
       <div class="d-flex">
         <h1 class="titulo">Mis Datos</h1>
         <button class="btn btn-link ml-auto inflate" type="button" name="edit">
@@ -15,7 +16,7 @@
           </label>
         </div>
         <div class="col-12 col-md-10">
-          <input class="form-control border-0 bg-transparent" id="username" type="text" name="username" value="{{(auth()->user())?auth()->user()->usuario:''}}" placeholder="Usuario">
+          <input class="form-control border-0 bg-transparent" id="username" type="text" name="username" value="" placeholder="Usuario">
         </div>
       </div>
       <div class="form-group row border-bottom mb-2">
@@ -29,7 +30,7 @@
           </label>
         </div>
         <div class="col-12 col-md-10">
-          <input class="form-control border-0 bg-transparent" id="name" type="text" name="name" value="{{(auth()->user())?auth()->user()->nombre:''}}" placeholder="Nombre">
+          <input class="form-control border-0 bg-transparent" id="name" type="text" name="name" value="" placeholder="Nombre">
         </div>
       </div>
       <div class="form-group row border-bottom mb-2">
@@ -39,7 +40,7 @@
           </label>
         </div>
         <div class="col-12 col-md-10">
-          <input class="form-control border-0 bg-transparent" id="lastname" type="text" name="lastname" value="{{(auth()->user())?auth()->user()->apellido:''}}" placeholder="Apellido">
+          <input class="form-control border-0 bg-transparent" id="lastname" type="text" name="lastname" value="" placeholder="Apellido">
         </div>
       </div>
       <div class="form-group row border-bottom mb-2">
@@ -49,10 +50,10 @@
           </label>
         </div>
         <div class="col-12 col-md-10">
-          <input class="form-control border-0 bg-transparent" id="email" type="email" name="email" value="{{(auth()->user())?auth()->user()->email:''}}" placeholder="E-mail">
+          <input class="form-control border-0 bg-transparent" id="email" type="email" name="email" value="" placeholder="E-mail">
         </div>
       </div>
       <button class="pulsador color1" type="reset">Resetear</button>
-      <button class="pulsador color3" type="submit" name="guardar">Guardar</button>
+      <button class="guardar pulsador color3" type="submit">Guardar</button>
     </form>
   </div>

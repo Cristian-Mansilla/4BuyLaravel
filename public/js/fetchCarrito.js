@@ -100,7 +100,7 @@
 function deleteProdCar(id){
     fetch('/Carrito/delete/'+id)
         .then(function(response){
-            return response.json;
+            return response.json();
         })
         .then(function(data){
             console.log(data);
@@ -117,7 +117,7 @@ function deleteCar(){
     if(preg){
         fetch('/Carrito/deleteAll')
         .then(function(response){
-            return response.json;
+            return response.json();
         })
         .then(function(data){
             console.log(data);

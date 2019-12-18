@@ -36,6 +36,10 @@ Route::get('/Categorias/Menu/{id}', 'categoriasController@menuSubcategorias');
 
 Route::get('/perfil', 'perfilController@miPerfil')->name('miPerfil');
 
+Route::get('/perfil/get', 'perfilController@getDatosUser');
+
+Route::post('/perfil/post', 'perfilController@postDatosUser');
+
 Route::view('/faqs', 'FAQs')->name('faqs');
 
 Route::get('/construccion', 'HomeController@construccion');

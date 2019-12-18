@@ -31,4 +31,18 @@ class perfilController extends Controller
     return view('perfil', compact('compras', 'config', 'tabContent'));
   }
 
+  public function getDatosUser() {
+    $usuario = [
+      'usuario' => auth()->user()->usuario,
+      'nombre' => auth()->user()->nombre,
+      'apellido' => auth()->user()->apellido,
+      'email' => auth()->user()->email
+    ];
+    return $usuario;
+  }
+
+  public function postDatosUser()
+  {
+    
+  }
 }
