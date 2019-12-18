@@ -34,9 +34,7 @@ window.onload = function ()
     event.preventDefault()
     .then(function()
     {
-     request()->validate([
-       'nombre' => 'required'
-     ]);
+     request()->validate();
     })
   })
 }

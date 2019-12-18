@@ -14,7 +14,7 @@
 @endsection
 
 @section('content')
-<main class="container  justify-content-lg-between justify-content-center " >
+<main class="container  justify-content-lg-between justify-content-center d-flex" >
     <div class="col-12 justify-content-lg-between justify-content-center row pt-4">
         <div class="col-4  sombra d-lg-block d-none row">
             <h3 class="mt-2">Ordenar por</h3>
@@ -38,6 +38,26 @@
 
 
 
+            </div>
+        </div>
+        <div class="col-12 row justify-content-between p-1 d-flex d-lg-none">
+            <h4 class="col-12">Filtrar</h4>
+            <div class="col-6">
+                <h5>Marcas</h5>
+                <select name="" id="marca2">
+                    <option value="all" class="brandLi">Todas</option>
+                    @foreach ($marcas as $marca)
+                        <option value="{{$marca->id}}" class="brandLi">{{$marca->nombre_marca}}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="col-6">
+                <h5 class="">Ordenar por</h5>
+                <select name="precios" id="precio2">
+                    <option value="relevancia" class="brandLi">Relevancia</option>
+                    <option value="menor" class="brandLi">Menor precio</option>
+                    <option value="mayor" class="brandLi">Mayor precio</option>
+                </select>
             </div>
         </div>
 

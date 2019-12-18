@@ -41,7 +41,7 @@
                             descuento = descuento + prod.oferta;
                         }
                         const templateLiteral = `
-                        <div class=' row justify-content-around bg-white p-2 mt-1 prodCarrito'>
+                        <div class=' row justify-content-around bg-white p-2 mt-1 prodCarrito d-md-flex d-sm-flex d-none'>
                         <div class='col-2 pt-2'>
                             <img src='${prod.ruta_imagen}' alt='Imagen Producto' height='100'>
                         </div>
@@ -60,7 +60,17 @@
                                 </div>
                             </div>
                         </div>
-                    </div>`;
+                    </div>
+
+                    <div class="card itemCarousel d-md-none d-flex d-sm-none">
+
+                <img src="${prod.ruta_imagen}" class="card-img-top imgCarouselMult p-3" alt="...">
+                <div class="card-body p-3 text-center">
+                    <h5 class="card-title">$ ${prod.precio}</h5>
+                    <p class="card-text ">Celular motorola moto g4 32 Gb + 3GB Ram${prod.titulo}</p>
+                </div>
+
+        </div>`;
 
 
                     div.innerHTML = div.innerHTML.concat(templateLiteral);

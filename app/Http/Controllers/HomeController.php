@@ -113,4 +113,8 @@ class HomeController extends Controller
         return ['status' => 'no existe'];
     }
 
+    public function ayuda(){
+        return view('Ayuda');
+    }
+
 }
