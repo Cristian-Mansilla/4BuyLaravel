@@ -16,18 +16,14 @@
 @section('content')
 <main class="container  justify-content-lg-between justify-content-center " >
     <div class="col-12 justify-content-lg-between justify-content-center row pt-4">
-        <div class="col-4 bg-white  sombra d-lg-block d-none row">
-            <div class="list-group">
-                <p>
-                    <label for="amount">Price range:</label>
-                    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-                  </p>
-
-                  <div id="slider-range" id="precioRango"></div>
-
-                <div id="price_range"></div>
-            </div>
-            <div id="brands-list">
+        <div class="col-4  sombra d-lg-block d-none row">
+            <h3 class="mt-2">Ordenar por</h3>
+            <select name="cars" id="precio">
+                <option value="relevancia" class="brandLi">Relevancia</option>
+                <option value="menor" class="brandLi">Menor precio</option>
+                <option value="mayor" class="brandLi">Mayor precio</option>
+              </select>
+            <div id="brands-list" class="mt-2">
                 @if (isset($marcas)&& !empty($marcas))
                 <h3>Marca</h3>
                 <ul>
@@ -59,6 +55,7 @@
 @stop
 
 @section('scripts')
+
 <script src="{{asset('/js/fetchProd.js')}} "></script>
 
 @endsection

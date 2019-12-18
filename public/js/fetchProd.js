@@ -1,32 +1,6 @@
 
 
-$( "#slider-range" ).slider({
-    range: true,
-    min: 0,
-    max: 500,
-    values: [ 0, 500 ],
-    slide: function( event, ui ) {
-      $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-      var div = document.getElementById('x');
-
-        div.innerHTML = '';
-        div.innerHTML = '<div id="loader" class="loader col-12 justify-content-center"><img src="/Imagenes/loader.gif" alt=""></div>';
-
-        document.getElementById('loader').style.display = 'flex';
-        setTimeout(fetchProds($( "#slider-range" ).slider( "values", 0 ), $( "#slider-range" ).slider( "values", 1 )), 1500);
-    }
-
-  });
-  $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-    " - $" + $( "#slider-range" ).slider( "values", 1 )
-
-    );
-
-
-
-
-
-    fetchProds(1,2);
+    fetchProds();
 
 
     $('.brandLi').click(function(){
@@ -41,90 +15,15 @@ $( "#slider-range" ).slider({
 
     });
 
-    function fetchProds(rango1, rango2){
+    function fetchProds(){
 
-        console.log(rango1);
-        console.log(rango2);
 
         var brands = [];
-        var modelo = [];
-        var ram = [];
-        var memoriaInterna = [];
-        var linea = [];
-        var tamañoPantalla = [];
-        var resolucion = [];
-        var capacidad = [];
-        var tipoPantalla = [];
-        var tamaño = [];
-        var pasadoString = [];
+
 
         $('.brand').each(function(){
             if($(this).is(":checked")){
                 brands.push($(this).val());
-            }
-
-        });
-
-
-
-
-
-        $('.modelo').each(function(){
-            if($(this).is(":checked")){
-                modelo.push($(this).val());
-            }
-
-        });
-        $('.ram').each(function(){
-            if($(this).is(":checked")){
-                ram.push($(this).val());
-            }
-
-        });
-        $('.memoriaInterna').each(function(){
-            if($(this).is(":checked")){
-                memoriaInterna.push($(this).val());
-            }
-
-        });
-        $('.linea').each(function(){
-            if($(this).is(":checked")){
-                linea.push($(this).val());
-            }
-
-        });
-
-        $('.tamañoPantalla').each(function(){
-            if($(this).is(":checked")){
-                tamañoPantalla.push($(this).val());
-            }
-
-        });
-
-        $('.resolucion').each(function(){
-            if($(this).is(":checked")){
-                resolucion.push($(this).val());
-            }
-
-        });
-
-        $('.capacidad').each(function(){
-            if($(this).is(":checked")){
-                capacidad.push($(this).val());
-            }
-
-        });
-
-        $('.tipoPantalla').each(function(){
-            if($(this).is(":checked")){
-                tipoPantalla.push($(this).val());
-            }
-
-        });
-
-        $('.tamaño').each(function(){
-            if($(this).is(":checked")){
-                tamaño.push($(this).val());
             }
 
         });
@@ -135,6 +34,7 @@ $( "#slider-range" ).slider({
         var locArray = loc.split('/');
 
 
+        var precio = document.getElementById('precio').value;
 
 
         if(brands && brands.length){
@@ -143,72 +43,12 @@ $( "#slider-range" ).slider({
             var filtro = "none";
         }
 
-        if(modelo && modelo.length){
-            var modelo = modelo.toString();
-        }else{
-            var modelo = "none";
-        }
 
-        if(ram && ram.length){
-            var ram = ram.toString();
-        }else{
-            var ram = "none";
-        }
 
-        if(memoriaInterna && memoriaInterna.length){
-            var memoriaInterna = memoriaInterna.toString();
-        }else{
-            var memoriaInterna = "none";
-        }
-
-        if(linea && linea.length){
-            var linea = linea.toString();
-        }else{
-            var linea = "none";
-        }
-
-        if(tamañoPantalla && tamañoPantalla.length){
-            var tamañoPantalla = tamañoPantalla.toString();
-        }else{
-            var tamañoPantalla = "none";
-        }
-
-        if(resolucion && resolucion.length){
-            var resolucion = resolucion.toString();
-        }else{
-            var resolucion = "none";
-        }
-
-        if(capacidad && capacidad.length){
-            var capacidad = capacidad.toString();
-        }else{
-            var capacidad = "none";
-        }
-
-        if(tipoPantalla && tipoPantalla.length){
-            var tipoPantalla = tipoPantalla.toString();
-        }else{
-            var tipoPantalla = "none";
-        }
-
-        if(tamaño && tamaño.length){
-            var tamaño = tamaño.toString();
-        }else{
-            var tamaño = "none";
-        }
-
-        console.log('Modelo :'+modelo);
-        console.log('Ram: '+ram);
-        console.log('MemoriaInterna: '+memoriaInterna);
-        console.log('Lineas: '+linea);
-        console.log('TamañoPantalla: '+tamañoPantalla);
-        console.log('Resolucion: '+resolucion);
-        console.log('Capacidad: '+capacidad);
-        console.log('TipoPantalla: '+tipoPantalla);
-        console.log('Tamaño: '+tamaño);
-
+        console.log('Ordenar por: ' + precio);
         console.log('Marca:'+filtro);
-        var ruta = '/Filtro/'+filtro+'?categoria='+locArray[3];
+
+        var ruta = '/Filtro/'+filtro+'?categoria='+locArray[3]+'&precio='+precio;
         console.log(ruta);
         fetch(ruta)
             .then(function(response){

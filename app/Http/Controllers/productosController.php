@@ -138,15 +138,7 @@ class productosController extends Controller
 
     public function fetchProd(Request $request,$marca){
         $categoria = explode(',' ,$request->query('categoria'));
-        $modelos = explode(',' ,$request->query('modelo'));
-        $rams = explode(',' ,$request->query('ram'));
-        $memoriasInternas = explode(',' ,$request->query('memoriaInterna'));
-        $lineas = explode(',' ,$request->query('linea'));
-        $tamañosPantallas = explode(',' ,$request->query('tamañoPantalla'));
-        $resoluciones = explode(',' ,$request->query('resolucion'));
-        $capacidades = explode(',' ,$request->query('capacidad'));
-        $tipoPantallas = explode(',' ,$request->query('tipoPantalla'));
-        $tamaños = explode(',' ,$request->query('tamaño'));
+        $ordenarPor =  $request->query('precio');
         $marcas = explode(',' , $marca);
 
 
@@ -164,9 +156,22 @@ class productosController extends Controller
                             ->where('marca_id', '=', $marca);
                 });
             }
-            $productos = $prod->get();
+
+            if($ordenarPor == 'mayor'){
+                $productos = $prod->orderBy('precio', 'DESC')->get();
+            }elseif($ordenarPor == 'menor'){
+                $productos = $prod->orderBy('precio', 'ASC')->get();
+            }else{
+                $productos = $prod->orderBy('id', 'ASC')->get();
+            }
         }else {
-            $productos = Producto::where('categoria_id', '=', $categoria)->get();
+            if($ordenarPor == 'mayor'){
+                $productos = Producto::where('categoria_id', '=', $categoria)->orderBy('precio', 'DESC')->get();
+            }elseif ($ordenarPor == 'menor'){
+                $productos = Producto::where('categoria_id', '=', $categoria)->orderBy('precio', 'ASC')->get();
+            }else{
+                $productos = Producto::where('categoria_id', '=', $categoria)->orderBy('id', 'ASC')->get();
+            }
 
         }
 
