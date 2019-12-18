@@ -113,22 +113,6 @@ function deleteProdCar(id){
 
 function deleteCar(){
     console.log('delete');
-<<<<<<< HEAD
-    var preg = prompt('Estas seguro de que quieres vaciar el carrito?');
-    if(preg){
-        fetch('/Carrito/deleteAll')
-        .then(function(response){
-            return response.json();
-        })
-        .then(function(data){
-            console.log(data);
-            fetchCarrito();
-        })
-        .catch(function(error){
-            console.log(error);
-        })
-    }
-=======
     swal({
         text: "Quiere vaciar su carrito de compras?",
         icon: "warning",
@@ -150,10 +134,6 @@ function deleteCar(){
                     })
             }
             });
-
-
-
->>>>>>> 9556121e5cac1ad730759383fc1b5937965a7f62
 }
 
 function compra(){
