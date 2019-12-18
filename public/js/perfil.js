@@ -43,6 +43,21 @@ window.onload = function ()
       alert('El campo email no es una dirección de correo electrónico valido')
       event.preventDefault()
     }
+
+    //actualizando data usuario a tabla User
+    fetch('perfil/actualizar')
+      .then(function(response)
+      {
+        return response.json()
+      })
+      .then(function(data)
+      {
+          console.log(data);
+      })
+      .catch(function(error)
+      {
+          console.log(error)
+      })
   })
 
   function validar(campo)
