@@ -32,7 +32,7 @@ class HomeController extends Controller
             $cate = 11;
         }
         $prodMasVendidos = Producto::where('categoria_id', 'LIKE', 12)->orWhere('categoria_id', 'LIKE', 11)->orwhere('categoria_id', 'LIKE', 8)->get();
-        $prodUltimaVisita = Producto::where('categoria_id', 'LIKE', $cate)->orWhere('categoria_id', 'LIKE', 11)->orWhere('categoria_id', 'LIKE', 12)->get();
+        $prodUltimaVisita = Producto::where('categoria_id', 'LIKE', $cate)->get();
         $vac = compact('prodMasVendidos', 'prodUltimaVisita');
         return view('home', $vac);
     }
