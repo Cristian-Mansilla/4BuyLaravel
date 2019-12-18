@@ -72,7 +72,7 @@
                             <li><a href="/Cupon">Canjear cupon</a></li>
                             <li><a href="/Productos/Ofertas">Ofertas</a></li>
                             <li><a href="/construccion">Contacto</a></li>
-                            <li><a href="/construccion">Ayuda</a></li>
+                            <li><a href="/Ayuda">Ayuda</a></li>
 
                             <li><a href=""><ion-icon name="notifications"></ion-icon></a></li>
                             <li><a href="/Carrito"><ion-icon name="cart"></ion-icon></a></li>
@@ -115,7 +115,7 @@
                             <button class="dropdown-item" type="button"><a href="/Cupon" class="text-center pt-2 col-12 rounded p-1">Canjear cupon</a></button>
                             <button class="dropdown-item" type="button"><a href="/Productos/Ofertas" class="text-center pt-2 col-12 rounded p-1">Ofertas</a></button>
                             <button class="dropdown-item" type="button"><a href="/construccion" class="text-center pt-2 col-12 rounded p-1">Contacto</a></button>
-                            <button class="dropdown-item" type="button"><a href="/construccion" class="text-center pt-2 col-12 rounded p-1">Ayuda</a></button>
+                            <button class="dropdown-item" type="button"><a href="/Ayuda" class="text-center pt-2 col-12 rounded p-1">Ayuda</a></button>
                             <button class="dropdown-item" type="button"><a href="/Categorias/Menu" class="text-center pt-2 col-12 rounded p-1">Categorias</a></button>
 
                         </div>
@@ -187,7 +187,7 @@
                             <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Contacto</a></li>
                             <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Reportar Problema</a></li>
                             <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Medios de pago</a></li>
-                            <li class="ml-3"><a class="text-white text-decoration-none" href="/construccion">Ayuda</a></li>
+                            <li class="ml-3"><a class="text-white text-decoration-none" href="/Ayuda">Ayuda</a></li>
 
                         </ul>
                     </div>

@@ -37,7 +37,7 @@ class productosController extends Controller
 
         $marcas = array_unique($marcas);
 
-        $vac = compact('productos', 'marcas', 'modelos', 'rams', 'memoriaInternas', 'lineas', 'tamañoPantallas', 'resoluciones', 'capacidades', 'tipoDePantallas', 'tamaños');
+        $vac = compact('productos', 'marcas');
         return view('Productos', $vac);
     }
 

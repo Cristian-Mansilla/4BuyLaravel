@@ -32,6 +32,7 @@ window.onload = function ()
 
   document.getElementById('guardar').addEventListener('click', function (event)
   {
+<<<<<<< HEAD
     //validando campos
     validar(nombre);
     validar(apellido);
@@ -43,6 +44,13 @@ window.onload = function ()
       alert('El campo email no es una dirección de correo electrónico valido')
       event.preventDefault()
     }
+=======
+    event.preventDefault()
+    .then(function()
+    {
+     request()->validate();
+    })
+>>>>>>> a73b52be70871d9e9edf346baebda8d719329eab
   })
 
   function validar(campo)

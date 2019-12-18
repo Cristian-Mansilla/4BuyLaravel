@@ -3,6 +3,8 @@
     fetchProds();
 
 
+
+
     $('.brandLi').click(function(){
 
         var div = document.getElementById('x');
@@ -34,16 +36,29 @@
         var locArray = loc.split('/');
 
 
-        var precio = document.getElementById('precio').value;
 
 
-        if(brands && brands.length){
-            var filtro = brands.toString();
+
+
+
+        if(screen.width < 980){
+            marca= document.getElementById('marca2').value;
+            if(marca != 'all'){
+                filtro = marca;
+            }else{
+                filtro = 'none';
+            }
+
+            precio = document.getElementById('precio2').value;
         }else{
-            var filtro = "none";
+            var precio = document.getElementById('precio').value;
+            if(brands && brands.length){
+                var filtro = brands.toString();
+
+            }else{
+                var filtro = "none";
+            }
         }
-
-
 
         console.log('Ordenar por: ' + precio);
         console.log('Marca:'+filtro);
@@ -71,7 +86,7 @@
                         <img src='${prod.ruta_imagen}' class="imgAllProd">
                     </div>
                     <div class='col-8 text-center mt-5 p-1 row justify-content-center'>
-                        <a href="/Productos/Detalle/${prod.id} " class='col-12 text-center text-dark'>${prod.titulo}</a>
+                        <a href="/Productos/Detalle/${prod.id} " class='col-12 text-center text-dark tituloProdsAll'>Celular motorola moto g4 32 Gb + 3GB Ram${prod.titulo}</a>
 
                         <p class='col-md-6 col-6 color-grey infoAllProd'>$ ${prod.precio}</p>
                         <p class='col-md-6 col-6 color-grey infoAllProd'>Stock: ${prod.stock}</p>
