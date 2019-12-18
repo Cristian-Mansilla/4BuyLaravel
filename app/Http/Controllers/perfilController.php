@@ -43,12 +43,13 @@ class perfilController extends Controller
 
   public function actualizar()
   {
-    $updateUsuario = [
+    //return \auth::user();
+    \auth::user()->update([
       'usuario' => request('usuario'),
       'nombre' => request('nombre'),
       'apellido' => request('apellido'),
       'email' => request('email')
-    ];
-    return $updateUsuario;
+    ]);
+    return redirect()->route('miPerfil');
   }
 }
