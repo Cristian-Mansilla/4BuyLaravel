@@ -41,8 +41,7 @@ class perfilController extends Controller
     return $usuario;
   }
 
-  public function postDatosUser()
+  public function actualizar(Request $request)
   {
-    
   }
 }
