@@ -1,7 +1,7 @@
 
   <div class="border-left mt-4 px-4">
-    <form class="" action="{{route('miPerfil')}}" method="get">
-      @csrf
+    <form class="" action="{{route('actualizar')}}" method="post">
+      @csrf @method('patch')
       <div class="d-flex">
         <h1 class="titulo">Mis Datos</h1>
         <button class="btn btn-link ml-auto inflate" type="button" name="edit">
@@ -16,7 +16,7 @@
           </label>
         </div>
         <div class="col-12 col-md-10">
-          <input class="form-control border-0 bg-transparent" id="username" type="text" name="username" value="" placeholder="Usuario">
+          <input class="form-control border-0 bg-transparent" id="username" type="text" name="usuario" value="" placeholder="Usuario">
         </div>
       </div>
       <div class="form-group row border-bottom mb-2">
@@ -30,7 +30,7 @@
           </label>
         </div>
         <div class="col-12 col-md-10">
-          <input class="form-control border-0 bg-transparent" id="name" type="text" name="name" value="" placeholder="Nombre">
+          <input class="form-control border-0 bg-transparent" id="name" type="text" name="nombre" value="" placeholder="Nombre">
         </div>
       </div>
       <div class="form-group row border-bottom mb-2">
@@ -40,7 +40,7 @@
           </label>
         </div>
         <div class="col-12 col-md-10">
-          <input class="form-control border-0 bg-transparent" id="lastname" type="text" name="lastname" value="" placeholder="Apellido">
+          <input class="form-control border-0 bg-transparent" id="lastname" type="text" name="apellido" value="" placeholder="Apellido">
         </div>
       </div>
       <div class="form-group row border-bottom mb-2">
@@ -54,6 +54,6 @@
         </div>
       </div>
       <button class="pulsador color1" type="reset">Resetear</button>
-      <button class="guardar pulsador color3" type="submit">Guardar</button>
+      <button id='guardar' class="pulsador color3" type="submit">Guardar</button>
     </form>
   </div>
