@@ -1,6 +1,7 @@
 window.onload = function ()
 {
 
+  //Mis datos
   let nombre = document.getElementById('name');
   let apellido = document.getElementById('lastname');
   let username = document.getElementById('username');
@@ -18,7 +19,7 @@ window.onload = function ()
       })
       .then(function(data)
       {
-        //console.log(data);
+        console.log(data);
         nombre.value = data.nombre;
         apellido.value = data.apellido;
         username.value = data.usuario;
@@ -44,7 +45,7 @@ window.onload = function ()
       event.preventDefault()
     }
 
-    //actualizando data usuario a tabla User
+    //Informe de cambios al usuario
     fetch('/perfil/actualizar')
       .then(function(response)
       {
@@ -75,5 +76,44 @@ window.onload = function ()
       event.preventDefault()
     }
   }
-//
+  //Fin mis datos
+
+  //Mis compras
+  let table = document.getElementById('table');
+
+  obtenerCompras();
+
+  function obtenerCompras()
+  {
+    fetch('/perfil/compras')
+      .then(function(response)
+      {
+        return response.json()
+      })
+      .then(function(data)
+      {
+          //console.log(compras)
+          tablaCompras(data)
+      })
+      .catch(function(error)
+      {
+          console.log(error)
+      })
+  }
+
+  function tablaCompras(compras)
+  {
+    table.innerHTML = ''
+    for(let compra of compras)
+    {
+      table.innerHTML +=
+      `
+      <tr>
+        <th>${compra.id}</th>
+        <td>${compra.productos}</td>
+      </tr>
+      `
+    }
+  }
+//Fin mis compras
 }
