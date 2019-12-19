@@ -1,8 +1,8 @@
 window.onload = function()
 {
 
-  let table = document.getElementById('table');
-
+  let tbody = document.querySelector('#content');
+  
   obtenerCompras();
 
   function obtenerCompras()
@@ -25,13 +25,13 @@ window.onload = function()
 
   function tablaCompras(compras)
   {
-    table.innerHTML = ''
+    tbody.innerHTML = ''
     for(let compra of compras)
     {
-      table.innerHTML +=
+      tbody.innerHTML +=
       `
       <tr>
-        <th>${compra.id}</th>
+        <th scope="row">${compra.id}</th>
         <td>${compra.productos}</td>
       </tr>
       `

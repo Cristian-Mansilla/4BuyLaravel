@@ -79,7 +79,7 @@ window.onload = function ()
   //Fin mis datos
 
   //Mis compras
-  let table = document.getElementById('table');
+  let tbody = document.querySelector('#content');
 
   obtenerCompras();
 
@@ -92,7 +92,7 @@ window.onload = function ()
       })
       .then(function(data)
       {
-          //console.log(compras)
+          console.log(data)
           tablaCompras(data)
       })
       .catch(function(error)
@@ -103,13 +103,13 @@ window.onload = function ()
 
   function tablaCompras(compras)
   {
-    table.innerHTML = ''
+    tbody.innerHTML = ''
     for(let compra of compras)
     {
-      table.innerHTML +=
+      tbody.innerHTML +=
       `
       <tr>
-        <th>${compra.id}</th>
+        <th scope="row">${compra.id}</th>
         <td>${compra.productos}</td>
       </tr>
       `
