@@ -53,7 +53,7 @@
           <input class="form-control border-0 bg-transparent" id="email" type="email" name="email" value="" placeholder="E-mail">
         </div>
       </div>
-      <button class="pulsador color1" type="reset">Resetear</button>
+      <!--<button class="pulsador color1" type="reset">Resetear</button>-->
       <button id='guardar' class="pulsador color3" type="submit">Guardar</button>
     </form>
   </div>
