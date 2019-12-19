@@ -50,9 +50,9 @@ class productosController extends Controller
     }
 
     public function busqueda(Request $form){
-        $productos = Producto::where('titulo', 'Like', '%' . $form['categoria'] . '%')->paginate(15);
+        $productos = Producto::where('titulo', 'Like', '%' . $form['categoria'] . '%')->get();
         $vac = compact('productos');
-        return view('Productos', $vac);
+        return view('busqueda', $vac);
     }
     public function ofertas(){
         return view('Ofertas');
