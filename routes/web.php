@@ -60,7 +60,7 @@ Route::get('/Carrito/cant', 'carritoController@cantCarrito');
 
 Route::get('/Filtro/{marca}', 'productosController@fetchProd');
 
-Route::get('/test', 'HomeController@test')->middleware('auth', 'role:admin');
+Route::get('/Admin', 'HomeController@test')->middleware('auth', 'role:admin');
 
 Route::get('/Pago/{precio}', 'HomeController@pago');
 
