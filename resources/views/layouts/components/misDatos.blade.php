@@ -1,7 +1,7 @@
 
   <div class="border-left mt-4 px-4">
-    <form class="" action="{{route('actualizar')}}" method="post">
-      @csrf @method('patch')
+    <form class="" action="{{route('actualizar')}}" method="get">
+      @csrf
       <div class="d-flex">
         <h1 class="titulo">Mis Datos</h1>
         <button class="btn btn-link ml-auto inflate" type="button" name="edit">

@@ -40,7 +40,7 @@ Route::get('/perfil', 'perfilController@miPerfil')->name('miPerfil');
 
 Route::get('/perfil/get', 'perfilController@getDatosUser');
 
-Route::patch('/perfil/actualizar', 'perfilController@actualizar')->name('actualizar');
+Route::get('/perfil/actualizar', 'perfilController@actualizar')->name('actualizar');
 
 Route::view('/faqs', 'FAQs')->name('faqs');
 
