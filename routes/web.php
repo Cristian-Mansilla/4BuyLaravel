@@ -88,4 +88,8 @@ Route::get('/Admin/getUsers', 'AdminController@getUsers');
 
 Route::get('/Admin/eliminarUser/{id}', 'AdminController@deleteUser');
 
+Route::get('/Admin/getRoles', 'AdminController@getRoles');
+
+Route::get('/Admin/eliminarRoles/{id}', 'AdminController@eliminarRol');
+
 

@@ -11,6 +11,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#" onclick="link2()">Usuarios</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="link3()">Roles</a>
+          </li>
 
         </ul>
 
@@ -176,5 +179,65 @@
         }
 
 
+        function link3(){
+            let div = document.getElementById('content');
+            div.innerHTML = '';
+            div.innerHTML = `<table class="table">
+            <thead id='thead'>
+                <th scope="col"># Rol</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Guard</th>
+              </tr>
+            </thead>
+            <tbody id='tbody'>
+
+            </tbody>
+          </table>`;
+
+          fetch('/Admin/getRoles')
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                let tbody = document.getElementById('tbody');
+                console.log(data);
+                data.map(function(rol){
+                    let templateLiteral = `<tr>
+                    <td>${rol.nombre}</td>
+                    <td>${rol.guard_name}</td>
+                    <td><button onclick='eliminarRol(${rol.id})'>Eliminar</button></td>
+                </tr>`;
+                tbody.innerHTML = tbody.innerHTML.concat(templateLiteral);
+                })
+            })
+            .catch(function(error){
+                console.log(error);
+            })
+
+        }
+
+        function eliminarRol(id){
+            swal({
+                text: "Esta seguro de que quiere eliminar este rol?",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+                .then((borrar)=>{
+                    if(borrar){
+                        fetch('/Admin/eliminarRoles/'+id)
+                            .then(function(response){
+                                return response.json();
+                            })
+                            .then(function(data){
+                                console.log(data.status);
+                                link3();
+                            })
+                            .catch(function(error){
+                                console.log(error)
+                            })
+                    }
+                })
+        }
     </script>
 @endsection

@@ -6,6 +6,7 @@ use App\CarProducto;
 use App\Pais;
 use App\Producto;
 use App\Provincia;
+use App\Rol;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -59,6 +60,25 @@ class AdminController extends Controller
 
     public function deleteUser($id){
         User::find($id)->delete();
+        return ['status' => 'ok'];
+    }
+
+    public function getRoles(){
+        $roles = Rol::all();
+        $rols = [];
+        foreach($roles as $rol){
+            $ro = [
+                'id' => $rol->id,
+                'nombre' => $rol->name,
+                'guard_name' => $rol->guard_name,
+            ];
+            array_push($rols, $ro);
+        }
+        return $rols;
+    }
+
+    public function eliminarRol($id){
+        $rol = Rol::find($id)->delete();
         return ['status' => 'ok'];
     }
 }
