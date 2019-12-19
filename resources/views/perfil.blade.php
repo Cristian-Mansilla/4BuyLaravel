@@ -28,11 +28,13 @@
                   <i class="fa fa-list-alt"></i>Resumen
                 </a>
               </li>
+              <!--
               <li class="nav-item">
                 <a class="nav-link" id="facturacion-tab" href="#facturacion" data-toggle="tab" role="tab" aria-controls="facturacion" aria-selected="false">
                   <ion-icon name="card"></ion-icon>Facturación
                 </a>
               </li>
+              -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fa fa-shopping-bag"></i>Compras
@@ -68,7 +70,7 @@
         @foreach ($tabContent as $content)
           @if ($content["id"] == "resumen")
             <div class="tab-pane fade show active" id="{{$content["id"]}}" role="tabpanel" aria-labelledby="{{$content["aria-labelledby"]}}">
-              ¡Contenido de {{$content["id"]}} en construcción!
+              @component($content["pagina"])@endcomponent
             </div>
           @else
             <div class="tab-pane fade show" id="{{$content["id"]}}" role="tabpanel" aria-labelledby="{{$content["aria-labelledby"]}}">
