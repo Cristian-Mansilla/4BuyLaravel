@@ -9,8 +9,10 @@ use App\Cupon;
 use App\Producto;
 use App\Provincia;
 use App\tarjeta;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
+use Spatie\Permission\Models\Role;
 
 class HomeController extends Controller
 {
@@ -44,10 +46,11 @@ class HomeController extends Controller
     }
 
     public function test(){
-        $producto = Producto::find(1);
+        //Role::create(['name' => 'admin']);
 
-        $vac = compact('producto');
-        return view('test', $vac);
+        //$user = User::find(1);
+        //$user->assignRole('admin');
+        return view('test');
     }
 
     public function pago($precio){

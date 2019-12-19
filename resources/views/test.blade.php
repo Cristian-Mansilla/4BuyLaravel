@@ -7,17 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{$producto}} </h1>
-    @if ($producto->info->Modelo)
-        Modelo: {{$producto->info->Modelo}}
-    @endif
-    <br>
-    @if($producto->info->Linea)
-        Linea: {{$producto->info->Linea}}
-    @endif
-    <br>
-    @if($producto->info->Ram)
-        Ram: {{$producto->info->Ram}}
-    @endif
+    Pagina de pruebas
+
+
 </body>
 </html>

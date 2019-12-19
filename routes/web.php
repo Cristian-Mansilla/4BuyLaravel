@@ -60,7 +60,7 @@ Route::get('/Carrito/cant', 'carritoController@cantCarrito');
 
 Route::get('/Filtro/{marca}', 'productosController@fetchProd');
 
-Route::get('/test', 'HomeController@test');
+Route::get('/test', 'HomeController@test')->middleware('auth', 'role:admin');
 
 Route::get('/Pago/{precio}', 'HomeController@pago');
 
@@ -77,3 +77,4 @@ Route::get('/Provincias/get/{pais}', 'HomeController@getProvincias');
 Route::get('/Contacto', 'HomeController@contacto');
 
 Route::post('/Contacto/send', 'HomeController@contactoSend');
+
