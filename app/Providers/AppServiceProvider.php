@@ -29,10 +29,10 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
         // Blade::component('layouts.components.carousel','carousel');
-        $categorias = Categorias::whereNull('subcategoria_id')->get();
-        view()->share('categorias', $categorias);
-        $paises = Pais::all();
-        view()->share('paises', $paises);
+        // $categorias = Categorias::whereNull('subcategoria_id')->get();
+        // view()->share('categorias', $categorias);
+        // $paises = Pais::all();
+        // view()->share('paises', $paises);
 
     }
 }

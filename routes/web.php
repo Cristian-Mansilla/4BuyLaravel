@@ -83,3 +83,9 @@ Route::post('/Contacto/send', 'HomeController@contactoSend');
 Route::get('/Admin/getProds', 'AdminController@getProds');
 
 Route::get('/Admin/eliminarProd/{id}', 'AdminController@eliminarProd');
+
+Route::get('/Admin/getUsers', 'AdminController@getUsers');
+
+Route::get('/Admin/eliminarUser/{id}', 'AdminController@deleteUser');
+
+
