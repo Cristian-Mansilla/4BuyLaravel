@@ -29,6 +29,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // $user = User::find(1);
+        // $user->assignRole('admin');
+        // session(['carrito' => []]);
+        // session(['cantCarrito' => []]);
 
         if(isset($_COOKIE['ultimaVisita'])){
             $cate = $_COOKIE['ultimaVisita'];
@@ -48,8 +52,7 @@ class HomeController extends Controller
     public function test(){
         //Role::create(['name' => 'admin']);
 
-        //$user = User::find(1);
-        //$user->assignRole('admin');
+
         return view('test');
     }
 

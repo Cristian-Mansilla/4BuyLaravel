@@ -108,7 +108,6 @@
                                     <span class="iconoNot"><ion-icon name="notifications"></ion-icon></span>
                                     <div class="dropdown-content">
                                     @if (Auth::check())
-                                        <p>Notificaciones</p>
                                         <p class="pl-1">No tiene notificaciones</p>
                                     @else
                                         <a href="{{ route('login') }}">Loguearse</a>

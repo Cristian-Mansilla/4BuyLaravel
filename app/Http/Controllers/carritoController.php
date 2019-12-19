@@ -26,7 +26,7 @@ class carritoController extends Controller
                 $request->session()->push('cantCarrito', ['prod' => $id,'cantidad' => 1]);
             }
 
-
+            return session('carrito');
 
         }else{
             session(['carrito' => []]);
@@ -58,6 +58,7 @@ class carritoController extends Controller
 
     public function vaciarCarrito(){
         session(['carrito' => []]);
+        session(['cantCarrito' => []]);
         return ['status' => 'ok'];
     }
 
