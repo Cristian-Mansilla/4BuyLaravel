@@ -3,6 +3,11 @@
 @section('css')
   <link rel="stylesheet" href="{{asset("css/perfil.css")}}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <style>
+      body{
+          background-color: rgb(235, 235, 235);
+      }
+  </style>
 @endsection
 
 @section('script')
@@ -15,7 +20,7 @@
     <div class="col-12 col-md-3">
       <section class="navbar-perfil">
         <nav class="navbar sticky-top navbar-light bg-celeste d-flex flex-column align-items-center icon-size rounded-right shadow-sm">
-          <img class="logo-perfil" src='{{asset('imagenes/login/user.jpg')}}' alt="">
+          <img class="logo-perfil" src='/upload/{{auth()->user()->img_perfil}} ' alt="">
           <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
             <a class="navbar-brand" href="#"><i class="fa fa-bars"></i>Mi cuenta</a>
           </button>
