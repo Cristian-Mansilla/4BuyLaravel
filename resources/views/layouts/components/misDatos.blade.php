@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="form-group row border-bottom mb-2">
-        <button class="btn-block pulsador color2" type="button" name="changePassword">Cambiar contraseña</button>
+        <a class="btn-block pulsador color2" href='{{route('password.email')}}' type="button" name="changePassword">Cambiar contraseña</a>
       </div>
       <h2>Datos personales</h2>
       <div class="form-group row border-bottom mb-2">

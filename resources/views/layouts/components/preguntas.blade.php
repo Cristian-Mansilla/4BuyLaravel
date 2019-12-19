@@ -1,3 +1,4 @@
+<h1>Preguntas frecuentes</h1>
 <ol class="hideAndSeek">
   <li>
     <a href="#a">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor vehicula ipsum nec ?</a>
