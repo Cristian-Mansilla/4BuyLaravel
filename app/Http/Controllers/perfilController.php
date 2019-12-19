@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\compra;
 
 class perfilController extends Controller
 {
@@ -22,7 +23,7 @@ class perfilController extends Controller
     ["id" => "resumen", "aria-labelledby" => "resumen-tab", "pagina" => "pagina externa?"],
     //["id" => "facturacion", "aria-labelledby" => "facturacion-tab", "pagina" => "pagina externa?"],
     //["id" => "favoritos", "aria-labelledby" => "favoritos-tab", "pagina" => "pagina externa?"],
-    //["id" => "compras", "aria-labelledby" => "compras-tab", "pagina" => "pagina externa?"],
+    ["id" => "compras", "aria-labelledby" => "compras-tab", "pagina" => "layouts.components.misCompras"],
     //["id" => "preguntas", "aria-labelledby" => "preguntas-tab", "pagina" => "pagina externa?"],
     ["id" => "misDatos", "aria-labelledby" => "misDatos-tab", "pagina" => "layouts.components.misDatos"],
     //["id" => "seguridad", "aria-labelledby" => "favoritos-tab", "pagina" => "pagina externa?"],
@@ -50,7 +51,13 @@ class perfilController extends Controller
       'apellido' => request('apellido'),
       'email' => request('email')
     ]);
-    return ['status' => 'ok']; 
+    return ['status' => 'ok'];
     //return redirect()->route('miPerfil');
+  }
+
+  public function misCompras()
+  {
+    $compras = \DB::table('compras')->get();
+    return $compras;
   }
 }
