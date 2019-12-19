@@ -42,6 +42,8 @@ Route::get('/perfil/get', 'perfilController@getDatosUser');
 
 Route::get('/perfil/actualizar', 'perfilController@actualizar')->name('actualizar');
 
+Route::get('/perfil/compras', 'perfilController@misCompras');
+
 Route::view('/faqs', 'FAQs')->name('faqs');
 
 Route::get('/construccion', 'HomeController@construccion');

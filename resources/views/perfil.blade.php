@@ -6,6 +6,7 @@
 
 @section('script')
   <script src="{{asset("js/perfil.js")}}"></script>
+  <script src="{{asset("js/misCompras.js")}}"></script>
 @endsection
 
 @section('content')
