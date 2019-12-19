@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\compra;
+use App\Producto;
+use Illuminate\Support\Facades\Auth;
 
 class perfilController extends Controller
 {
@@ -57,7 +59,22 @@ class perfilController extends Controller
 
   public function misCompras()
   {
-    $compras = \DB::table('compras')->get();
+    $id = Auth::id();
+    $comprasP = compra::where('user_id', '=', $id)->get();
+    $compras = [];
+    $productos = [];
+    foreach($comprasP as $compra){
+        $prodsP = explode(',', $compra->productos);
+        foreach ($prodsP as $prod){
+            $prod = Producto::find($prod);
+            array_push($productos, $prod->titulo);
+        }
+        $comp = [
+            'id' => $compra->user_id,
+            'productos' => $productos,
+        ];
+        array_push($compras, $comp);
+    }
     return $compras;
   }
 }

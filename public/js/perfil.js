@@ -92,8 +92,20 @@ window.onload = function ()
       })
       .then(function(data)
       {
+        let tbody = document.getElementById('tbody');
+        tbody.innerHTML = ''
+
           console.log(data)
-          tablaCompras(data)
+          data.map(function(compra){
+              let templateLiteral =
+              `
+              <tr>
+                <th scope="row">${compra.id}</th>
+                <td>${compra.productos}</td>
+              </tr>
+              `;
+              tbody.innerHTML = tbody.innerHTML.concat(templateLiteral);
+          })
       })
       .catch(function(error)
       {

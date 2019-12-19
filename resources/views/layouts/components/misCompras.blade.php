@@ -8,7 +8,7 @@
           <th scope="col">Producto</th>
         </tr>
       </thead>
-      <tbody id="content">
+      <tbody id="tbody">
         <!--Contenido de la tabla ir a perfil.js-->
       </tbody>
     </table>
